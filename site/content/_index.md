@@ -1,7 +1,7 @@
 ---
 title: Redefining the way you meet Rishtas
 subtitle: ' '
-image: /img/home-jumbotron.jpg
+image: /img/blog-flavor_wheel.jpg
 blurb:
   heading: Why Laddu
   text: >-
