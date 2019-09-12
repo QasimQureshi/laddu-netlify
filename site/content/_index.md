@@ -1,12 +1,24 @@
 ---
 title: Redefining the way you meet Rishtas
-subtitle: ' '
+subtitle: ' Providing more autonomy and transparency'
 image: /img/rings.jpeg
 blurb:
   heading: Why Laddu
   text: >-
-    We believe that great relationships are built by choice. And that's what
-    we're here to give you. 
+    For the Muslim community marriage is a rite of passage into adulthood and
+    not a choice. The traditional way of getting married includes an outdated
+    matchmaker, often dubbed the Rishta Aunty, ubiquitously renowned for asking
+    regressive questions and pigeonholing people in the guise of finding an
+    appropriate partner. This approach does not work for millennials and is
+    especially derogatory for women who are shamed for having any personality.
+    The alternative- dating apps, also don't work for Muslims who are seeking
+    marriage and not hookups. 
+
+
+    Laddu aims to create a progressive space for marriage-minded Muslims to
+    meet. Our app enables Muslims globally to connect in person and offline
+    through tailored events. The app is currently being alpha tested, but event
+    registration is open in Lahore.
 intro:
   heading: What we offer
   text: '  '
