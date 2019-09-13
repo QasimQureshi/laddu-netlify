@@ -13,8 +13,7 @@ blurb:
     especially derogatory for women who are shamed for having any personality.
     The alternative- dating apps, also don't work for Muslims who are seeking
     marriage and not hookups. 
-
-
+      
     Laddu aims to create a progressive space for marriage-minded Muslims to
     meet. Our app enables Muslims globally to connect in person and offline
     through tailored events. The app is currently being alpha tested, but event
@@ -32,7 +31,7 @@ values:
     potential partners with similar values, in a very short period of time. Each
     event caters up to 40 people, advance registration is required. Based on
     your values, our algorithm places you in a specific cohort of like-minded
-    single Muslims.
+    single Muslims.  
 
 
     At the event, men and women are rotated to meet each other over a series of
@@ -41,7 +40,7 @@ values:
     like to get to know more. If both participants liked one another, there is a
     match, and we forward contact information to both parties. Contact
     information cannot be traded during the initial meeting, in order to reduce
-    pressure to accept or reject a suitor to his or her face.
+    pressure to accept or reject a suitor to his or her face.  
 
 
     On said date, you're free to hold a conversation on your own but we highly
