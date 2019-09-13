@@ -14,10 +14,11 @@ blurb:
     The alternative- dating apps, also don't work for Muslims who are seeking
     marriage and not hookups. 
       
-    Laddu aims to create a progressive space for marriage-minded Muslims to
-    meet. Our app enables Muslims globally to connect in person and offline
-    through tailored events. The app is currently being alpha tested, but event
-    registration is open in Lahore.
+    Laddu aims to take online-dating offline and in doing so, create a
+    progressive space for marriage-minded Muslims to meet. Our app enables
+    Muslims globally to connect in person and offline through tailored events.
+    The app is currently being alpha tested, but event registration is open in
+    Lahore.
 intro:
   heading: ' '
   text: '  '
