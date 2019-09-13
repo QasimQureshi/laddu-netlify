@@ -19,11 +19,9 @@ blurb:
     through tailored events. The app is currently being alpha tested, but event
     registration is open in Lahore.
 intro:
-  heading: What we offer
+  heading: ' '
   text: '  '
-products:
-  - image: img/illustrations-coffee.svg
-    text: ' '
+products: []
 values:
   heading: How Laddu Events Work
   text: >-
