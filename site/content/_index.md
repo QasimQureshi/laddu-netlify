@@ -1,6 +1,6 @@
 ---
 title: Redefining the way you meet Rishtas
-subtitle: ' Providing more autonomy and transparency'
+subtitle: ' '
 image: /img/rings.jpeg
 blurb:
   heading: Why Laddu
