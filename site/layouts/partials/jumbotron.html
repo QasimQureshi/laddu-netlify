@@ -207,8 +207,14 @@
 
     body.modal-open {
         overflow: hidden;
-        position: relative;
+        position: fixed;
         -webkit-overflow-scrolling: touch;
+    }
+
+    @media (min-width: 640px) {
+        .modal__close {
+
+        }
     }
 
 </style>
@@ -218,8 +224,8 @@
     var targetElement = $('modal__overlay');
 
     MicroModal.init({
-        onShow: modal => bodyScrollLock.disableBodyScroll(targetElement),
-        onClose: modal => bodyScrollLock.enableBodyScroll(targetElement)
+        onShow: modal => { bodyScrollLock.disableBodyScroll(targetElement); document.querySelector('body').classList.add('modal-open') },
+        onClose: modal => { bodyScrollLock.enableBodyScroll(targetElement); document.querySelector('body').classList.remove('modal-open') }
     });
   })
 </script>
