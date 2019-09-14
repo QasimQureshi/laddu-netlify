@@ -212,11 +212,14 @@
     }
 
 </style>
+<script type="text/javascript" src="bodyscroll.js"></script>
 <script type="text/javascript">
   $(document).ready(function(){
+    var targetElement = $('modal__overlay');
+
     MicroModal.init({
-        onShow: modal => document.querySelector('body').classList.add('modal-open'),
-        onClose: modal => document.querySelector('body').classList.remove('modal-open')
+        onShow: modal => bodyScrollLock.disableBodyScroll(targetElement),
+        onClose: modal => bodyScrollLock.enableBodyScroll(targetElement)
     });
   })
 </script>
