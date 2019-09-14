@@ -24,8 +24,8 @@
 <script type="text/javascript" src="https://unpkg.com/micromodal/dist/micromodal.min.js"></script>
 
 <div class="modal micromodal-slide" id="modal-1" aria-hidden="true">
+  <button class="modal__close" aria-label="Close modal" data-micromodal-close>x</button>
   <div class="modal__overlay" tabindex="-1" data-micromodal-close>
-    <button class="modal__close" aria-label="Close modal" data-micromodal-close>x</button>
     <iframe src="https://docs.google.com/forms/d/e/1FAIpQLSfWuAEuVK1LdtixmtCedcCi5zPotqBUG5ssuBlsIsav5iuSHg/viewform?embedded=true" width="100%" height="1929" frameborder="0" marginheight="0" marginwidth="0">Loading…</iframe>
   </div>
 </div>
@@ -91,7 +91,7 @@
 
     .modal__overlay > iframe {
       overflow-y: scroll;
-      margin-top: 110vh;
+      margin-top: 120vh;
     }
     .modal__container {
     background-color: #fff;
@@ -211,8 +211,33 @@
         -webkit-overflow-scrolling: touch;
     }
 
+    .modal__close {
+        position: fixed;
+        top: 5px;
+        left: 5px;
+        z-index: 1000;
+        background-color: rgba(255, 68, 0, 1);
+        width: 30px;
+        height: 30px;
+        border-radius: 15px;
+        color: white;
+        font-size: 0.7em;
+        font-weight: bold;
+        line-height: 0.1;
+        transition: 0.2s linear all;
+    }
+
+    .modal__close:hover {
+        width: 34px;
+        height: 34px;
+        border-radius: 16px;
+        left: 1px;
+        top: 1px;
+    }
+
     @media (min-width: 640px) {
         .modal__close {
+            left: calc((100vw - 640px)/2);
 
         }
     }
