@@ -1,5 +1,4 @@
 (function (global, factory) {
-  alert('this works');
   if (typeof define === "function" && define.amd) {
     define(['exports'], factory);
   } else if (typeof exports !== "undefined") {
