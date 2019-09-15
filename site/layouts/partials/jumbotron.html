@@ -91,7 +91,8 @@
 
     .modal__overlay > iframe {
       overflow-y: scroll;
-      margin-top: 120vh;
+      /*margin-top: 120vh;*/
+      height: 100%;
     }
     .modal__container {
     background-color: #fff;
@@ -235,7 +236,8 @@
 
     @media (min-width: 750px) {
         .modal__close {
-            left: calc((100vw - 740px)/2);
+            left: calc(600px + ((100vw - 640px) / 2));
+            top: 15px;
 
         }
     }
