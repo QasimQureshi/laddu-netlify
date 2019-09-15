@@ -1,7 +1,7 @@
 ---
 title: "Frequently asked Questions"
 image: /img/about-jumbotron.jpg
-values:
+faq:
   - heading: "Shade-grown coffee"
     text: >
       Coffee is a small tree or shrub that grows in the forest
