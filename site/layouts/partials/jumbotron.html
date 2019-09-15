@@ -214,10 +214,11 @@
 
     .modal__close {
         position: fixed;
-        top: 5px;
-        left: 5px;
+        top: 15px;
+        left: calc(600px + ((100vw - 640px) / 2));
         z-index: 1000;
-        background-color: rgba(255, 68, 0, 1);
+        background-color: rgba(227, 228, 218, 1);
+        border-color: rgba(227, 228, 218, 1);
         width: 30px;
         height: 30px;
         border-radius: 15px;
@@ -228,16 +229,17 @@
         transition: 0.2s linear all;
     }
 
+    .modal__close:focus {
+        box-shadow: none;
+    }
+
     .modal__close:hover {
-        width: 34px;
-        height: 34px;
-        border-radius: 16px;
+        background-color: rgba(255, 68, 0, 1);
+        color: white;
     }
 
     @media (min-width: 750px) {
         .modal__close {
-            left: calc(600px + ((100vw - 640px) / 2));
-            top: 15px;
 
         }
     }
