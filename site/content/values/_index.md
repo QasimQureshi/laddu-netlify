@@ -83,6 +83,73 @@ values:
       Laddu events happen at various venues in multiple cities. There are no
       fixed locations per se, but we consider key features for each venue
       selection such as privacy, security, location and accessibility. All our
-      events happen in private party rooms in high-end hotels and restaurants.
+      events happen in private party rooms in high-end hotels and restaurants. 
+  - heading: Is Laddu in my city?
+    imageUrl: /img/noun_city_2488436.svg
+    text: >
+      Currently, we do events only in Lahore, Islamabad and Toronto but as we
+      scale aim to add more cities in our network.
+  - heading: What is your policy against harassment?
+    imageUrl: /img/noun_sexual-harassment_657576.svg
+    text: >-
+      Laddu is, in essence, a very feminist brand. We emerged into existence due
+      to a lack of safe spaces for marriage-minded Muslim men and women to
+      connect. We take bullying and harassment very seriously. Not only will the
+      culprit be asked to leave the event, but they will also be barred from
+      ever attending any future Laddu events.
+  - heading: >-
+      Can I pay you extra to purchase the contact information of someone I did
+      not match with?
+    imageUrl: /img/noun_privacy_1821548.svg
+    text: >-
+      Repeat after us: No means no. Consent ka nara rozana! 
+
+      When our clients share their scorecards and we tally their matches, we
+      respect that. 
+  - heading: What is your cancellation policy?
+    imageUrl: /img/noun_cancellation-time_2596939.svg
+    text: >-
+      Since last-minute cancellations affect the overall user experience for the
+      group, we ask for a minimum 72-hour notice and will credit 50% of your
+      payment to another event of your choice. Cancellations on the day of the
+      event and/or "no-shows" are ineligible for credit.
+  - heading: Will you refund my money if I don’t get any matches?
+    imageUrl: /img/noun_refund_1238553.svg
+    text: >
+      No. Our job is to provide a safe space for eligible single Muslims to meet
+      a large number of potential partners with similar values, in a very short
+      period of time. We do our best to keep quality singles in the mix, but the
+      burden of charming others enough to court you, lies on you. 
+
+
+      How are introductions made?
+  - heading: Any tips to help me get me the most out of my Laddu experience?
+    imageUrl: /img/noun_teamwork_654885.svg
+    text: >-
+      Yes, so glad that you asked! As cliche as it sounds, come with an open
+      mind, an open heart, budding optimism and dare I say- even a sense of
+      adventure. Instead of focusing on what you don’t like in the person in
+      front of you, focus on what you do like. Finding flaws and cracks is easy,
+      seeing the beauty in another is hard (and a learned trait). We encourage
+      keeping an open mind even if the person in front isn’t traditionally “your
+      type”. The universe opens you up to so many possibilities when you let go
+      of rigid standards. And lastly, be gentle in your interactions. Kindness
+      is paramount. Refrain from passing aggressive, aggravating comments and/or
+      outright rejections.
+  - heading: How much does it cost?
+    imageUrl: /img/noun_pakistani-coins_2036824.svg
+    text: >
+      Our ticket is currently priced at PKR. 8000, which is a steal deal
+      considering that the cost of a singular “rishta trolley spread” roughly
+      costs the same amount. Whereas, unlike traditional rishat settings, we are
+      introducing you to 20 other suitors for that price point.
+
+
+       
+
+      (Once you show interest in our events, our matchmakers do an intake call.
+      Based on your values, our algorithm places you in a specific cohort of 40
+      other marriage-minded single Muslims in your location. On the event get to
+      meet 10-12 potential partners, each date lasts for 6 minutes.) Omitted
 ---
 
