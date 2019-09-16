@@ -16,7 +16,7 @@ blurb:
     Laddu aims to take online-dating offline and in doing so, create a
     progressive space for marriage-minded Muslims to meet. Our app enables
     Muslims globally to connect in person and offline through tailored events.
-    The app is currently being alpha tested, but event registration is open in
+    The app is currently being alpha tested, but event registration is open for
     Lahore.
 image: /img/jumbotron_new.jpg
 intro:
