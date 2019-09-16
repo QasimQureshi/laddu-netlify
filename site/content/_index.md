@@ -20,8 +20,18 @@ blurb:
     Lahore.
 image: /img/jumbotron_new.jpg
 intro:
-  heading: ' '
-  text: '  '
+  heading: How is Laddu different from traditional matchmakers?
+  text: >-
+    For starters, we are the antidote to misogynistic Rishta aunties who ask
+    regressive questions and shame both men and women into domestication with a
+    mismatched suitor. Unlike traditional matchmaking firms, we are a
+    transparent company and have no gimmicks. We do not solicit outrageous sums
+    of money on pretentious claims, we do not have scary contracts and most
+    importantly we create a safe space for our clients to meet several suitable
+    suitors in a short time span. You will not have to entertain people in your
+    drawing room and endure an additional cost of hosting, and then suffer the
+    humiliation of waiting endlessly. Our process returns power to our clients,
+    is efficient, and is far less expensive way than traditional matchmaking.
 products: []
 subtitle: ' '
 title: Redefining the way you meet Rishtas
