@@ -5,24 +5,32 @@ values:
   - heading: How does Laddu registration work?
     imageUrl: /img/noun_form_589531.svg
     text: >
-      Coffee is a small tree or shrub that grows in the forest understory in its
-      wild form, and traditionally was grown commercially under other trees that
-      provided shade. The forest-like structure of shade coffee farms provides
-      habitat for a great number of migratory and resident specie.
+      1: Sign up on our website and create a basic profile.  
+
+      2: Our matchmakers will get in touch with you, do an intake interview and
+      process payments.  
+
+      3: Based on your responses our algorithm will match you with suitable
+      singles who display similar values.  
+
+      4: We will send you an event invite 2 weeks in advance where you will be
+      able to meet said suitors
   - heading: How is Laddu different?
     imageUrl: /img/noun_fibonacci-sequence_1767617.svg
-    text: >
-      Single-origin coffee is coffee grown within a single known geographic
-      origin. Sometimes, this is a single farm or a specific collection of beans
-      from a single country. The name of the coffee is then usually the place it
-      was grown to whatever degree available.
+    text: >-
+      For starters, we are the antidote to misogynistic Rishta aunties who ask
+      regressive questions and shame both men and women. Unlike traditional
+      matchmaking firms, we are a transparent company and have no gimmicks. We
+      do not solicit outrageous sums of money on pretentious claims, we do not
+      have scary contracts and most importantly we create a safe space for our
+      clients to meet several suitable suitors in a short time span. You will
+      not have to entertain people in your drawing room and endure an additional
+      cost of hosting, and then suffer the humiliation of waiting endlessly. Our
+      process returns power to our clients, is efficient, and is far less
+      expensive way than traditional matchmaking.
   - heading: What is the format of the Laddu event?
     imageUrl: /img/noun_sequence_121702.svg
-    text: >
-      Sustainable agriculture is farming in sustainable ways based on an
-      understanding of ecosystem services, the study of relationships between
-      organisms and their environment. What grows where and how it is grown are
-      a matter of choice and careful consideration for nature and communities.
+    text: Event format
   - heading: How many people will I meet at an event?
     imageUrl: /img/noun_people_1711210.svg
     text: >
