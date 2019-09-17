@@ -15,7 +15,7 @@
       </div>
       {{ if .subtitle }}
       <div class="tc mt-5">
-        <a href="#" data-micromodal-trigger="modal-1" class="btn raise sign-up">Sign-up</a>
+        <a href="#register" data-micromodal-trigger="modal-1" class="btn raise sign-up">Sign-up</a>
       </div>
       {{ end }}
     </div>
@@ -250,11 +250,19 @@
 <script type="text/javascript" src="bodyscroll.js"></script>
 <script type="text/javascript">
   $(document).ready(function(){
+    debugger;
+    if( window.location.hash === "#register")
+    {
+        MicroModal.show('modal-1');
+        history.pushState(null, null, '#register');
+    }
+
+    // Registration modal
     var targetElement = $('modal__overlay');
 
     MicroModal.init({
-        onShow: modal => { bodyScrollLock.disableBodyScroll(targetElement); document.querySelector('body').classList.add('modal-open') },
-        onClose: modal => { bodyScrollLock.enableBodyScroll(targetElement); document.querySelector('body').classList.remove('modal-open') }
+        onShow: modal => { console.log('show called?'); bodyScrollLock.disableBodyScroll(targetElement); document.querySelector('body').classList.add('modal-open'); },
+        onClose: modal => { history.back(); bodyScrollLock.enableBodyScroll(targetElement); document.querySelector('body').classList.remove('modal-open'); }
     });
   })
 </script>
