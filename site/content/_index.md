@@ -5,7 +5,7 @@ blurb:
     For the Muslim community marriage is a rite of passage into adulthood and
     not a choice.
 
-    <br />
+    <br /><br />
 
     The traditional way of getting married includes an outdated matchmaker,
     often dubbed the Rishta Aunty, ubiquitously renowned for asking regressive
@@ -15,7 +15,7 @@ blurb:
     alternative- dating apps, also don't work for Muslims who are seeking
     marriage and not hookups.  
 
-    <br />
+    <br /><br />
 
     Laddu aims to take online-dating offline and in doing so, create a
     progressive space for marriage-minded Muslims to meet. Our app enables
@@ -30,7 +30,7 @@ intro:
     regressive questions and shame both men and women into domestication with a
     mismatched suitor.
 
-    <br />
+    <br /><br />
 
     Unlike traditional matchmaking firms, we are a transparent company and have
     no gimmicks. We do not solicit outrageous sums of money on pretentious
@@ -38,7 +38,7 @@ intro:
     space for our clients to meet several suitable suitors in a short time
     span. 
 
-    <br />
+    <br /><br />
 
     You will not have to entertain people in your drawing room and endure an
     additional cost of hosting, and then suffer the humiliation of waiting
