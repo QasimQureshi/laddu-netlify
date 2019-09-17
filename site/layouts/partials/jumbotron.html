@@ -255,7 +255,7 @@
         showRegistrationModal();
 
     // Registration modal
-    var targetElement = $('modal__overlay');
+    var targetElement = $('.modal__overlay');
 
     MicroModal.init({
         onShow: modal => { console.log('show called?'); bodyScrollLock.disableBodyScroll(targetElement); document.querySelector('body').classList.add('modal-open'); },
