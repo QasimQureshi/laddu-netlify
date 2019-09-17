@@ -13,7 +13,7 @@ blurb:
     partner. This approach does not work for millennials and is especially
     derogatory for women who are shamed for having any personality. The
     alternative- dating apps, also don't work for Muslims who are seeking
-    marriage and not hookups.  
+    marriage and not hookups.
 
     <br /><br />
 
@@ -35,8 +35,7 @@ intro:
     Unlike traditional matchmaking firms, we are a transparent company and have
     no gimmicks. We do not solicit outrageous sums of money on pretentious
     claims, we do not have scary contracts and most importantly we create a safe
-    space for our clients to meet several suitable suitors in a short time
-    span. 
+    space for our clients to meet several suitable suitors in a short time span.
 
     <br /><br />
 
@@ -54,7 +53,7 @@ values:
     potential partners with similar values, in a very short period of time. Each
     event caters up to 40 people, advance registration is required. Based on
     your values, our algorithm places you in a specific cohort of like-minded
-    single Muslims.  
+    single Muslims.
 
     <br /><br />
 
@@ -64,7 +63,7 @@ values:
     like to get to know more. If both participants liked one another, there is a
     match, and we forward contact information to both parties. Contact
     information cannot be traded during the initial meeting, in order to reduce
-    pressure to accept or reject a suitor to his or her face.  
+    pressure to accept or reject a suitor to his or her face.
 
     <br /><br />
 
