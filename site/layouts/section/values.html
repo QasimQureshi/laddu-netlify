@@ -14,24 +14,43 @@
 
 </div>
 <style type="text/css">
-	.ph3-m.w-50-m > img {
-
-	}
 
 	.image-container {
 		position: relative;
 		text-align: center;
 		height: 160px;
 		overflow: hidden;
-		top: 50%;
-		transform: translateY(-50%);
+		
 	}
 
 	.image-container > img {
 		height: 200px;
 		margin: 0 auto;
 	}
+
+	@media (min-width: 800px) {
+		.image-container {
+			top: 50%;
+			transform: translateY(-50%);
+		}
+	}
+
+	@media (max-width: 800px) {
+		.lh-title {
+			text-align: center;
+		}
+		.lh-title + p {
+			/*text-align: justify-all;*/
+		}
+		.image-container {
+			height: 80px;
+		}
+
+		.image-container > img {
+			height: 100px;
+		}
+	}
+
 </style>
 
 {{ end }}
-
