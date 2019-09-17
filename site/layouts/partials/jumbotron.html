@@ -259,7 +259,7 @@
 
     MicroModal.init({
         onShow: modal => { console.log('show called?'); bodyScrollLock.disableBodyScroll(targetElement); document.querySelector('body').classList.add('modal-open'); },
-        onClose: modal => { history.back(); bodyScrollLock.enableBodyScroll(targetElement); document.querySelector('body').classList.remove('modal-open'); }
+        onClose: modal => { console.log('modal closed'); history.back(); bodyScrollLock.enableBodyScroll(targetElement); document.querySelector('body').classList.remove('modal-open'); }
     });
 
     $('.register.link').on('click', showRegistrationModal);
