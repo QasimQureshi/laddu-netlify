@@ -250,12 +250,9 @@
 <script type="text/javascript" src="bodyscroll.js"></script>
 <script type="text/javascript">
   $(document).ready(function(){
-    
+
     if( window.location.hash === "#register")
-    {
-        MicroModal.show('modal-1');
-        history.pushState(null, null, '#register');
-    }
+        showRegistrationModal();
 
     // Registration modal
     var targetElement = $('modal__overlay');
@@ -264,5 +261,12 @@
         onShow: modal => { console.log('show called?'); bodyScrollLock.disableBodyScroll(targetElement); document.querySelector('body').classList.add('modal-open'); },
         onClose: modal => { history.back(); bodyScrollLock.enableBodyScroll(targetElement); document.querySelector('body').classList.remove('modal-open'); }
     });
+
+    $('.register.link').on('click', showRegistrationModal);
   })
+
+  function showRegistrationModal() {
+    MicroModal.show('modal-1');
+    history.pushState(null, null, '#register');
+  }
 </script>
