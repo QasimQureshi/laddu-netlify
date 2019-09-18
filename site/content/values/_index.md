@@ -1,6 +1,6 @@
 ---
 title: Frequently asked Questions
-image: /img/about-reinvest-profits.jpg
+image: /img/jumbotron_new.jpg
 values:
   - heading: How does Laddu registration work?
     imageUrl: /img/noun_form_589531.svg
