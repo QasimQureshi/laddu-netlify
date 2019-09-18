@@ -22,7 +22,7 @@ blurb:
     Muslims globally to connect in person and offline through tailored events.
     The app is currently being alpha tested, but event registration is open for
     Lahore.
-image: /img/jumbotron_new.jpg
+image: /img/shutterstock_313114061.jpg
 intro:
   heading: How is Laddu different from traditional matchmakers?
   text: >-
