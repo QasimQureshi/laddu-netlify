@@ -15,7 +15,7 @@
       </div>
       {{ if .subtitle }}
       <div class="tc mt-5">
-        <a href="#register" data-micromodal-trigger="modal-1" class="btn raise sign-up">Sign-up</a>
+        <a href="#register" class="btn raise sign-up">Sign-up</a>
       </div>
       {{ end }}
     </div>
@@ -253,6 +253,7 @@
   $(document).ready(function(){
 
     // Registration modal
+    MicroModal.init({});
     var targetElement = $('.modal__overlay');
 
     function showRegistrationModal() {
@@ -265,7 +266,7 @@
 
     function hideRegistrationModal() {
         console.log('modal closed'); 
-        MicroModal.hide('modal-1');
+        MicroModal.close('modal-1');
         history.back(); 
         bodyScrollLock.enableBodyScroll(targetElement); 
         document.querySelector('body').classList.remove('modal-open');
@@ -282,10 +283,9 @@
     if( window.location.hash === "#register")
         showRegistrationModal();
 
-    
 
-    MicroModal.init();
     $('.modal__close').on('click',hideRegistrationModal);
+    $('.sign-up').on('click', showRegistrationModal);
     $('.register.link').on('click', showRegistrationModal);
   })
 
