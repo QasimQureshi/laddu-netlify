@@ -34,8 +34,10 @@ values:
       1) Users will sign in, be given resources for note-taking, a name badge
       and be invited for refreshments.
 
+
       2) Orientation: once everyone has arrived, Laddu hosts will explain how
       the event and matchmaking will work.
+
 
       3) Rishta-dates: At the event, men and women are rotated to meet each
       other over a series of short " rishta dates" that last six minutes each.
@@ -43,14 +45,17 @@ values:
       when the bell rings. Conversational cue cards will be provided on each
       table to facilitate your interaction.
 
+
       4) Scorecard: After each interaction, you should keep notes about the
       person you just met. At the end of the evening, you take home the pamphlet
       with your notes, and go to our website to enter who your favourite suitors
       were.
 
+
       5) Matches: If both participants like one another, it is a match. We will
       get in touch with you and set up the next solo meeting between you and
       your match(es). 
+
 
       6) Contact information cannot be traded during the initial meeting, in
       order to reduce pressure to accept or reject a suitor to his or her face.
