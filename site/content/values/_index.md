@@ -1,6 +1,6 @@
 ---
 title: Frequently asked Questions
-image: /img/jumbotron_new.jpg
+image: /img/shutterstock_612205724.jpg
 values:
   - heading: How does Laddu registration work?
     imageUrl: /img/noun_form_589531.svg
