@@ -15,6 +15,7 @@ values:
 
       4: We will send you an event invite 2 weeks in advance where you will be
       able to meet said suitors
+    url: how-to-register
   - heading: How is Laddu different?
     imageUrl: /img/noun_fibonacci-sequence_1767617.svg
     text: >-
@@ -28,6 +29,7 @@ values:
       cost of hosting, and then suffer the humiliation of waiting endlessly. Our
       process returns power to our clients, is efficient, and is far less
       expensive way than traditional matchmaking.
+    url: Laddu-difference
   - heading: What is the format of the Laddu event?
     imageUrl: /img/noun_sequence_121702.svg
     text: >-
@@ -59,12 +61,14 @@ values:
 
       6) Contact information cannot be traded during the initial meeting, in
       order to reduce pressure to accept or reject a suitor to his or her face.
+    url: event-format
   - heading: How many people will I meet at an event?
     imageUrl: /img/noun_people_1711210.svg
     text: >
       There are normally 40 people per event, 20 men and 20 women; but sometimes
       due to unforeseen circumstances, a user may cancel last minute. We highly
       discourage cancellations.
+    url: how-many-people
   - heading: Why do you provide conversational cue cards
     imageUrl: /img/noun_Card_1626060.svg
     text: >
@@ -75,17 +79,20 @@ values:
       human behaviour and intimacy. The cards are built in such a way that they
       draw out even the most introverted people from their shell and allow you
       to learn about your suitor’s values fairly quickly.
+    url: cue-cards
   - heading: What type of people will I meet at the event?
     imageUrl: /img/noun_Diversity_52927.svg
     text: >-
       We work very hard to maintain the quality of the crowd and filter out any
       bad apples. Most of our clients are professionals who are seriously
       looking to settle down.
+    url: type-of-people
   - heading: Are 6 minutes per “rishta date” long enough?
     imageUrl: /img/noun_clock_2326370.svg
     text: >-
       They are long enough for you to get a feel for the other person but short
       enough to endure if the person isn’t your cup of tea.
+    url: 6-minutes
   - heading: >-
       Why do you deny potential clients and refuse to sell tickets for your
       events to everyone?
@@ -95,6 +102,7 @@ values:
       the cut. For the overall group experience to be positive, there is an air
       of exclusivity and only people with similar values will be placed together
       in each event.
+    url: refuse-tickets
   - heading: How should I dress for a Laddu event?
     imageUrl: /img/noun_suit_2388838.svg
     text: >-
@@ -103,6 +111,7 @@ values:
       clean outfit that is a true representation of your personality. Ladies, in
       particular, ask us if they should come only in traditional attire- that is
       entirely your call.
+    url: dress-for-a-laddu-event
   - heading: Can my best friend tag along with me to the event?
     imageUrl: /img/noun_celebrity_125787.svg
     text: >-
@@ -110,6 +119,7 @@ values:
       nerves. If you are both single and want to be placed in the same event
       please let us know in the intake call. We provide a 10% discount for
       bundle packages.
+    url: best-friend
   - heading: Can a guardian accompany me to the event?
     imageUrl: /img/noun_parent_1375551.svg
     text: >-
@@ -117,6 +127,7 @@ values:
       sibling or friend, by all means, do so. Bear in mind though, that anyone
       who is not going to partake in the meet and greet will be seated in a
       separate area to protect the privacy of our users.
+    url: guardian-accompany-me
   - heading: Where do Laddu events happen?
     imageUrl: /img/noun_Hotel_1845946.svg
     text: >-
@@ -124,11 +135,13 @@ values:
       fixed locations per se, but we consider key features for each venue
       selection such as privacy, security, location and accessibility. All our
       events happen in private party rooms in high-end hotels and restaurants.
+    url: where-do-laddu-events-happen
   - heading: Is Laddu in my city?
     imageUrl: /img/noun_city_2488436.svg
     text: >-
       Currently, we do events only in Lahore, Islamabad and Toronto but as we
       scale, we aim to add more cities in our network.
+    url: laddu-in-my-city
   - heading: What is your policy against harassment?
     imageUrl: /img/noun_sexual-harassment_657576.svg
     text: >-
@@ -137,6 +150,7 @@ values:
       connect. We take bullying and harassment very seriously. Not only will the
       culprit be asked to leave the event, but they will also be barred from
       ever attending any future Laddu events.
+    url: harassment-policy
   - heading: >-
       Can I pay you extra to purchase the contact information of someone I did
       not match with?
@@ -150,6 +164,7 @@ values:
       interaction between them. If one client likes another client, but the
       interest isn't mutual, we respect that and will not pass along the contact
       information for any amount of money.
+    url: pay-for-information
   - heading: What is your cancellation policy?
     imageUrl: /img/noun_cancellation-time_2596939.svg
     text: >-
@@ -158,6 +173,7 @@ values:
       payment to another event of your choice. Cancellations on the day of the
       event and/or "no-shows" are ineligible for credit, and also marked in our
       system. Repeat "no-shows" are barred from registering a third time.
+    url: cancellation-policy
   - heading: Will you refund my money if I don’t get any matches?
     imageUrl: /img/noun_refund_1238553.svg
     text: >-
@@ -165,6 +181,7 @@ values:
       a large number of potential partners with similar values, in a very short
       period of time. We do our best to keep quality singles in the mix, but the
       burden of charming others enough to court you lies on you.
+    url: refund-no-matches
   - heading: Any tips to help me get the most out of my Laddu experience?
     imageUrl: /img/noun_teamwork_654885.svg
     text: >-
@@ -180,6 +197,7 @@ values:
       of your fantasies. Lastly, be gentle in your interactions. Kindness is
       paramount. Refrain from passing aggressive, aggravating comments and/or
       outright rejections.
+    url: tips
   - heading: How much does a Laddu event cost?
     imageUrl: /img/noun_pakistani-coins_2036824.svg
     text: >-
@@ -188,5 +206,6 @@ values:
       than that. Whereas, unlike the traditional rishta setting, we are
       introducing you to 20 other suitors in that price point. Quite the value
       proposition, if we say so ourselves.
+    url: event-cost
 ---
 
