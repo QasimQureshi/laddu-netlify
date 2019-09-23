@@ -1,5 +1,3 @@
-alert("IN.js");
-
 if (!document.getElementById("EmbedSocialIFrame")) {
     var jsEmbed = document.createElement("script");
     jsEmbed.id = "EmbedSocialIFrame", jsEmbed.src = "https://embedsocial.com/cdn/iframe.js", document.getElementsByTagName("body")[0].appendChild(jsEmbed)
