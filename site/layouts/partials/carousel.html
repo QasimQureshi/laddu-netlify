@@ -10,7 +10,7 @@
 
 .hero-carousel__cell {
   width: 100%;
-  height: 240px;
+  height: 540px;
   color: white;
   background: #ED2;
   background: #EFCE36; /* match gif */
@@ -21,6 +21,8 @@
   max-width: 1000px;
   margin: 0 auto;
   position: relative;
+  top: 50%;
+  transform: translateY(-50%) translateX(10px);
 }
 
 .hero-carousel h1 {
@@ -124,7 +126,7 @@
 @media screen and ( min-width: 768px ) {
 
   .hero-carousel__cell {
-    height: 440px;
+    height: 740px;
   }
 
   .hero-carousel__cell__content {
@@ -335,7 +337,7 @@
 </div>
 
 <script type="text/javascript">
-	var elem = document.querySelector('.main-carousel');
+	var elem = document.querySelector('.hero-carousel');
 	var flkty = new Flickity( elem, {
 	  // options
     wrapAround: true,
