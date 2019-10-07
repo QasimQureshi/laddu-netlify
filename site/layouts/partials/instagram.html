@@ -1,5 +1,68 @@
+<style>
+	@media (max-width: 1024px) {
+		#photo_lightbox_wrapper #right_panel {
+			position: relative !important;
+			left: 50%;
+			transform: translateX(-50%);
+		}
+
+		#photo_lightbox_wrapper #left_panel {
+			position: relative !important;
+			left: 50%;
+			transform: translateX(-50%);
+		}
+	}
+
+	@media only screen and (max-width: 736px) {
+		.mfp-arrow-right:after {
+			display: none;
+			content: '';
+		}
+	}
+
+	@media (max-width: 780px) {
+		#photo_lightbox_wrapper #left_panel {
+			display: block !important;
+		}
+
+		#photo_lightbox_wrapper #right_panel {
+			display: block !important;
+		}
+	}
+
+</style>
+
+<script type="text/javascript">
+
+	$(document).ready(function(){
+		var style = document.createElement('style');
+		style.innerHTML = 
+		`@media (max-width: 1024px) {
+			#photo_lightbox_wrapper #right_panel {
+				position: relative !important;
+				left: 50%;
+				transform: translateX(-50%);
+			}
+
+			#photo_lightbox_wrapper #left_panel {
+				position: relative !important;
+				left: 50%;
+				transform: translateX(-50%);
+			}
+		}`;
+
+		style.rel = 'stylesheet';
+		style.type = 'text/css';
+	})
+</script>
+
 <div class="ph3 mw7 center">
 	<div id="pixlee_container"></div>
 </div>
 
-<script type="text/javascript">window.PixleeAsyncInit = function() {Pixlee.init({apiKey:'r5OD_8R8DPNCr5GTuCw7'});Pixlee.addSimpleWidget({widgetId:'21678'});};</script><script src="//instafeed.assets.pixlee.com/assets/pixlee_widget_1_0_0.js"></script>
+<!-- <script type="text/javascript">window.PixleeAsyncInit = function() {Pixlee.init({apiKey:'r5OD_8R8DPNCr5GTuCw7'});Pixlee.addSimpleWidget({widgetId:'21678'});};</script><script src="//instafeed.assets.pixlee.com/assets/pixlee_widget_1_0_0.js"></script> -->
+
+<script src="https://apps.elfsight.com/p/platform.js" defer></script>
+<div class="mw7 center">
+	<div class="elfsight-app-5150f37c-b9e8-4119-9e22-b92db646f9ea"></div>	
+</div>
