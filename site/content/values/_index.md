@@ -201,7 +201,7 @@ values:
   - heading: How much does a Laddu event cost?
     imageUrl: /img/noun_pakistani-coins_2036824.svg
     text: >-
-      Our ticket is currently priced at PKR. 5000, which is a steal deal
+      Our ticket is currently priced at PKR. 6000/-, which is a steal
       considering that the cost of a singular “rishta trolley spread” costs more
       than that. Whereas, unlike the traditional rishta setting, we are
       introducing you to 20 other suitors in that price point. Quite the value
