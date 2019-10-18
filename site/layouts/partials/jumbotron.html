@@ -15,7 +15,7 @@
       </div>
       {{ if .subtitle }}
       <div class="tc mt-5">
-        <a href="#register" class="btn raise sign-up">Sign-up</a>
+        <a href="https://docs.google.com/forms/d/e/1FAIpQLSfWuAEuVK1LdtixmtCedcCi5zPotqBUG5ssuBlsIsav5iuSHg/viewform?usp=sf_link" target="_blank" class="btn raise">Sign-up</a>
       </div>
       {{ end }}
     </div>
@@ -261,11 +261,13 @@
     var targetElement = $('.modal__overlay');
 
     function showRegistrationModal() {
-        console.log('show called?');
-        MicroModal.show('modal-1');
-        bodyScrollLock.disableBodyScroll(targetElement);
-        history.pushState(null, null, '#register');
-        document.querySelector('body').classList.add('modal-open');
+        window.location = 'https://docs.google.com/forms/d/e/1FAIpQLSfWuAEuVK1LdtixmtCedcCi5zPotqBUG5ssuBlsIsav5iuSHg/viewform?usp=sf_link';
+
+        // console.log('show called?');
+        // MicroModal.show('modal-1');
+        // bodyScrollLock.disableBodyScroll(targetElement);
+        // history.pushState(null, null, '#register');
+        // document.querySelector('body').classList.add('modal-open');
     }
 
     function hideRegistrationModal() {
