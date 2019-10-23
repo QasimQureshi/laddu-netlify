@@ -204,8 +204,8 @@ values:
       Our ticket is currently priced at PKR. 6000/-, which is a steal
       considering that the cost of a singular “rishta trolley spread” costs more
       than that. Whereas, unlike the traditional rishta setting, we are
-      introducing you to 20 other suitors in that price point. Quite the value
-      proposition, if we say so ourselves.
+      introducing you to numerous other suitors in that price point. Quite the
+      value proposition, if we say so ourselves.
     url: event-cost
 ---
 
