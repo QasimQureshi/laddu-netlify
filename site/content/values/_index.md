@@ -65,9 +65,9 @@ values:
   - heading: How many people will I meet at an event?
     imageUrl: /img/noun_people_1711210.svg
     text: >
-      There are normally 40 people per event, 20 men and 20 women; but sometimes
-      due to unforeseen circumstances, a user may cancel last minute. We highly
-      discourage cancellations.
+      Cohort sizes vary per-event, but generally range from 6 - 10, 5 men and 5
+      women; sometimes due to unforeseen circumstances, a user may cancel last
+      minute. We highly discourage cancellations.
     url: how-many-people
   - heading: Why do you provide conversational cue cards
     imageUrl: /img/noun_Card_1626060.svg
