@@ -72,7 +72,7 @@
 		}
 		p.question {
 			font-family: serif;
-			font-size: 3em;
+			font-size: 2em;
 			text-align: center;
 			color: rgb(255, 164, 27);
 		}
@@ -150,7 +150,7 @@
   	<img src="/img/laddu.png" class="logo br0 db mb0 w-100">
   	<div class="question-container">
   		<p class="question">
-	  		Why did the chicken cross the road?
+	  		Your house, containing everything you own, catches fire. After saving your loved ones and pets, you have time to safely make a final dash to save any one item. What would it be? Why?
 	  	</p>
   	</div>
   	<a href="#" class="next-question btn raise">Next question</a>
@@ -259,7 +259,24 @@
     	}
 
     	$(document).ready(function(){
+    		/* Get the element you want displayed in fullscreen mode (a video in this example): */
+			var elem = document.getElementByName("body");
+
+			/* When the openFullscreen() function is executed, open the video in fullscreen.
+			Note that we must include prefixes for different browsers, as they don't support the requestFullscreen method yet */
+			function openFullscreen() {
+			  if (elem.requestFullscreen) {
+			    elem.requestFullscreen();
+			  } else if (elem.mozRequestFullScreen) { /* Firefox */
+			    elem.mozRequestFullScreen();
+			  } else if (elem.webkitRequestFullscreen) { /* Chrome, Safari and Opera */
+			    elem.webkitRequestFullscreen();
+			  } else if (elem.msRequestFullscreen) { /* IE/Edge */
+			    elem.msRequestFullscreen();
+			  }
+			}
     		renderARandomQuestion();
+    		function openFullscreen();
 
     		$('.next-question').on('click', function(event){
     			event.preventDefault();
