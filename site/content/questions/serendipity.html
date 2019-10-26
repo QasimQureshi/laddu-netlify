@@ -61,7 +61,6 @@
 			position: fixed;
 			bottom: 20px;
 			width: calc(100% - 50px);
-
 		}
 
 		@media (max-width: 400px) {
@@ -71,10 +70,11 @@
 			
 		}
 		p.question {
-			font-family: serif;
+			font-family: sans-serif;
 			font-size: 2em;
 			text-align: center;
 			color: rgb(255, 164, 27);
+			font-weight: 100;
 		}
 
 		.logo {
@@ -147,13 +147,16 @@
 	</style>
   </head>
   <body class="">
-  	<img src="/img/laddu.png" class="logo br0 db mb0 w-100">
-  	<div class="question-container">
-  		<p class="question">
-	  		Your house, containing everything you own, catches fire. After saving your loved ones and pets, you have time to safely make a final dash to save any one item. What would it be? Why?
-	  	</p>
+  	<div class="content-container">
+  		<img src="/img/laddu.png" class="logo br0 db mb0 w-100">
+	  	<div class="question-container">
+	  		<p class="question">
+		  		Your house, containing everything you own, catches fire. After saving your loved ones and pets, you have time to safely make a final dash to save any one item. What would it be? Why?
+		  	</p>
+	  	</div>
+	  	<a href="#" class="next-question btn raise">Next question</a>	
   	</div>
-  	<a href="#" class="next-question btn raise">Next question</a>
+  	
     
     <script src="https://code.jquery.com/jquery-3.4.1.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo="
   crossorigin="anonymous"></script>
@@ -259,8 +262,9 @@
     	}
 
     	$(document).ready(function(){
+
     		/* Get the element you want displayed in fullscreen mode (a video in this example): */
-			var elem = document.getElementByName("body");
+			var elem = document.querySelector(".content-container");
 
 			/* When the openFullscreen() function is executed, open the video in fullscreen.
 			Note that we must include prefixes for different browsers, as they don't support the requestFullscreen method yet */
@@ -276,7 +280,6 @@
 			  }
 			}
     		renderARandomQuestion();
-    		function openFullscreen();
 
     		$('.next-question').on('click', function(event){
     			event.preventDefault();
