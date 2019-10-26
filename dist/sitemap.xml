@@ -24,11 +24,31 @@
   </url>
   
   <url>
+    <loc>/questiones/ambience/</loc>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>/questions/ambience/</loc>
+    <priority>0</priority>
+  </url>
+  
+  <url>
     <loc>/contact/</loc>
   </url>
   
   <url>
     <loc>/values/</loc>
+  </url>
+  
+  <url>
+    <loc>/questiones/</loc>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>/questions/</loc>
+    <priority>0</priority>
   </url>
   
 </urlset>
