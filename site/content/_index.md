@@ -80,7 +80,7 @@ icons:
     url: Laddu-difference
 products: []
 subtitle: ' '
-title: Redefining the way you meet Rishtas
+title: Predefining the way you meet Rishtas
 values:
   heading: How Laddu Events Work
   text: >-

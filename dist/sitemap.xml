@@ -8,24 +8,19 @@
   </url>
   
   <url>
+    <loc>/</loc>
+    <lastmod>2019-10-25T11:35:41+05:00</lastmod>
+  </url>
+  
+  <url>
     <loc>/test/</loc>
     <lastmod>2019-10-25T11:35:41+05:00</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
-    <loc>/</loc>
-    <lastmod>2018-11-14T19:02:50-07:00</lastmod>
-  </url>
-  
-  <url>
     <loc>/tech/</loc>
     <lastmod>2018-11-14T19:02:50-07:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>/questiones/ambience/</loc>
-    <priority>0</priority>
   </url>
   
   <url>
@@ -39,11 +34,6 @@
   
   <url>
     <loc>/values/</loc>
-  </url>
-  
-  <url>
-    <loc>/questiones/</loc>
-    <priority>0</priority>
   </url>
   
   <url>
