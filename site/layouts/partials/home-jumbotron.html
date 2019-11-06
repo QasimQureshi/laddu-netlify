@@ -1,0 +1,356 @@
+<div class="jumbotron pv5 pv6-l ph3 bg-center cover cf" style="background-image: url('{{.imageUrl}}')">
+  
+  <div class="jumbotron-content">
+    <div class="db mb3">
+      <div class="mw7 relative bg-fix-primary mb3">
+        <h1 class="f2 f2-l b di lh-title mb3 white mw6">
+          {{.title}}
+        </h1>
+      </div>
+      <div class="mw7 relative bg-fix-primary">
+        {{ if .subtitle }}
+        <p class="b f4 di lh-title mb3 white mw6 bg-primary">
+          {{.subtitle}}
+        </p>
+        {{ end }}
+      </div>
+      {{ if .subtitle }}
+      <div class="tc mt-5">
+        <a href="https://docs.google.com/forms/d/e/1FAIpQLSfTTVfdL73PYou7IRVtopgbTGRPzCNyTvMJAa8mgLkL1-QsCg/viewform?usp=sf_link" target="_blank" class="btn raise">Sign-up</a>
+      </div>
+      {{ end }}
+    </div>
+  </div>
+</div>
+
+<div class="modal micromodal-slide" id="modal-1" aria-hidden="true">
+  <button class="modal__close" aria-label="Close modal">x</button>
+  <div class="modal__overlay" tabindex="-1" data-micromodal-close>
+    <iframe src="https://docs.google.com/forms/d/e/1FAIpQLSfWuAEuVK1LdtixmtCedcCi5zPotqBUG5ssuBlsIsav5iuSHg/viewform?embedded=true" width="100%" height="1929" frameborder="0" marginheight="0" marginwidth="0">Loading…</iframe>
+  </div>
+</div>
+
+<!-- <div id="sign-up-modal" class="modal" tabindex="-1" role="dialog">
+  <div class="modal-dialog modal-lg" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title">Modal title</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+        <iframe src="https://docs.google.com/forms/d/e/1FAIpQLSfWuAEuVK1LdtixmtCedcCi5zPotqBUG5ssuBlsIsav5iuSHg/viewform?embedded=true" width="100%" height="2069" frameborder="0" marginheight="0" marginwidth="0">Loading…</iframe>
+      </div>
+    </div>
+  </div>
+</div> -->
+
+<style type="text/css">
+
+    .jumbotron {
+        min-height: 500px;
+    }
+
+    .jumbotron-content {
+        text-align: center;
+        padding: 2em 4em;
+        background-color: rgba(255, 68, 0, 0.9) !important;
+        border-radius: 50px;
+        float: right;
+        padding-bottom: 0.5em;
+        transition: 0.2s linear background-color;
+    }
+
+    .jumbotron-content:hover {
+        background-color: rgba(255, 68, 0, 0.95) !important;;
+    }
+
+    @media screen and (min-height: 500px) {
+        .jumbotron {
+            position: relative;
+        }
+
+        .jumbotron > .jumbotron-content {
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%) scaleX(-1);
+            float: left;
+        }
+    }
+
+    @media (min-width: 60em) and (min-height: 500px) {
+        .jumbotron {
+            height: calc(100vh - 77px);
+        }
+
+        .jumbotron > .jumbotron-content {
+            max-width: 40%;
+            right: calc(((100vw / 2) - 500px) / 2);
+        }
+    }
+
+    /* flipping jumbotron background */
+    .jumbotron {transform: scaleX(-1);}
+
+    /* undo the vertical flip for all child elements */
+    .jumbotron a { transform: scaleX(1);}
+    .jumbotron * {
+        -webkit-transform:scaleX(-1);
+        -moz-transform:scaleX(-1);
+        -ms-transform:scaleX(-1);
+        -o-transform:scaleX(-1);
+        transform:scaleX(-1);
+    }
+
+  .modal__overlay > .modal__close {
+    position: fixed;
+    left: 10px;
+    top: 10px;
+  }
+
+  @media (min-width: 640px) {
+
+  }
+
+  .sign-up {
+    margin-top: 40px;
+    font-size: 1.5em;
+  }
+
+  .lh-title.bg-primary {
+    background-color: rgba(255, 68, 0, 1) !important;
+  }
+
+  .btn.sign-up {
+    color: #f40 !important;
+    border-color: #f40 !important;
+    background-color: #fff !important;
+  }
+
+  .modal {
+    font-family: -apple-system,BlinkMacSystemFont,avenir next,avenir,helvetica neue,helvetica,ubuntu,roboto,noto,segoe ui,arial,sans-serif;
+    }
+    .modal__overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    overflow-y: scroll;
+    background: rgba(0,0,0,0.6);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 20;
+    }
+
+    .modal__overlay > iframe {
+      overflow-y: scroll;
+      /*margin-top: 120vh;*/
+      height: 100%;
+    }
+    .modal__container {
+    background-color: #fff;
+    padding: 30px;
+    min-width: 600px;
+    max-width: 500px;
+    max-height: 100vh;
+    border-radius: 4px;
+    overflow-y: auto;
+    box-sizing: border-box;
+    }
+    .modal__header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    }
+    .modal__title {
+    margin-top: 0;
+    margin-bottom: 0;
+    font-weight: 600;
+    font-size: 1.25rem;
+    line-height: 1.25;
+    color: #00449e;
+    box-sizing: border-box;
+    }
+    .modal__close {
+    background: transparent;
+    border: 0;
+    }
+    .modal__header .modal__close:before { content: "\2715"; }
+    .modal__content {
+    margin-top: 2rem;
+    margin-bottom: 2rem;
+    line-height: 1.5;
+    color: rgba(0,0,0,.8);
+    }
+    .modal__btn {
+    font-size: .875rem;
+    padding-left: 1rem;
+    padding-right: 1rem;
+    padding-top: .5rem;
+    padding-bottom: .5rem;
+    background-color: #e6e6e6;
+    color: rgba(0,0,0,.8);
+    border-radius: .25rem;
+    border-style: none;
+    border-width: 0;
+    cursor: pointer;
+    -webkit-appearance: button;
+    text-transform: none;
+    overflow: visible;
+    line-height: 1.15;
+    margin: 0;
+    will-change: transform;
+    -moz-osx-font-smoothing: grayscale;
+    -webkit-backface-visibility: hidden;
+    backface-visibility: hidden;
+    -webkit-transform: translateZ(0);
+    transform: translateZ(0);
+    transition: -webkit-transform .25s ease-out;
+    transition: transform .25s ease-out;
+    transition: transform .25s ease-out,-webkit-transform .25s ease-out;
+    }
+    .modal__btn:focus, .modal__btn:hover {
+    -webkit-transform: scale(1.05);
+    transform: scale(1.05);
+    }
+    .modal__btn-primary {
+    background-color: #00449e;
+    color: #fff;
+    }
+    /**************************\
+      Demo Animation Style
+    \**************************/
+    @keyframes mmfadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+    }
+    @keyframes mmfadeOut {
+    from { opacity: 1; }
+    to { opacity: 0; }
+    }
+    @keyframes mmslideIn {
+    from { transform: translateY(15%); }
+    to { transform: translateY(0); }
+    }
+    @keyframes mmslideOut {
+    from { transform: translateY(0); }
+    to { transform: translateY(-10%); }
+    }
+    .micromodal-slide {
+    display: none;
+    }
+    .micromodal-slide.is-open {
+    display: block;
+    }
+    .micromodal-slide[aria-hidden="false"] .modal__overlay {
+    animation: mmfadeIn .3s cubic-bezier(0.0, 0.0, 0.2, 1);
+    }
+    .micromodal-slide[aria-hidden="false"] .modal__container {
+    animation: mmslideIn .3s cubic-bezier(0, 0, .2, 1);
+    }
+    .micromodal-slide[aria-hidden="true"] .modal__overlay {
+    animation: mmfadeOut .3s cubic-bezier(0.0, 0.0, 0.2, 1);
+    }
+    .micromodal-slide[aria-hidden="true"] .modal__container {
+    animation: mmslideOut .3s cubic-bezier(0, 0, .2, 1);
+    }
+    .micromodal-slide .modal__container,
+    .micromodal-slide .modal__overlay {
+    will-change: transform;
+    }
+
+    body.modal-open {
+        overflow: hidden;
+        position: fixed;
+        -webkit-overflow-scrolling: touch;
+    }
+
+    .modal__close {
+        position: fixed;
+        top: 15px;
+        left: calc(600px + ((100vw - 640px) / 2));
+        z-index: 1000;
+        background-color: rgba(227, 228, 218, 1);
+        border-color: rgba(227, 228, 218, 1);
+        width: 30px;
+        height: 30px;
+        border-radius: 15px;
+        color: white;
+        font-size: 0.7em;
+        font-weight: bold;
+        line-height: 0.1;
+        transition: 0.2s linear all;
+    }
+
+    .modal__close:focus {
+        box-shadow: none;
+    }
+
+    .modal__close:hover {
+        background-color: rgba(255, 68, 0, 1);
+        color: white;
+    }
+
+    @media (min-width: 750px) {
+        .modal__close {
+
+        }
+    }
+
+</style>
+
+<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+<script type="text/javascript" src="https://unpkg.com/micromodal/dist/micromodal.min.js"></script>
+<!-- <script type="text/javascript" src="js/micromodal.js"></script> -->
+<script type="text/javascript" src="bodyscroll.js"></script>
+
+<!-- {{ $style := resources.Get "css/test.css" }} -->
+
+<script type="text/javascript">
+  // Testing
+  $(document).ready(function(){
+
+    // Registration modal
+    MicroModal.init({});
+    var targetElement = $('.modal__overlay');
+
+    function showRegistrationModal() {
+        window.location = 'https://docs.google.com/forms/d/e/1FAIpQLSfWuAEuVK1LdtixmtCedcCi5zPotqBUG5ssuBlsIsav5iuSHg/viewform?usp=sf_link';
+
+        // console.log('show called?');
+        // MicroModal.show('modal-1');
+        // bodyScrollLock.disableBodyScroll(targetElement);
+        // history.pushState(null, null, '#register');
+        // document.querySelector('body').classList.add('modal-open');
+    }
+
+    function hideRegistrationModal() {
+        console.log('modal closed'); 
+        MicroModal.close('modal-1');
+        history.back(); 
+        bodyScrollLock.enableBodyScroll(targetElement); 
+        document.querySelector('body').classList.remove('modal-open');
+    }
+
+    
+
+    // Debugging the iframe scrolling bug
+    // $('body').on('click touch', function(event){
+    //     console.log(event.target);
+    // })
+
+    // Opening the modal, if the URL hash contains #register
+    if( window.location.hash === "#register")
+        showRegistrationModal();
+
+
+    $('.modal__close').on('click',hideRegistrationModal);
+    $('.sign-up').on('click', showRegistrationModal);
+    $('.register.link').on('click', showRegistrationModal);
+  })
+
+    
+</script>
