@@ -3,12 +3,12 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   
   <url>
-    <loc>/test/my-first-test/</loc>
+    <loc>/</loc>
     <lastmod>2019-10-25T11:35:41+05:00</lastmod>
   </url>
   
   <url>
-    <loc>/</loc>
+    <loc>/test/my-first-test/</loc>
     <lastmod>2019-10-25T11:35:41+05:00</lastmod>
   </url>
   
