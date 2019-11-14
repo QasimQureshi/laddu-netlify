@@ -16,21 +16,99 @@
       </div>
       {{ if .subtitle }}
       <div class="tc mt-5">
-        <a href="https://docs.google.com/forms/d/e/1FAIpQLSfTTVfdL73PYou7IRVtopgbTGRPzCNyTvMJAa8mgLkL1-QsCg/viewform?usp=sf_link" target="_blank" class="btn raise sign-up-btn">Join now</a>
+        <!-- <a href="https://docs.google.com/forms/d/e/1FAIpQLSfTTVfdL73PYou7IRVtopgbTGRPzCNyTvMJAa8mgLkL1-QsCg/viewform?usp=sf_link" target="_blank" class="btn raise sign-up-btn">Join now</a> -->
+        <a href="#" target="_blank" class="btn raise sign-up-btn">Join now</a>
       </div>
       {{ end }}
     </div>
   </div>
 </div>
 
-<div class="modal micromodal-slide" id="modal-1" aria-hidden="true">
-  <button class="modal__close" aria-label="Close modal">x</button>
+ <div class="modal signup-modal micromodal-slide" id="signup-modal" aria-hidden="true">
+  <!-- <button class="modal__close" aria-label="Close modal">x</button> -->
   <div class="modal__overlay" tabindex="-1" data-micromodal-close>
-    <iframe src="https://docs.google.com/forms/d/e/1FAIpQLSfWuAEuVK1LdtixmtCedcCi5zPotqBUG5ssuBlsIsav5iuSHg/viewform?embedded=true" width="100%" height="1929" frameborder="0" marginheight="0" marginwidth="0">Loading…</iframe>
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+              <h5 class="modal-title">Signup for Laddu</h5>
+              <button type="button" class="close modal__close" data-dismiss="modal" aria-label="Close">
+                <span aria-hidden="true">×</span>
+              </button>
+            </div>
+            <div class="modal-body">
+                <div class="form-container">
+                    <div class="form-row">
+                        <div class="col-6">
+                          <label for="firstname">First name</label>
+                          <input type="text" name="firstname" class="form-control" id="firstname" placeholder="First name" required="">
+                          <div class="valid-feedback">
+                            Looks good!
+                          </div>
+                          <div class="invalid-feedback">
+                              Only alphabets and hyphens, please
+                          </div>
+                        </div>
+                        <div class="col-6">
+                          <label for="lastname">Last name</label>
+                          <input type="text" name="lastname" class="form-control" id="lastname" placeholder="Last name" required="">
+                          <div class="valid-feedback">
+                            Awesome!
+                          </div>
+                          <div class="invalid-feedback">
+                            Only alphabets and hyphens, please
+                          </div>
+                        </div>
+                        <div class="col-12">
+                          <label for="email">Email</label>
+                          <input type="email" name="email" class="form-control" id="email" placeholder="Your email address" required="">
+                          <div class="valid-feedback">
+                            Splendid!
+                          </div>
+                          <div class="invalid-feedback">
+                            Please provide a valid email address
+                          </div>
+                        </div>
+                        <div class="col-4">
+                          <label for="birthdate">Birth date</label>
+                          <input type="date" name="email" class="form-control" id="email" placeholder="Your email address" required="" value="1980-07-01">
+                          <div class="valid-feedback">
+                            Looks good!
+                          </div>
+                        </div>
+
+                        <div class="col-4">
+                          <label for="gender">Gender</label>
+                          <select name="gender" class="form-control">
+                              <option value="female">Female</option>
+                              <option value="male">Male</option>
+                          </select>
+                          <div class="valid-feedback">
+                            Looks good!
+                          </div>
+                        </div>
+
+                        <div class="col-4">
+                          <label for="location">Location</label>
+                          <input type="text" name="location" class="form-control" id="email" placeholder="City" required="true">
+                          <div class="valid-feedback">
+                            Looks good!
+                          </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- asdf -->
+            <div class="modal-footer">
+              <button type="button" class="btn btn-secondary modal__close" data-dismiss="modal">Close</button>
+              <button type="button" class="btn btn-primary">Signup for Free</button>
+            </div>
+        </div>
+    </div>
+     
   </div>
 </div>
 
-<!-- <div id="sign-up-modal" class="modal" tabindex="-1" role="dialog">
+<!-- <div id="signup-modal" class="modal signup-modal micromodal-slide" tabindex="-1" role="dialog" aria-hidden="true">
   <div class="modal-dialog modal-lg" role="document">
     <div class="modal-content">
       <div class="modal-header">
@@ -40,13 +118,287 @@
         </button>
       </div>
       <div class="modal-body">
-        <iframe src="https://docs.google.com/forms/d/e/1FAIpQLSfWuAEuVK1LdtixmtCedcCi5zPotqBUG5ssuBlsIsav5iuSHg/viewform?embedded=true" width="100%" height="2069" frameborder="0" marginheight="0" marginwidth="0">Loading…</iframe>
+        testing
       </div>
     </div>
   </div>
 </div> -->
 
+<!-- 
+    <iframe src="https://docs.google.com/forms/d/e/1FAIpQLSfWuAEuVK1LdtixmtCedcCi5zPotqBUG5ssuBlsIsav5iuSHg/viewform?embedded=true" width="100%" height="1929" frameborder="0" marginheight="0" marginwidth="0">Loading…</iframe>  
+
+    <iframe src="https://docs.google.com/forms/d/e/1FAIpQLSfWuAEuVK1LdtixmtCedcCi5zPotqBUG5ssuBlsIsav5iuSHg/viewform?embedded=true" width="100%" height="2069" frameborder="0" marginheight="0" marginwidth="0">Loading…</iframe> -->
+
 <style type="text/css">
+
+    /* Bootstrap inputs */
+    .form-control.is-valid, .was-validated .form-control:valid {
+        border-color: #28a745;
+        padding-right: calc(1.5em + .75rem);
+        background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 8 8'%3e%3cpath fill='%2328a745' d='M2.3 6.73L.6 4.53c-.4-1.04.46-1.4 1.1-.8l1.1 1.4 3.4-3.8c.6-.63 1.6-.27 1.2.7l-4 4.6c-.43.5-.8.4-1.1.1z'/%3e%3c/svg%3e");
+        background-repeat: no-repeat;
+        background-position: center right calc(.375em + .1875rem);
+        background-size: calc(.75em + .375rem) calc(.75em + .375rem);
+    }
+
+    .form-control::placeholder {
+        color: #777;
+    }
+
+    .form-control:focus {
+        color: #495057;
+        background-color: #fff;
+        border-color: #80bdff;
+        outline: 0;
+        box-shadow: 0 0 0 0.2rem rgba(0,123,255,.25);
+    }
+
+    .form-row * {
+        font: 400 11px system-ui;
+    }
+
+    .form-control.is-invalid, .was-validated .form-control:invalid {
+        border-color: #dc3545;
+        padding-right: calc(1.5em + .75rem);
+        background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' fill='%23dc3545' viewBox='-2 -2 7 7'%3e%3cpath stroke='%23dc3545' d='M0 0l3 3m0-3L0 3'/%3e%3ccircle r='.5'/%3e%3ccircle cx='3' r='.5'/%3e%3ccircle cy='3' r='.5'/%3e%3ccircle cx='3' cy='3' r='.5'/%3e%3c/svg%3E");
+        background-repeat: no-repeat;
+        background-position: center right calc(.375em + .1875rem);
+        background-size: calc(.75em + .375rem) calc(.75em + .375rem);
+    }
+
+    .form-control.is-valid:focus, .was-validated .form-control:valid:focus {
+        border-color: #28a745;
+        box-shadow: 0 0 0 0.2rem rgba(40,167,69,.25);
+    }
+
+    .valid-feedback, .invalid-feedback {
+        font-family: -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,"Helvetica Neue",Arial,"Noto Sans",sans-serif,"Apple Color Emoji","Segoe UI Emoji","Segoe UI Symbol","Noto Color Emoji";
+            font-size: 1rem;
+        font-weight: 400;
+        line-height: 1.5;
+        color: #212529;
+        text-align: left;
+    }
+
+    .form-control.is-invalid:focus, .was-validated .form-control:invalid:focus {
+        border-color: #dc3545;
+        box-shadow: 0 0 0 0.2rem rgba(220,53,69,.25);
+    }
+
+    .invalid-feedback {
+        display: none;
+        width: 100%;
+        margin-top: .25rem;
+        font-size: 100%;
+        color: #dc3545;
+    }
+
+    .valid-feedback {
+        display: none;
+        width: 100%;
+        margin-top: .25rem;
+        font-size: 100%;
+        color: #28a745;
+    }
+
+    .form-control {
+        display: block;
+        box-sizing: border-box;
+        width: 100%;
+        height: calc(1.5em + .75rem + 2px);
+        padding: .375rem .75rem;
+        font-size: 0.8rem;
+        font-weight: 400;
+        line-height: 1.5;
+        color: #495057;
+        background-color: #fff;
+        background-clip: padding-box;
+        border: 1px solid #ced4da;
+        border-radius: .25rem;
+        transition: border-color .15s ease-in-out,box-shadow .15s ease-in-out;
+    }
+
+    .form-control.is-valid~.valid-feedback, .form-control.is-valid~.valid-tooltip, .was-validated .form-control:valid~.valid-feedback, .was-validated .form-control:valid~.valid-tooltip {
+        display: block;
+    }
+
+    .form-control.is-invalid~.invalid-feedback, .form-control.is-invalid~.invalid-tooltip, .was-validated .form-control:invalid~.invalid-feedback, .was-validated .form-control:invalid~.invalid-tooltip {
+        display: block;
+    }
+
+    .form-row>.col, .form-row>[class*=col-] {
+        padding-right: 5px;
+        padding-left: 5px;
+    }
+
+    .input-group {
+        position: relative;
+        display: -ms-flexbox;
+        display: flex;
+        -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+        -ms-flex-align: stretch;
+        align-items: stretch;
+        width: 100%;
+    }
+
+    .input-group>.input-group-append:last-child>.btn:not(:last-child):not(.dropdown-toggle), .input-group>.input-group-append:last-child>.input-group-text:not(:last-child), .input-group>.input-group-append:not(:last-child)>.btn, .input-group>.input-group-append:not(:last-child)>.input-group-text, .input-group>.input-group-prepend>.btn, .input-group>.input-group-prepend>.input-group-text {
+        border-top-right-radius: 0;
+        border-bottom-right-radius: 0;
+    }
+
+    .input-group>.custom-file, .input-group>.custom-select, .input-group>.form-control, .input-group>.form-control-plaintext {
+            position: relative;
+        -ms-flex: 1 1 auto;
+        flex: 1 1 auto;
+        width: 1%;
+        margin-bottom: 0;
+    }
+
+    .input-group-text {
+        display: -ms-flexbox;
+        display: flex;
+        -ms-flex-align: center;
+        align-items: center;
+        padding: .375rem .75rem;
+        margin-bottom: 0;
+        font-size: 0.8rem;
+        font-weight: 400;
+        line-height: 1.5;
+        color: #495057;
+        text-align: center;
+        white-space: nowrap;
+        background-color: #e9ecef;
+        border: 1px solid #ced4da;
+        border-radius: .25rem;
+    }
+
+    .input-group>.custom-select:not(:first-child), .input-group>.form-control:not(:first-child) {
+        border-top-left-radius: 0;
+        border-bottom-left-radius: 0;
+    }
+
+    .form-row>.col, .form-row>[class*=col-] {
+        padding-right: 5px;
+        padding-left: 5px;
+    }
+
+    .mb-3, .my-3 {
+        margin-bottom: 1rem !important;    
+    }
+
+    .form-row {
+        display: -ms-flexbox;
+        display: flex;
+        -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+        margin-right: -5px;
+        margin-left: -5px;
+    }
+
+    .form-container {
+        max-width: 500px;
+        margin: 0 auto;
+    }
+
+    /*asdf*/
+    .modal-footer .btn {
+        box-shadow: none;
+    }
+
+    .modal-footer .btn-primary {
+        color: #fff;
+        background-color: rgba(255, 68, 0, 0.95) !important;
+        border-color: rgba(255, 68, 0, 0.95) !important;
+        transition: 0.3s linear background-color;
+    }
+
+    .modal-footer .btn-secondary {
+        color: #bdbdbd;
+        transition: 0.3s linear color;
+    }
+
+    .modal-footer .btn-secondary:hover {
+        color: #d0d0d0;
+    }
+    
+
+    .modal-footer .btn-primary:hover {
+        background-color: rgba(255, 100, 44, 0.95) !important;
+    }
+
+
+    label {
+        opacity: 1;
+        font-size: 0.8rem !important;
+        display: inline-block;
+        margin-top: .5rem;
+        margin-bottom: .1rem;
+        position: static;
+        background-color: inherit;
+        transition: none;
+        color: inherit;
+        font-size: inherit;;
+    }
+
+    .col, .col-1, .col-10, .col-11, .col-12, .col-2, .col-3, .col-4, .col-5, .col-6, .col-7, .col-8, .col-9, .col-auto, .col-lg, .col-lg-1, .col-lg-10, .col-lg-11, .col-lg-12, .col-lg-2, .col-lg-3, .col-lg-4, .col-lg-5, .col-lg-6, .col-lg-7, .col-lg-8, .col-lg-9, .col-lg-auto, .col-md, .col-md-1, .col-md-10, .col-md-11, .col-md-12, .col-md-2, .col-md-3, .col-md-4, .col-md-5, .col-md-6, .col-md-7, .col-md-8, .col-md-9, .col-md-auto, .col-sm, .col-sm-1, .col-sm-10, .col-sm-11, .col-sm-12, .col-sm-2, .col-sm-3, .col-sm-4, .col-sm-5, .col-sm-6, .col-sm-7, .col-sm-8, .col-sm-9, .col-sm-auto, .col-xl, .col-xl-1, .col-xl-10, .col-xl-11, .col-xl-12, .col-xl-2, .col-xl-3, .col-xl-4, .col-xl-5, .col-xl-6, .col-xl-7, .col-xl-8, .col-xl-9, .col-xl-auto {
+        position: relative;
+        width: 100%;
+        padding-right: 15px;
+        padding-left: 15px;
+    }
+
+
+    .col-4 {
+        -ms-flex: 0 0 33.333333%;
+        flex: 0 0 33.333333%;
+        max-width: 33.333333%;
+    }
+
+    .col-6 {
+        -ms-flex: 0 0 50%;
+        flex: 0 0 50%;
+        max-width: 50%;
+    }
+
+    .modal-header .close {
+        padding: 1rem 1rem;
+        margin: -1rem -1rem -1rem auto;
+    }
+
+    .close {
+        float: right;
+        font-size: 1.5rem;
+        font-weight: 700;
+        line-height: 1;
+        color: #000;
+        text-shadow: 0 1px 0 #fff;
+        opacity: .5;
+    }
+
+    .close:hover {
+        color: #000;
+        text-decoration: none;
+    }
+
+    button.close:focus {
+        box-shadow: none;
+    }
+
+    /* Bootstrap inputs END */
+
+    .modal-header {
+        display: -ms-flexbox;
+        display: flex;
+        -ms-flex-align: start;
+        align-items: flex-start;
+        -ms-flex-pack: justify;
+        justify-content: space-between;
+        padding: 1rem 1rem;
+        border-bottom: 1px solid #dee2e6;
+        border-top-left-radius: .3rem;
+        border-top-right-radius: .3rem;
+    }
 
     .sign-up-btn {
         text-transform: uppercase;
@@ -64,6 +416,43 @@
         float: right;
         padding-bottom: 0.5em;
         transition: 0.2s linear background-color;
+    }
+
+    .modal-content {
+        width: 100%;
+        display: -ms-flexbox;
+        display: flex;
+        -ms-flex-align: stretch;
+        align-items: stretch;
+        -ms-flex-pack: justify;
+        justify-content: space-between;
+        border-bottom: 1px solid #dee2e6;
+        border-top-left-radius: .3rem;
+        border-top-right-radius: .3rem;
+    }
+
+    .modal-content > form {
+        width: 100%;
+    }
+
+    .modal-body {
+        position: relative;
+        -ms-flex: 1 1 auto;
+        flex: 1 1 auto;
+        padding: 1rem;
+    }
+
+    .modal-footer {
+        display: -ms-flexbox;
+        display: flex;
+        -ms-flex-align: center;
+        align-items: center;
+        -ms-flex-pack: end;
+        justify-content: flex-end;
+        padding: 1rem;
+        border-top: 1px solid #dee2e6;
+        border-bottom-right-radius: .3rem;
+        border-bottom-left-radius: .3rem;
     }
 
     .jumbotron-content:hover {
@@ -109,11 +498,11 @@
         transform:scaleX(-1);
     }
 
-  .modal__overlay > .modal__close {
+  /*.modal__overlay > .modal__close {
     position: fixed;
     left: 10px;
     top: 10px;
-  }
+  }*/
 
   @media (min-width: 640px) {
 
@@ -180,11 +569,11 @@
     color: #00449e;
     box-sizing: border-box;
     }
-    .modal__close {
+    /*.modal__close {
     background: transparent;
     border: 0;
-    }
-    .modal__header .modal__close:before { content: "\2715"; }
+    }*/
+    /*.modal__header .modal__close:before { content: "\2715"; }*/
     .modal__content {
     margin-top: 2rem;
     margin-bottom: 2rem;
@@ -274,7 +663,32 @@
         -webkit-overflow-scrolling: touch;
     }
 
-    .modal__close {
+    .modal-dialog {
+        width: 90%;
+        max-width: 700px;
+        position: relative;
+        margin: 30px auto;
+        border-radius: 6px;
+        -webkit-box-shadow: 0 3px 9px rgba(0, 0, 0, .5);
+        box-shadow: 0 3px 9px rgba(0, 0, 0, .5);
+    }
+
+    .modal-content {
+        position: relative;
+        display: -ms-flexbox;
+        display: flex;
+        -ms-flex-direction: column;
+        flex-direction: column;
+        width: 100%;
+        pointer-events: auto;
+        background-color: #fff;
+        background-clip: padding-box;
+        border: 1px solid rgba(0,0,0,.2);
+        border-radius: .3rem;
+        outline: 0;
+    }
+
+/*    .modal__close {
         position: fixed;
         top: 15px;
         left: calc(600px + ((100vw - 640px) / 2));
@@ -304,14 +718,21 @@
         .modal__close {
 
         }
-    }
+    }*/
 
 </style>
 
 <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
 <script type="text/javascript" src="https://unpkg.com/micromodal/dist/micromodal.min.js"></script>
-<!-- <script type="text/javascript" src="js/micromodal.js"></script> -->
+<script type="text/javascript" src="js/micromodal.js"></script>
 <script type="text/javascript" src="bodyscroll.js"></script>
+
+<!-- Isolated Version of Bootstrap, not needed if your site already uses Bootstrap -->
+<link rel="stylesheet" href="https://formden.com/static/cdn/bootstrap-iso.css" />
+
+<!-- Bootstrap Date-Picker Plugin -->
+<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.4.1/js/bootstrap-datepicker.min.js"></script>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.4.1/css/bootstrap-datepicker3.css"/>
 
 <!-- {{ $style := resources.Get "css/test.css" }} -->
 
@@ -324,10 +745,10 @@
     var targetElement = $('.modal__overlay');
 
     function showRegistrationModal() {
-        window.location = 'https://docs.google.com/forms/d/e/1FAIpQLSfWuAEuVK1LdtixmtCedcCi5zPotqBUG5ssuBlsIsav5iuSHg/viewform?usp=sf_link';
+        // window.location = 'https://docs.google.com/forms/d/e/1FAIpQLSfWuAEuVK1LdtixmtCedcCi5zPotqBUG5ssuBlsIsav5iuSHg/viewform?usp=sf_link';
 
-        // console.log('show called?');
-        // MicroModal.show('modal-1');
+        console.log('show called?');
+        MicroModal.show('signup-modal');
         // bodyScrollLock.disableBodyScroll(targetElement);
         // history.pushState(null, null, '#register');
         // document.querySelector('body').classList.add('modal-open');
@@ -335,9 +756,9 @@
 
     function hideRegistrationModal() {
         console.log('modal closed'); 
-        MicroModal.close('modal-1');
+        MicroModal.close('signup-modal');
         history.back(); 
-        bodyScrollLock.enableBodyScroll(targetElement); 
+        // bodyScrollLock.enableBodyScroll(targetElement); 
         document.querySelector('body').classList.remove('modal-open');
     }
 
@@ -354,7 +775,7 @@
 
 
     $('.modal__close').on('click',hideRegistrationModal);
-    $('.sign-up').on('click', showRegistrationModal);
+    $('.sign-up-btn').on('click', function(event){ event.preventDefault();showRegistrationModal();});
     $('.register.link').on('click', showRegistrationModal);
   })
 
