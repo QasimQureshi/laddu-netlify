@@ -1,0 +1,121 @@
+<style type="text/css">
+	.event-image {
+		border-radius: 50% !important;
+	    width: 300px;
+	    height: 300px;
+	    object-fit: cover;
+	}
+
+	.spots-container {
+		display: inline-block;
+	    text-align: left;
+	    position: relative;
+	}
+
+	.spots-container > img {
+		width: 25px;
+	    height: 25px;
+	    object-fit: contain;
+	    position: relative;
+	    top: 5px;
+	}
+
+	.spots-container > span {
+		position: relative;
+		left: -3px;
+	}
+
+	.remaining-spots > span:first-of-type {
+		display: block;
+	}
+
+	.rounded-box {
+		padding: 0px 10px;
+	    background-color: #fff;
+	    border: 2px solid #ddd;
+	    border-radius: 10px;
+	}
+
+	.btn.orange {
+		background-color: rgba(255, 68, 0, 0.9) !important;
+		color: white !important;
+	}
+
+	.next-event .btn.orange {
+		/*font-size: 1em;*/
+	}
+
+	.details-block > h3 {
+    	font-weight: bold;
+	    font-size: 1.3em;
+	    margin-bottom: 10px;
+	}
+
+	.details-block > .date {
+		font-weight: bold;
+	    font-size: 2em;
+	    color: #fff;
+	    text-shadow: 4px 4px #aaa;
+	}
+
+	.details-block > .month, .details-block > .year {
+
+	}
+
+	.event-image-container {
+
+	}
+</style>
+
+<div class="bg-grey-1 pv4 next-event">
+  <div class="flex-l mhn1-l ph3 center mw7">
+    <div class="w-30-l mb0 tc tl-l">
+    	<img class="event-image" src="/img/lahore.jpg">
+    	<div class="event-image-container">
+    		
+    	</div>
+    </div>
+    <div class="w-30-l details-block ph3 tc tr-l">
+    	<h3>DHA Phase 3 <br>
+    	Lahore</h3>
+    	<span class="date">07</span>
+    	<span class="month">December</span>
+    	<br>
+    	<span class="year">2019 (Saturday)</span>
+    	<br>
+    	<a href="#" class="btn sign-up orange raise mb4">Sign up</a>
+    </div>
+    <div class="w-30-l ph3 tc tr-l">
+    	<div class="remaining-spots mb2">
+    		<span>Remaining spots:</span>	
+
+    		<span class="spots-container rounded-box" title="Males">
+				<img src="/img/male.png">
+	    		<span>4</span>	
+	    	</span>
+	    	
+	    	<span class="spots-container rounded-box" title="Females">
+		    	<img src="/img/female.png">
+		    	<span>4</span>
+	    	</span>
+    	</div>
+
+    	<div class="price mb2">
+    		<span class="db">Price (Rs):</span>
+    		<span class="rounded-box">
+    			6000
+    		</span>
+    	</div>
+
+    	<div class="age-range mb2">
+    		<span class="db">Age range:</span>
+    		<span class="rounded-box">
+    			26 - 34
+    		</span>
+    	</div>
+
+
+
+    </div>
+  </div>
+</div>
