@@ -32,8 +32,8 @@ event:
   locality: DHA Phase 3
   price: 6000
   spots:
-    females: 4
-    males: 4
+    females: 2
+    males: -1
 image: /img/shutterstock_313114061.jpg
 intro:
   heading: How is Laddu different from traditional matchmakers?
