@@ -2,7 +2,7 @@
 
 {{ partial "home-jumbotron" (dict "imageUrl" .Params.image "title" .Title "subtitle" .Params.subtitle) }}
 
-{{ partial "icons" }}
+{{ partial "icons" .Params.icons }}
 
 {{ partial "next-event" .Params.event }}
 
