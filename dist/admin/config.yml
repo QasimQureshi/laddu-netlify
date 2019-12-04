@@ -38,6 +38,21 @@ collections: # A list of collections the CMS should be able to edit
           - {label: "Intro", name: intro, widget: object, fields: [
               {label: "Heading", name: "heading", widget: string},
               {label: "Text", name: "text", widget: "text"}]}
+          - {label: Event, name: event, widget: object, fields: [
+              {label: "Auto-manage Event", name: auto, widget: "boolean", default: false},
+              {label: "Image", name: "image", widget: "image", required: true},
+              {label: Locality, name: locality, widget: string, required: true},
+              {label: City, name: city, widget: string, required: true},
+              {label: "Date", name: "date", widget: "date", required: true},
+              {label: Duration, name: duration, widget: string, required: true},
+              {label: "Price", name: 'price', widget: number, default: 6000, required: true},
+              {label: "Age range", name: 'age', widget: 'string', default: "26 - 34", required: true},
+              {label: "Remaining spots", name: "spots", widget: object, fields: [
+                {label: "Females", name: 'females', widget: number, default: 5, required: true},
+                {label: "Males", name: 'males', widget: number, default: 5, required: true}
+              ]}
+
+          ]}
           - {label: "Products", name: products, widget: list, fields: [
               {label: "Image", name: "image", widget: "image"},
               {label: "Text", name: "text", widget: "text"}]}
