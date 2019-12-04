@@ -9,6 +9,8 @@
     <link href="/main.css" rel="stylesheet">
   
 
+  	<link rel="stylesheet" type="text/css" href="/css/hover.css">
+
 	<meta charset="utf-8">
 	<meta http-equiv="x-ua-compatible" content="ie=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
@@ -353,11 +355,12 @@
     }
 
     function hideRegistrationModal() {
+        debugger;
         console.log('modal closed'); 
         MicroModal.close('modal-1');
-        history.back(); 
-        bodyScrollLock.enableBodyScroll(targetElement); 
-        document.querySelector('body').classList.remove('modal-open');
+        
+        
+        
     }
 
     

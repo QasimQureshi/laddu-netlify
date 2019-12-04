@@ -36,6 +36,33 @@
 	    border-radius: 10px;
 	}
 
+	.rounded-box.spots-filled {
+		border: 2px solid rgba(255, 68, 0, 0.9) !important;
+		color: rgba(255, 68, 0, 0.9) !important;
+	}
+
+	.spots-filled-container {
+		color: rgba(255, 68, 0, 1) !important;	
+	}
+	.spots-filled-container > a {
+		color: rgba(255, 68, 0, 0.9) !important;
+		font-weight: bold;
+		transition: 0.4s linear all;
+		text-decoration: none;
+		border-bottom: 1px solid rgba(255, 68, 0, 0.4);
+	}
+
+	.spots-filled-container > a:hover {
+		border-bottom: 2px solid rgba(255, 68, 0, 1);	
+	}
+
+	.rounded-box > i {
+		padding: 0 2px;
+		font-size: 1.2em;
+	    position: relative;
+	    top: 2px;
+	}
+
 	.btn.orange {
 		background-color: rgba(255, 68, 0, 0.9) !important;
 		color: white !important;
@@ -62,62 +89,69 @@
 
 	}
 
-	.event-image-container {
-
+	.next-event .sign-up-btn {
+		text-transform: initial;
 	}
 </style>
 
 <div class="bg-grey-1 pv4 next-event">
   <div class="flex-l mhn1-l ph3 center mw7">
     <div class="w-30-l mb0 tc tl-l">
-    	<img class="event-image" src="/img/lahore.jpg">
+    	<img class="event-image" src="{{.image}}">
     	<div class="event-image-container">
     		
     	</div>
     </div>
     <div class="w-30-l details-block ph3 tc tr-l">
-    	<h3>DHA Phase 3 <br>
-    	Lahore</h3>
-    	<span class="date">07</span>
-    	<span class="month">December</span>
+    	<h3>{{.locality}}<br>
+    	{{.city}}</h3>
+    	<input type="hidden" name="eventDate" value="{{.date}}" />
+    	<input type="hidden" name="auto" value="{{.auto}}" />
+    	<span class="date"></span>&nbsp;
+    	<span class="month"></span>
     	<br>
-    	<span class="year">2019 (Saturday)</span>
+    	<span class="year"></span>
     	<br>
-    	<a href="#" class="btn sign-up orange raise mb4">Sign up</a>
+    	<a href="#" class="btn sign-up sign-up-btn orange raise mb4">Sign up</a>
     </div>
     <div class="w-30-l ph3 tc tr-l">
     	<div class="remaining-spots mb2">
     		<span>Remaining spots:</span>	
 
-    		<span class="spots-container rounded-box" title="Males">
-				<img src="/img/male.png">
-	    		<span>4</span>	
+    		<span class="spots-container rounded-box" aria-label="Males" data-balloon-pos="down">
+				<i class="fas fa-mars"></i>
+	    		<span>{{.spots.males}}</span>	
 	    	</span>
 	    	
-	    	<span class="spots-container rounded-box" title="Females">
-		    	<img src="/img/female.png">
-		    	<span>4</span>
+	    	<span class="spots-container rounded-box" aria-label="Females" data-balloon-pos="down">
+		    	<i class="fas fa-venus"></i>
+		    	<span>{{.spots.females}}</span>
 	    	</span>
+
+	    	<div class="spots-filled-container dn">
+	    		<a href="#" class="sign-up-btn">Sign-up </a> for a spot on the waiting list<br class="dn-l"> or join <a href="#" class="sign-up-btn">upcoming events</a>
+	    	</div>
+	    	
     	</div>
 
     	<div class="time mb2">
     		<span class="db">Time:</span>
     		<span class="rounded-box">
-    			6pm - 8pm
+    			{{.duration}}
     		</span>
     	</div>
 
     	<div class="age-range mb2">
     		<span class="db">Age range:</span>
     		<span class="rounded-box">
-    			26 - 34
+    			{{.age}}
     		</span>
     	</div>
 
     	<div class="price mb2">
     		<span class="db">Price (Rs):</span>
     		<span class="rounded-box">
-    			6000
+    			{{.price}}
     		</span>
     	</div>
 
@@ -126,3 +160,36 @@
     </div>
   </div>
 </div>
+
+<script type="text/javascript">
+	document.addEventListener('DOMContentLoaded', function(event){
+
+		// Initializing tooltips
+		// var elems = document.querySelectorAll('.tooltipped');
+  //   	var instances = M.Tooltip.init(elems, options);
+
+
+		// Render event date
+		var eventDate = new Date(document.querySelector('.details-block > input[name="eventDate"]').value);
+
+		renderEventDate(eventDate);
+
+		function renderEventDate(dateObj){
+			let months = ["January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"],
+				days = ['Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday', 'Sunday'];
+
+			// Ternary conditional, Changes 7 to "07", if current date is a single-digit number
+			document.querySelector('.details-block > .date').textContent = ( dateObj.getDate().toString().length === 1 ? "0" + dateObj.getDate() : dateObj.getDate() );
+			document.querySelector('.details-block > .month').textContent = months[dateObj.getMonth()];
+			document.querySelector('.details-block > .year').textContent = `${dateObj.getFullYear()} (${days[dateObj.getDay() - 1]})`;
+		}
+
+		// If 0 spots remain, the visual formatting classes are added
+		document.querySelectorAll('.spots-container').forEach(function(node){
+			if(Number(node.querySelector('span').textContent) === 0){
+				node.classList.add('spots-filled');
+				document.querySelector('.spots-filled-container').classList.remove('dn')
+			}
+		})
+	})
+</script>
