@@ -33,8 +33,7 @@ event:
   price: 6000
   spots:
     females: 2
-    males: 0
-
+    males: 4
 icons:
   - content: >-
       Create a profile by earnestly answering your preferences. Our matchmakers
