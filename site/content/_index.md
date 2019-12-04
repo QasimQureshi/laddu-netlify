@@ -22,6 +22,18 @@ blurb:
     Muslims globally to connect in person and offline through tailored events.
     The app is currently being alpha tested, but event registration is open for
     Lahore.
+event:
+  age: 26 - 34
+  auto: true
+  city: Lahore
+  date: 2019-12-07T04:12:37.115Z
+  duration: 6pm - 8pm
+  image: /img/lahore.jpg
+  locality: DHA Phase 3
+  price: 6000
+  spots:
+    females: 4
+    males: 4
 image: /img/shutterstock_313114061.jpg
 intro:
   heading: How is Laddu different from traditional matchmakers?
@@ -43,41 +55,6 @@ intro:
     additional cost of hosting, and then suffer the humiliation of waiting
     endlessly. Our process returns power to our clients, is efficient, and is
     far less expensive way than traditional matchmaking.
-beans:
-  - 1
-  - 2
-  - 3
-  - 4
-  - 5
-icons:
-  - heading: How does Laddu registration work?
-    imageUrl: /img/noun_form_589531.svg
-    text: >
-      1: Sign up on our website and create a basic profile.  
-
-      2: Our matchmakers will get in touch with you, do an intake interview and
-      process payments.  
-
-      3: Based on your responses our algorithm will match you with suitable
-      singles who display similar values.  
-
-      4: We will send you an event invite 2 weeks in advance where you will be
-      able to meet said suitors
-    url: how-to-register
-  - heading: How is Laddu different?
-    imageUrl: /img/noun_fibonacci-sequence_1767617.svg
-    text: >-
-      For starters, we are the antidote to misogynistic Rishta aunties who ask
-      regressive questions and shame both men and women. Unlike traditional
-      matchmaking firms, we are a transparent company and have no gimmicks. We
-      do not solicit outrageous sums of money on pretentious claims, we do not
-      have scary contracts and most importantly we create a safe space for our
-      clients to meet several suitable suitors in a short time span. You will
-      not have to entertain people in your drawing room and endure an additional
-      cost of hosting, and then suffer the humiliation of waiting endlessly. Our
-      process returns power to our clients, is efficient, and is far less
-      expensive way than traditional matchmaking.
-    url: Laddu-difference
 products: []
 subtitle: ' '
 title: A better way to meet Rishtas
