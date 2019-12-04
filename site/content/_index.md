@@ -24,7 +24,7 @@ blurb:
     Lahore.
 event:
   age: 26 - 34
-  auto: true
+  auto: false
   city: Lahore
   date: 2019-12-07T04:12:37.115Z
   duration: 6pm - 8pm
