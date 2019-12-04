@@ -34,6 +34,31 @@ event:
   spots:
     females: 2
     males: 0
+icons:
+  - content: >-
+      Create a profile by earnestly answering your preferences. Our matchmakers
+      will then get in touch with you.
+    header: Sign up
+    imageClass: fas fa-clipboard-list
+    url: '/values#how-to-register'
+  - content: >-
+      We will send you an event invite in advance where you will be able to meet
+      multiple rishtas, in a single evening
+    header: Multiple rishtas
+    imageClass: fas fa-users
+    url: '/values#how-many-people'
+  - content: >-
+      We pre-vet members to make sure that Laddu events are a great experience
+      for all attendees.
+    header: Account verification
+    imageClass: fas fa-user-check
+    url: '/values#type-of-people'
+  - content: >-
+      Contact information cannot be traded during the initial meeting, in order
+      to reduce pressure to accept or reject a suitor to his or her face.
+    header: Privacy
+    imageClass: fas fa-shield-alt
+    url: '/values#pay-for-information'
 image: /img/shutterstock_313114061.jpg
 intro:
   heading: How is Laddu different from traditional matchmakers?
