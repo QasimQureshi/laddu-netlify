@@ -62,87 +62,10 @@
 <div class="bg-off-white pv4 cf">
 
 	<div class="icons-container mw7 center">
-		{{.icons}}
-		<div class="icon-box w-25-l w-50 fl tc mb5">
-			<div class="img-container mx-auto">
-				<i class="fas fa-clipboard-list"></i>
-			</div>
-			<h3>Sign up</h3>
-			<hr>
-			<p>Create a profile by earnestly answering your preferences.
-Our matchmakers will then get in touch with you.</p>
-			<a href="/values#how-to-register" class="btn raise">Learn more</a>
-		</div>
 
-		<div class="icon-box w-25-l w-50 fl tc mb5">
-			<div class="img-container mx-auto">
-				<!-- <img src="img/noun_group_1273480.svg" alt="registration icon"> -->
-				<i class="fas fa-users"></i>
-			</div>
-			<h3>Multiple rishtas</h3>
-			<hr>
-			<p>We will send you an event invite in advance where you will be able to meet multiple rishtas, in a single evening</p>
-			<a href="/values#how-many-people" class="btn raise">Learn more</a>
-		</div>
-
-		<div class="icon-box w-25-l w-50 fl tc mb5">
-			<div class="img-container mx-auto">
-				<i class="fas fa-user-check"></i>
-			</div>
-			<h3>Account verification</h3>
-			<hr>
-			<p>We pre-vet members to make sure that Laddu events are a great experience for all attendees.</p>
-			<a href="/values#type-of-people" class="btn raise">Learn more</a>
-		</div>
-
-		<!-- <div class="icon-box w-25-l w-50 fl tc mb5">
-			<div class="img-container mx-auto">
-				<img src="img/registration.svg" alt="registration icon">
-			</div>
-			<h3>Customized rishtas</h3>
-			<hr>
-			<p>Based on your responses our algorithm will match you with suitable singles who display similar values.</p>
-			<a href="/values" class="btn raise">Learn more</a>
-		</div> -->
-
-		<!-- <div class="icon-box w-25-l w-50 fl tc mb5">
-			<div class="img-container mx-auto">
-				<img src="img/registration.svg" alt="registration icon">
-			</div>
-			<h3>Speed Rishta-dates</h3>
-			<hr>
-			<p>At the event, men and women are rotated to meet each other over a series of short “ rishta dates”. The women will remain seated while the men will move onto the next table when the bell rings. Conversational cue cards will be provided on each table to facilitate your interaction</p>
-			<a href="/values" class="btn raise">Learn more</a>
-		</div> -->
-
-		<!-- <div class="icon-box w-25-l w-50 fl tc mb5">
-			<div class="img-container mx-auto">
-				<img src="img/registration.svg" alt="registration icon">
-			</div>
-			<h3>Scorecard</h3>
-			<hr>
-			<p>After each interaction, you should keep notes about the person you just met. At the end of the evening, you take home the pamphlet with your notes, and go to our website to enter who your favourite suitors were.</p>
-			<a href="/values" class="btn raise">Learn more</a>
-		</div> -->
-
-		<!-- <div class="icon-box w-25-l w-50 fl tc mb5">
-			<div class="img-container mx-auto">
-				<img src="img/registration.svg" alt="registration icon">
-			</div>
-			<h3>Matches</h3>
-			<hr>
-			<p>If both participants like one another, it is a match. We will get in touch with you and set up the next solo meeting between you and your match(es).</p>
-			<a href="/values" class="btn raise">Learn more</a>
-		</div> -->
-
-		<div class="icon-box w-25-l w-50 fl tc mb5">
-			<div class="img-container mx-auto">
-				<i class="fas fa-shield-alt"></i>
-			</div>
-			<h3>Privacy</h3>
-			<hr>
-			<p>Contact information cannot be traded during the initial meeting, in order to reduce pressure to accept or reject a suitor to his or her face.</p>
-			<a href="/values#pay-for-information" class="btn raise">Learn more</a>
-		</div>
+	{{ range $index, $element := .icons }}
+		{{ partial "icon-box" $element}}
+	{{ end }}
+	
 	</div>
 </div>
