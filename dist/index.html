@@ -11,7 +11,7 @@
   
 
   	<link rel="stylesheet" type="text/css" href="/css/hover.css">
-
+  	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.7.2/animate.min.css">
 	<meta charset="utf-8">
 	<meta http-equiv="x-ua-compatible" content="ie=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
@@ -801,16 +801,18 @@
         console.log('show called?');
         MicroModal.show('signup-modal');
         
+        history.pushState(null, null, '#register');
         
-        
+        animateCSS('.modal__overlay > .modal-dialog', 'bounce');
     }
 
     function hideRegistrationModal() {
         console.log('modal closed'); 
         MicroModal.close('signup-modal');
-        history.back(); 
+        history.back();
         
-        document.querySelector('body').classList.remove('modal-open');
+        
+        animateCSS('.modal__overlay > .modal-dialog', 'fadeOut');
     }
 
     
@@ -829,6 +831,20 @@
     $('.sign-up-btn').on('click', function(event){ event.preventDefault();showRegistrationModal();});
     $('.register.link').on('click', showRegistrationModal);
   })
+
+    function animateCSS(element, animationName, callback) {
+        const node = document.querySelector(element)
+        node.classList.add('animated', animationName)
+
+        function handleAnimationEnd() {
+            node.classList.remove('animated', animationName)
+            node.removeEventListener('animationend', handleAnimationEnd)
+
+            if (typeof callback === 'function') callback()
+        }
+
+        node.addEventListener('animationend', handleAnimationEnd)
+    }
 
     
 </script>

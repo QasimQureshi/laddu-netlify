@@ -10,7 +10,7 @@
   
 
   	<link rel="stylesheet" type="text/css" href="/css/hover.css">
-
+  	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.7.2/animate.min.css">
 	<meta charset="utf-8">
 	<meta http-equiv="x-ua-compatible" content="ie=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
@@ -359,8 +359,8 @@
         console.log('modal closed'); 
         MicroModal.close('modal-1');
         
-        
-        
+        bodyScrollLock.enableBodyScroll(targetElement); 
+        document.querySelector('body').classList.remove('modal-open');
     }
 
     

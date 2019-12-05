@@ -754,16 +754,18 @@
         console.log('show called?');
         MicroModal.show('signup-modal');
         // bodyScrollLock.disableBodyScroll(targetElement);
-        // history.pushState(null, null, '#register');
+        history.pushState(null, null, '#register');
         // document.querySelector('body').classList.add('modal-open');
+        animateCSS('.modal__overlay > .modal-dialog', 'bounce');
     }
 
     function hideRegistrationModal() {
         console.log('modal closed'); 
         MicroModal.close('signup-modal');
-        history.back(); 
+        history.back();
         // bodyScrollLock.enableBodyScroll(targetElement); 
-        document.querySelector('body').classList.remove('modal-open');
+        // document.querySelector('body').classList.remove('modal-open');
+        animateCSS('.modal__overlay > .modal-dialog', 'fadeOut');
     }
 
     
@@ -782,6 +784,20 @@
     $('.sign-up-btn').on('click', function(event){ event.preventDefault();showRegistrationModal();});
     $('.register.link').on('click', showRegistrationModal);
   })
+
+    function animateCSS(element, animationName, callback) {
+        const node = document.querySelector(element)
+        node.classList.add('animated', animationName)
+
+        function handleAnimationEnd() {
+            node.classList.remove('animated', animationName)
+            node.removeEventListener('animationend', handleAnimationEnd)
+
+            if (typeof callback === 'function') callback()
+        }
+
+        node.addEventListener('animationend', handleAnimationEnd)
+    }
 
     
 </script>
