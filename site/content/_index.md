@@ -26,7 +26,7 @@ event:
   age: 26 - 34
   auto: false
   city: Lahore
-  date: 2019-12-07T04:12:37.115Z
+  date: 2019-12-25T04:12:37.115Z
   duration: 6pm - 8pm
   image: /img/lahore.jpg
   locality: DHA Phase 3
@@ -81,6 +81,56 @@ intro:
     endlessly. Our process returns power to our clients, is efficient, and is
     far less expensive way than traditional matchmaking.
 products: []
+slide:
+  - color: 'rgb(255, 68, 0)'
+    description: >-
+      Finding the right partner is a numbers game. You’ll encounter many frogs
+      before you meet your prince. Laddu events facilitate you to meet a large
+      number of suitors in a short period of time.
+    hasImage: true
+    imageURL: /img/blog-chemex.jpg
+    title: Connect with multiple Rishtas in a single event
+  - color: '#8C8'
+    description: >-
+      We find rishta meet-ups where women have to awkwardly serve tea archaic
+      and dehumanizing. Allow us to serve the tea, you ask the pertinent
+      questions.
+    hasImage: false
+    imageURL: /img/blog-index.jpg
+    title: Reclaim the Trolley-pushing Toxic Rishta Culture
+  - color: '#FFDA41'
+    description: >-
+      Imagine hosting numerous dinners for multiple rishtas, and potentially not
+      liking a single one of them. The whole ordeal can be utterly exhausting,
+      especially for women who traditionally host the men. Our events take away
+      the pressure of hosting and allow you to connect you with potential
+      partners in a more time-efficient and dignified manner.
+    hasImage: false
+    imageURL: /img/rings.jpeg
+    title: An Efficient Way of Connecting
+  - color: 'rgba(255, 68, 0, 1)'
+    description: >-
+      Meeting people in real-life, as opposed to meeting them online, affords a
+      better opportunity to gauge compatibility.
+    hasImage: false
+    imageURL: /img/about-single-origin.jpg
+    title: Meet Pre-Vetted People
+  - color: 'rgb(47, 97, 210)'
+    description: >-
+      Immediately after the event we will email you your matches and facilitate
+      further interactions, thereby ensuring that no one gets ghosted. With us,
+      you will never be placed in limbo endlessly wondering whether or not a
+      suitor likes you.
+    hasImage: false
+    imageURL: /img/blog-flavor_wheel.jpg
+    title: No more Ghosting
+  - color: '#8C8'
+    description: >-
+      Meeting people in real-life, versus meeting them online, affords you a
+      better opportunity to gauge your compatibility.
+    hasImage: false
+    imageURL: /img/about-shade-grown.jpg
+    title: Connect better
 subtitle: ' '
 title: A better way to meet Rishtas
 values:
