@@ -120,7 +120,7 @@
       
       <div class="tc mt-5">
         
-        <a href="#" target="_blank" class="btn raise sign-up-btn">Join now</a>
+        <a href="#" class="btn raise sign-up-btn">Join now</a>
       </div>
       
     </div>
@@ -796,23 +796,23 @@
     var targetElement = $('.modal__overlay');
 
     function showRegistrationModal() {
-        
+        window.location.href = 'https://docs.google.com/forms/d/e/1FAIpQLSfTTVfdL73PYou7IRVtopgbTGRPzCNyTvMJAa8mgLkL1-QsCg/viewform?usp=sf_link';
 
         console.log('show called?');
-        MicroModal.show('signup-modal');
         
-        history.pushState(null, null, '#register');
         
-        animateCSS('.modal__overlay > .modal-dialog', 'bounce');
+        
+        
+        
     }
 
     function hideRegistrationModal() {
-        console.log('modal closed'); 
+        
+        
+        
         MicroModal.close('signup-modal');
         history.back();
         
-        
-        animateCSS('.modal__overlay > .modal-dialog', 'fadeOut');
     }
 
     
@@ -828,7 +828,12 @@
 
 
     $('.modal__close').on('click',hideRegistrationModal);
-    $('.sign-up-btn').on('click', function(event){ event.preventDefault();showRegistrationModal();});
+    $('.sign-up-btn').on('click', function(event){ 
+        event.preventDefault();showRegistrationModal();
+        
+        
+        
+    });
     $('.register.link').on('click', showRegistrationModal);
   })
 
