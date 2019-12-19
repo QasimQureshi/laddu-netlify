@@ -26,7 +26,7 @@ event:
   age: 26 - 34
   auto: false
   city: Lahore
-  date: 2019-12-07T04:12:37.115Z
+  date: 2019-12-25T04:12:37.115Z
   duration: 6pm - 8pm
   image: /img/lahore.jpg
   locality: DHA Phase 3
@@ -81,34 +81,57 @@ intro:
     additional cost of hosting, and then suffer the humiliation of waiting
     endlessly. Our process returns power to our clients, is efficient, and is
     far less expensive way than traditional matchmaking.
-products: []
+slide:
+  - color: 'rgb(255, 68, 0)'
+    description: >-
+      Finding the right partner is a numbers game. You’ll encounter many frogs
+      before you meet your prince. Laddu events facilitate you to meet a large
+      number of suitors in a short period of time.
+    hasImage: true
+    imageURL: /img/blog-chemex.jpg
+    title: Connect with multiple Rishtas in a single event
+  - color: '#8C8'
+    description: >-
+      We find rishta meet-ups where women have to awkwardly serve tea archaic
+      and dehumanizing. Allow us to serve the tea, you ask the pertinent
+      questions.
+    hasImage: false
+    imageURL: /img/blog-index.jpg
+    title: Reclaim the Trolley-pushing Toxic Rishta Culture
+  - color: '#FFDA41'
+    description: >-
+      Imagine hosting numerous dinners for multiple rishtas, and potentially not
+      liking a single one of them. The whole ordeal can be utterly exhausting,
+      especially for women who traditionally host the men. Our events take away
+      the pressure of hosting and allow you to connect you with potential
+      partners in a more time-efficient and dignified manner.
+    hasImage: false
+    imageURL: /img/rings.jpeg
+    title: An Efficient Way of Connecting
+  - color: 'rgba(255, 68, 0, 1)'
+    description: >-
+      Meeting people in real-life, as opposed to meeting them online, affords a
+      better opportunity to gauge compatibility.
+    hasImage: false
+    imageURL: /img/about-single-origin.jpg
+    title: Meet Pre-Vetted People
+  - color: 'rgb(47, 97, 210)'
+    description: >-
+      Immediately after the event we will email you your matches and facilitate
+      further interactions, thereby ensuring that no one gets ghosted. With us,
+      you will never be placed in limbo endlessly wondering whether or not a
+      suitor likes you.
+    hasImage: false
+    imageURL: /img/blog-flavor_wheel.jpg
+    title: No more Ghosting
+  - color: '#8C8'
+    description: >-
+      Meeting people in real-life, versus meeting them online, affords you a
+      better opportunity to gauge your compatibility.
+    hasImage: false
+    imageURL: /img/about-shade-grown.jpg
+    title: Connect better
 subtitle: ' '
 title: A better way to meet Rishtas
-values:
-  heading: How Laddu Events Work
-  text: >-
-    Our events encourage eligible single Muslims to meet a large number of
-    potential partners with similar values, in a very short period of time. Each
-    event caters up to 40 people, advance registration is required. Based on
-    your values, our algorithm places you in a specific cohort of like-minded
-    single Muslims.
-
-    <br /><br />
-
-    At the event, men and women are rotated to meet each other over a series of
-    short " rishta dates" that last six minutes each. At the end of the event,
-    participants submit a list of people they enjoyed interacting with and would
-    like to get to know more. If both participants liked one another, there is a
-    match, and we forward contact information to both parties. Contact
-    information cannot be traded during the initial meeting, in order to reduce
-    pressure to accept or reject a suitor to his or her face.
-
-    <br /><br />
-
-    On said date, you're free to hold a conversation on your own but we highly
-    recommend using our conversational cue cards that are based on research done
-    by psychologists and social scientists that study intimacy. These cards
-    enable you to learn about values fairly quickly and create an easy flow of
-    conversation.
 ---
 
