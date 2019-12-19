@@ -130,10 +130,6 @@ slide:
     hasImage: false
     imageURL: /img/about-shade-grown.jpg
     title: Connect better
-  - color: 'rgb(255, 68, 0)'
-    description: Testing
-    hasImage: false
-    title: Testing
 subtitle: ' '
 title: A better way to meet Rishtas
 ---
