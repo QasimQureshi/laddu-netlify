@@ -17,7 +17,7 @@
       {{ if .subtitle }}
       <div class="tc mt-5">
         <!-- <a href="https://docs.google.com/forms/d/e/1FAIpQLSfTTVfdL73PYou7IRVtopgbTGRPzCNyTvMJAa8mgLkL1-QsCg/viewform?usp=sf_link" target="_blank" class="btn raise sign-up-btn">Join now</a> -->
-        <a href="#" target="_blank" class="btn raise sign-up-btn">Join now</a>
+        <a href="#" class="btn raise sign-up-btn">Join now</a>
       </div>
       {{ end }}
     </div>
@@ -749,23 +749,23 @@
     var targetElement = $('.modal__overlay');
 
     function showRegistrationModal() {
-        // window.location = 'https://docs.google.com/forms/d/e/1FAIpQLSfWuAEuVK1LdtixmtCedcCi5zPotqBUG5ssuBlsIsav5iuSHg/viewform?usp=sf_link';
+        window.location.href = 'https://docs.google.com/forms/d/e/1FAIpQLSfTTVfdL73PYou7IRVtopgbTGRPzCNyTvMJAa8mgLkL1-QsCg/viewform?usp=sf_link';
 
         console.log('show called?');
-        MicroModal.show('signup-modal');
+        // MicroModal.show('signup-modal');
         // bodyScrollLock.disableBodyScroll(targetElement);
-        history.pushState(null, null, '#register');
+        // history.pushState(null, null, '#register');
         // document.querySelector('body').classList.add('modal-open');
-        animateCSS('.modal__overlay > .modal-dialog', 'bounce');
+        // animateCSS('.modal__overlay > .modal-dialog', 'bounceInDown');
     }
 
     function hideRegistrationModal() {
-        console.log('modal closed'); 
-        MicroModal.close('signup-modal');
-        history.back();
+        
         // bodyScrollLock.enableBodyScroll(targetElement); 
         // document.querySelector('body').classList.remove('modal-open');
-        animateCSS('.modal__overlay > .modal-dialog', 'fadeOut');
+        MicroModal.close('signup-modal');
+        history.back();
+        // animateCSS('.modal__overlay > .modal-dialog', 'fadeOut');
     }
 
     
@@ -781,7 +781,12 @@
 
 
     $('.modal__close').on('click',hideRegistrationModal);
-    $('.sign-up-btn').on('click', function(event){ event.preventDefault();showRegistrationModal();});
+    $('.sign-up-btn').on('click', function(event){ 
+        event.preventDefault();showRegistrationModal();
+        // console.log('BOOGA BOOGA');
+        // asdf
+        // window.location.href = 'https://docs.google.com/forms/d/e/1FAIpQLSfTTVfdL73PYou7IRVtopgbTGRPzCNyTvMJAa8mgLkL1-QsCg/viewform?usp=sf_link';
+    });
     $('.register.link').on('click', showRegistrationModal);
   })
 
