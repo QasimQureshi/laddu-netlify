@@ -61,10 +61,21 @@
   line-height: 1.1;
 }
 
+.slogan--easy {
+  background-color: rgb(255, 68, 0);
+}
+
 .slogan--tagline {
+  background-color: rgba(247, 194, 0, 0.9);
+  /*filter: blur(0.8px); */
   margin-top: 10px;
   font-size: 1.2rem;
-  color: #444;
+  color: #fff;
+  transition: 0.2s linear background-color;
+}
+
+.slogan--tagline:hover {
+  background-color: rgba(247, 194, 0, 1);
 }
 
 .feature-list {
@@ -303,8 +314,9 @@
 <script src="https://unpkg.com/flickity@2/dist/flickity.pkgd.min.js"></script>
 
 <div class="hero-carousel" data-flickity="" data-js="hero-carousel">
-
-	<div class="hero-carousel__cell hero-carousel__cell--2 first">
+<!-- asdf -->
+	<div class="hero-carousel__cell hero-carousel__cell--2 first"
+        style="background-image: url(/img/shutterstock_313114061.jpg)">
       <div class="hero-carousel__cell__content">
         <p class="slogan slogan--easy">Connect with multiple Rishtas in a single event</p>
         <p class="slogan slogan--tagline">Finding the right partner is a numbers game. You’ll encounter many frogs before you meet your prince. Laddu events facilitate you to meet a large number of suitors in a short period of time.</p>
@@ -353,7 +365,7 @@
 	var flkty = new Flickity( elem, {
 	  // options
     wrapAround: true,
-    autoPlay: true,
+    // autoPlay: true,
 	  cellAlign: 'left',
 	  contain: true
 	});

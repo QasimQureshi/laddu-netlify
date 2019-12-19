@@ -1281,10 +1281,21 @@ On said date, you&rsquo;re free to hold a conversation on your own but we highly
   line-height: 1.1;
 }
 
+.slogan--easy {
+  background-color: rgb(255, 68, 0);
+}
+
 .slogan--tagline {
+  background-color: rgba(247, 194, 0, 0.9);
+   
   margin-top: 10px;
   font-size: 1.2rem;
-  color: #444;
+  color: #fff;
+  transition: 0.2s linear background-color;
+}
+
+.slogan--tagline:hover {
+  background-color: rgba(247, 194, 0, 1);
 }
 
 .feature-list {
@@ -1522,7 +1533,8 @@ On said date, you&rsquo;re free to hold a conversation on your own but we highly
 
 <div class="hero-carousel" data-flickity="" data-js="hero-carousel">
 
-	<div class="hero-carousel__cell hero-carousel__cell--2 first">
+	<div class="hero-carousel__cell hero-carousel__cell--2 first"
+        style="background-image: url(/img/shutterstock_313114061.jpg)">
       <div class="hero-carousel__cell__content">
         <p class="slogan slogan--easy">Connect with multiple Rishtas in a single event</p>
         <p class="slogan slogan--tagline">Finding the right partner is a numbers game. You’ll encounter many frogs before you meet your prince. Laddu events facilitate you to meet a large number of suitors in a short period of time.</p>
@@ -1571,7 +1583,7 @@ On said date, you&rsquo;re free to hold a conversation on your own but we highly
 	var flkty = new Flickity( elem, {
 	  
     wrapAround: true,
-    autoPlay: true,
+    
 	  cellAlign: 'left',
 	  contain: true
 	});
