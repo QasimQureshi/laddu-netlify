@@ -17,6 +17,7 @@ collections: # A list of collections the CMS should be able to edit
       - {label: "Body", name: "body", widget: "markdown"}
   - name: "pages"
     label: "Pages"
+    create: true
     fields: # The fields each document in this collection have
       - {label: "Title", name: "title", widget: "string"}
       - {label: "Publish Date", name: "date", widget: "datetime"}
@@ -57,13 +58,12 @@ collections: # A list of collections the CMS should be able to edit
                 {label: "Males", name: 'males', widget: number, default: 5, required: true}
               ]}
           ]}
-          - {label: Slides, name: slide, widget: 'list', fields: [
-            {label: "Image background? (no, for color)", name: 'hasImage', widget: "boolean", default: false},
-            {label: "Image", name: imageURL, widget: "image", required: false},
-            {label: "Background color", name: 'color', widget: "string", default: "rgb(255, 68, 0)"},
-            {label: "Title text", name: 'title', widget: "string"},
-            {label: "Detailed description", name: 'description', widget: "string"}
-          ]}
+          - {label: "Products", name: products, widget: list, fields: [
+              {label: "Image", name: "image", widget: "image"},
+              {label: "Text", name: "text", widget: "text"}]}
+          - {label: "Values", name: "values", widget: "object", fields: [
+              {label: "Heading", name: "heading", widget: string},
+              {label: "Text", name: "text", widget: "text"}]}
       - file: "site/content/contact/_index.md"
         label: "Contact Page"
         name: "contact"
