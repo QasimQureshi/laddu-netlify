@@ -26,13 +26,13 @@ event:
   age: 26 - 34
   auto: false
   city: Lahore
-  date: 2019-12-25T04:12:37.115Z
+  date: 2020-01-05T04:12:37.115Z
   duration: 6pm - 8pm
   image: /img/lahore.jpg
   locality: DHA Phase 3
   price: 6000
   spots:
-    females: 2
+    females: 5
     males: 4
 icons:
   - content: >-
@@ -59,7 +59,6 @@ icons:
     header: Privacy
     imageClass: fas fa-shield-alt
     url: '/values#pay-for-information'
-    
 image: /img/shutterstock_313114061.jpg
 intro:
   heading: How is Laddu different from traditional matchmakers?
