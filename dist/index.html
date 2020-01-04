@@ -172,7 +172,7 @@
                           </div>
                         </div>
                         <div class="col-4">
-                          <label for="birthdate">Birth date</label>
+                          <label for="birthdate">Date of Birth</label>
                           <input type="date" name="email" class="form-control" id="email" placeholder="Your email address" required="" value="1980-07-01">
                           <div class="valid-feedback">
                             Looks good!
@@ -796,14 +796,14 @@
     var targetElement = $('.modal__overlay');
 
     function showRegistrationModal() {
-        window.location.href = 'https://docs.google.com/forms/d/e/1FAIpQLSfTTVfdL73PYou7IRVtopgbTGRPzCNyTvMJAa8mgLkL1-QsCg/viewform?usp=sf_link';
+        
 
-        console.log('show called?');
         
-        
-        
-        
-        
+        MicroModal.show('signup-modal');
+        bodyScrollLock.disableBodyScroll(targetElement);
+        history.pushState(null, null, '#register');
+        document.querySelector('body').classList.add('modal-open');
+        animateCSS('.modal__overlay > .modal-dialog', 'bounceInDown');
     }
 
     function hideRegistrationModal() {
@@ -829,7 +829,8 @@
 
     $('.modal__close').on('click',hideRegistrationModal);
     $('.sign-up-btn').on('click', function(event){ 
-        event.preventDefault();showRegistrationModal();
+        event.preventDefault();
+        showRegistrationModal();
         
         
         
