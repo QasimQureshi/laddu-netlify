@@ -51,9 +51,7 @@
                         <div class="col-6">
                           <label for="lastname">Last name</label>
                           <input type="text" name="lastname" class="form-control" id="lastname" placeholder="Last name" required="">
-                          <div class="valid-feedback">
-                            Awesome!
-                          </div>
+                          
                           <div class="invalid-feedback">
                             Only alphabets and hyphens, please
                           </div>
@@ -61,16 +59,25 @@
                         <div class="col-12">
                           <label for="email">Email</label>
                           <input type="email" name="email" class="form-control" id="email" placeholder="Your email address" required="">
-                          <div class="valid-feedback">
-                            Splendid!
-                          </div>
                           <div class="invalid-feedback">
                             Please provide a valid email address
                           </div>
+                          <div class="valid-feedback">
+                            Looks good!
+                          </div>
                         </div>
+                        
+                        <div class="col-4">
+                          <label for="location">Location</label>
+                          <input type="text" name="location" class="form-control" id="city" placeholder="City" required="true">
+                          <div class="valid-feedback">
+                            Looks good!
+                          </div>
+                        </div>
+
                         <div class="col-4">
                           <label for="birthdate">Date of Birth</label>
-                          <input type="date" name="email" class="form-control" id="email" placeholder="Your email address" required="" value="1980-07-01">
+                          <input type="date" name="birthdate" class="form-control" id="birthdate" placeholder="Your birthdate" required="" value="1980-07-01">
                           <div class="valid-feedback">
                             Looks good!
                           </div>
@@ -78,7 +85,7 @@
 
                         <div class="col-4">
                           <label for="gender">Gender</label>
-                          <select name="gender" class="form-control">
+                          <select name="gender" class="form-control" id="gender">
                               <option value="female">Female</option>
                               <option value="male">Male</option>
                           </select>
@@ -86,16 +93,9 @@
                             Looks good!
                           </div>
                         </div>
-
-                        <div class="col-4">
-                          <label for="location">Location</label>
-                          <input type="text" name="location" class="form-control" id="email" placeholder="City" required="true">
-                          <div class="valid-feedback">
-                            Looks good!
-                          </div>
-                        </div>
+    
                     </div>
-                </div>
+                </div><!-- /.form-container ENDs -->
             </div>
             <!-- asdf -->
             <div class="modal-footer">
@@ -375,6 +375,18 @@
         color: #000;
         text-shadow: 0 1px 0 #fff;
         opacity: .5;
+        background-color: #fff;
+    }
+
+    .form-control#gender {
+        -webkit-appearance: none;
+        -moz-appearance: none;
+        appearance: none;
+        background: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='100' height='100' fill='%238C98F2'><polygon points='0,0 100,0 50,50'/></svg>") no-repeat;
+        background-size: 12px;
+        background-position: calc(100% - 10px) 17px;
+        background-repeat: no-repeat;
+        background-color: #fff;
     }
 
     .close:hover {
@@ -741,7 +753,8 @@
 <!-- {{ $style := resources.Get "css/test.css" }} -->
 
 <script type="text/javascript">
-  // Testing
+  var baseURL = (window.location.href.indexOf('localhost') !== -1 ? 'http://lvh.me:3001' : 'api.laddu.co');
+
   $(document).ready(function(){
 
     // Registration modal
@@ -789,7 +802,111 @@
         // window.location.href = 'https://docs.google.com/forms/d/e/1FAIpQLSfTTVfdL73PYou7IRVtopgbTGRPzCNyTvMJAa8mgLkL1-QsCg/viewform?usp=sf_link';
     });
     $('.register.link').on('click', showRegistrationModal);
-  })
+
+    // Form submission event-handler
+    document.querySelector('.modal-footer button.btn-primary').addEventListener('click', event => {
+        let signupObj = {
+            firstName: document.querySelector('#firstname').value,
+            lastName: document.querySelector('#lastname').value,
+            email: document.querySelector('#email').value,
+            birthdate: document.querySelector('#birthdate').value,
+            gender: document.querySelector('#gender').value,
+            location: document.querySelector('#city').value
+        }
+
+        // Creating a new request
+        var request = new XMLHttpRequest();
+
+        request.open('POST', `${baseURL}/users/`, true);
+        request.setRequestHeader('Content-Type', 'application/json; charset=UTF-8');
+
+        request.onload = function(data) {
+            debugger;
+            if (this.status >= 200 && this.status < 400) {
+                
+                // Success!
+                var resp = JSON.parse(this.response);
+                // window.location.url = `${baseURL}/users/${resp.id}/profile`;
+                window.open(`${baseURL}/users/${resp.id}/edit`, '_blank');
+
+            } else {
+                // We reached our target server, but it returned an error
+                console.log('ERROR')
+
+            }
+        };
+
+        request.onerror = function(errObj) {
+          // There was a connection error of some sort
+          debugger;
+        };
+
+        request.send( JSON.stringify(signupObj) );
+    })
+
+    // Removing previous validation styling on input fields
+    document.querySelectorAll('#signup-modal input').forEach( (element) => {
+        element.addEventListener('focus', (event) => {
+            event.currentTarget.classList.remove("is-valid","is-invalid");
+        })  
+    })
+
+    // validating email formatting and uniqueness
+    document.querySelector('#email').addEventListener('blur', (event) => {
+        debugger;
+        let email = event.target.value,
+            emailField = document.querySelector('#email');
+        
+        // checking email formatting
+        if(!/\S+@\S+/.test(email))
+        {
+            emailField.classList.add('is-invalid');
+            emailField.nextElementSibling.innerText = 'Please enter a valid email address';
+
+        // Ensuring that this email isn't already used
+        }else{
+            // Creating a new request
+            var request = new XMLHttpRequest();
+            
+            request.open('POST', `${baseURL}/users/emailvalidation`, true);
+            request.setRequestHeader('Content-Type', 'application/json; charset=UTF-8');
+
+            request.onload = function(data) {
+                
+                if (this.status >= 200 && this.status < 400) {
+                    debugger;
+                    // checking email validity    
+                    let response = JSON.parse(this.response).response,
+                        emailField = document.querySelector('#email');
+
+                    // Rendering the response
+                    if(response !== "Email available")
+                    {
+                        emailField.classList.add('is-invalid');
+                        emailField.nextElementSibling.innerText = response;
+                    }else{
+                        emailField.classList.add('is-valid');
+                    }
+
+
+                } else {
+                    // We reached our target server, but it returned an error
+                    console.log('ERROR')
+
+                }
+            };
+
+            request.onerror = function(errObj) {
+              // There was a connection error of some sort
+              debugger;
+            };
+
+            request.send( JSON.stringify( {email: email}) );
+        }
+        
+    })
+
+  })//document.ready ENDs
 
     function animateCSS(element, animationName, callback) {
         const node = document.querySelector(element)
@@ -804,6 +921,4 @@
 
         node.addEventListener('animationend', handleAnimationEnd)
     }
-
-    
 </script>
