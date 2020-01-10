@@ -128,7 +128,7 @@
 
  <div class="modal signup-modal micromodal-slide" id="signup-modal" aria-hidden="true">
   
-  <div class="modal__overlay" tabindex="-1" data-micromodal-close>
+  <div class="modal__overlay" tabindex="-1">
     <div class="modal-dialog">
         <div class="modal-content">
             <div class="modal-header">
@@ -752,6 +752,8 @@
     body.modal-open {
         overflow: hidden;
         position: fixed;
+        left: 0;
+        right: 0;
         -webkit-overflow-scrolling: touch;
     }
 
@@ -813,26 +815,32 @@
         
         MicroModal.show('signup-modal');
         bodyScrollLock.disableBodyScroll(targetElement);
-        history.pushState(null, null, '#register');
+        
+        
+        if( window.location.href.indexOf('#register') === -1 )
+            history.pushState({prevUrl: window.location.href}, null, '#register');
+
         document.querySelector('body').classList.add('modal-open');
         animateCSS('.modal__overlay > .modal-dialog', 'bounceInDown');
     }
 
     function hideRegistrationModal() {
         
-        
-        
+        bodyScrollLock.enableBodyScroll(targetElement); 
+        document.querySelector('body').classList.remove('modal-open');
         MicroModal.close('signup-modal');
-        history.back();
+        
+        let referrer = document.referrer,
+            baseURL = window.location.href.substr(0, window.location.href.indexOf('#')); 
+        
+        if( !!window.history.state ){
+            history.back();    
+        }else{
+            history.pushState(null, null, baseURL); 
+        }
+        
         
     }
-
-    
-
-    
-    
-    
-    
 
     
     if( window.location.hash === "#register")
@@ -877,8 +885,7 @@
 
             } else {
                 // We reached our target server, but it returned an error
-                console.log('ERROR')
-
+                console.log('ERROR');
             }
         };
 
@@ -933,7 +940,6 @@
                     }else{
                         emailField.classList.add('is-valid');
                     }
-
 
                 } else {
                     
