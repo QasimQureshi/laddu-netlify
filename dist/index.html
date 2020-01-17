@@ -142,17 +142,14 @@
                     <div class="form-row">
                         <div class="col-6">
                           <label for="firstname">First name</label>
-                          <input type="text" name="firstname" class="form-control" id="firstname" placeholder="First name" required="">
-                          <div class="valid-feedback">
-                            Looks good!
-                          </div>
+                          <input type="text" data-error-message="Please enter a valid first name" name="firstname" class="form-control" id="firstname" placeholder="First name" required>
                           <div class="invalid-feedback">
                               Only alphabets and hyphens, please
                           </div>
                         </div>
                         <div class="col-6">
                           <label for="lastname">Last name</label>
-                          <input type="text" name="lastname" class="form-control" id="lastname" placeholder="Last name" required="">
+                          <input type="text" data-error-message="Please enter a valid last name" name="lastname" class="form-control" id="lastname" placeholder="Last name" required="">
                           
                           <div class="invalid-feedback">
                             Only alphabets and hyphens, please
@@ -160,28 +157,25 @@
                         </div>
                         <div class="col-12">
                           <label for="email">Email</label>
-                          <input type="email" name="email" class="form-control" id="email" placeholder="Your email address" required="">
+                          <input type="email" data-error-message="Please provide a valid email address" name="email" class="form-control" id="email" placeholder="Your email address" required="">
                           <div class="invalid-feedback">
                             Please provide a valid email address
-                          </div>
-                          <div class="valid-feedback">
-                            Looks good!
                           </div>
                         </div>
                         
                         <div class="col-4">
                           <label for="location">Location</label>
-                          <input type="text" name="location" class="form-control" id="city" placeholder="City" required="true">
-                          <div class="valid-feedback">
-                            Looks good!
+                          <input type="text" name="location" data-error-message="Please type in your city" class="form-control" id="city" placeholder="City" required="true">
+                          <div class="invalid-feedback">
+                              Only alphabets and hyphens, please
                           </div>
                         </div>
 
                         <div class="col-4">
                           <label for="birthdate">Date of Birth</label>
-                          <input type="date" name="birthdate" class="form-control" id="birthdate" placeholder="Your birthdate" required="" value="1980-07-01">
-                          <div class="valid-feedback">
-                            Looks good!
+                          <input type="date" data-error-message="DD/MM/YYYY format required" name="birthdate" class="form-control" id="birthdate" placeholder="01/07/1980" required="">
+                          <div class="invalid-feedback">
+                              Only alphabets and hyphens, please
                           </div>
                         </div>
 
@@ -191,8 +185,8 @@
                               <option value="female">Female</option>
                               <option value="male">Male</option>
                           </select>
-                          <div class="valid-feedback">
-                            Looks good!
+                          <div class="invalid-feedback">
+                              Please provide a valid value
                           </div>
                         </div>
     
@@ -857,44 +851,120 @@
     });
     $('.register.link').on('click', showRegistrationModal);
 
-    
-    document.querySelector('.modal-footer button.btn-primary').addEventListener('click', event => {
-        let signupObj = {
-            firstName: document.querySelector('#firstname').value,
-            lastName: document.querySelector('#lastname').value,
-            email: document.querySelector('#email').value,
-            birthdate: document.querySelector('#birthdate').value,
-            gender: document.querySelector('#gender').value,
-            location: document.querySelector('#city').value
+    function validateSignupForm() {
+        let isValid = true,
+            birthdate = document.querySelector('#birthdate').valueAsDate,
+            emailField = document.querySelector('#email'),
+            dateField = document.querySelector('#birthdate'),
+            genderField = document.querySelector('#gender');
+
+        document.querySelectorAll('.form-container input').forEach( (element) => {
+
+            
+            if( element.value.length < 1 ) {
+                
+                isValid = false;
+                element.classList.remove('is-valid');
+                element.classList.add('is-invalid');
+                element.parentElement.querySelector('.invalid-feedback').innerText = element.dataset.errorMessage
+            }else{
+                debugger;
+                element.classList.add('is-valid');
+                element.classList.remove('is-invalid');
+            }
+        })
+
+        
+        if( !validateEmailFormat() ) {
+            isValid = false;
+            emailField.classList.add('is-invalid');
+            emailField.parentElement.querySelector('.invalid-feedback').innerText = emailField.dataset.errorMessage;
+        }
+
+        if( validateDateFormat() ) {
+            isValid = false;
+            dateField.classList.add('is-invalid');
+            dateField.parentElement.querySelector('.invalid-feedback').innerText = dateField.dataset.errorMessage;
         }
 
         
-        var request = new XMLHttpRequest();
+        genderField.classList.add( !!genderField.value ? 'is-valid' : 'is-invalid' );
 
-        request.open('POST', `${baseURL}/users/`, true);
-        request.setRequestHeader('Content-Type', 'application/json; charset=UTF-8');
+        return isValid;
+    }
 
-        request.onload = function(data) {
+    function validateEmailFormat(){
+        let emailField = document.querySelector('#email'),
+            email = emailField.value,
+            isEmailValid = true;
+        
+
+        
+        if(!/\S+@\S+/.test(email))
+            isEmailValid = false;
+
+        return isEmailValid;
+    }
+
+    function validateDateFormat(){
+        var dateField = document.querySelector('#birthdate'),
+            isDateValid = true;
+
+        
+        if( !/[0-9]{4}-(0[1-9]|1[012])-(0[1-9]|1[0-9]|2[0-9]|3[01])/.test(dateField.value) )
+            isDateValid = false;
+            
+
+        return isDateValid;
+    }
+
+    
+    document.querySelector('.modal-footer button.btn-primary').addEventListener('click', event => {
+        
+        if(validateSignupForm()) {
             debugger;
-            if (this.status >= 200 && this.status < 400) {
-                
-                
-                var resp = JSON.parse(this.response);
-                
-                window.open(`${baseURL}/users/${resp.id}/edit`, '_blank');
 
-            } else {
-                // We reached our target server, but it returned an error
-                console.log('ERROR');
+            let signupObj = {
+                firstName: document.querySelector('#firstname').value,
+                lastName: document.querySelector('#lastname').value,
+                email: document.querySelector('#email').value,
+                birthdate: document.querySelector('#birthdate').value,
+                gender: document.querySelector('#gender').value,
+                location: document.querySelector('#city').value
             }
-        };
 
-        request.onerror = function(errObj) {
-          
-          debugger;
-        };
+            
+            var request = new XMLHttpRequest();
 
-        request.send( JSON.stringify(signupObj) );
+            request.open('POST', `${baseURL}/users/`, true);
+            request.setRequestHeader('Content-Type', 'application/json; charset=UTF-8');
+
+            request.onload = function(data) {
+                debugger;
+                if (this.status >= 200 && this.status < 400) {
+                    
+                    
+                    var resp = JSON.parse(this.response);
+                    
+                    window.open(`${baseURL}/users/${resp.id}/edit`, '_blank');
+
+                } else {
+                    // We reached our target server, but it returned an error
+                    console.log('ERROR');
+                }
+            };
+
+            request.onerror = function(errObj) {
+              
+              debugger;
+            };
+
+            request.send( JSON.stringify(signupObj) );
+
+        }else{
+            
+            debugger;
+        }
     })
 
     
@@ -907,11 +977,11 @@
     
     document.querySelector('#email').addEventListener('blur', (event) => {
         debugger;
-        let email = event.target.value,
+        var email = event.target.value,
             emailField = document.querySelector('#email');
         
         
-        if(!/\S+@\S+/.test(email))
+        if(!validateEmailFormat())
         {
             emailField.classList.add('is-invalid');
             emailField.nextElementSibling.innerText = 'Please enter a valid email address';
