@@ -26,14 +26,14 @@ event:
   age: 26 - 34
   auto: false
   city: Lahore
-  date: 2020-01-05T04:12:37.115Z
+  date: 2020-02-21T04:12:37.115Z
   duration: 6pm - 8pm
   image: /img/lahore.jpg
   locality: DHA Phase 3
   price: 6000
   spots:
-    females: 5
-    males: 4
+    females: 10
+    males: 6
 icons:
   - content: >-
       Create a profile by earnestly answering your preferences. Our matchmakers
