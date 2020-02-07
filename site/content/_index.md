@@ -84,8 +84,8 @@ slide:
   - color: 'rgb(255, 68, 0)'
     description: >-
       Finding the right partner is a numbers game. You’ll encounter many frogs
-      before you meet your prince. Laddu events facilitate you to meet a large
-      number of suitors in a short period of time.
+      before you meet your perfect fit. Laddu events facilitate you to meet a
+      large number of suitors in a short period of time.
     hasImage: false
     imageURL: /img/blog-chemex.jpg
     title: Connect with multiple Rishtas in a single event
