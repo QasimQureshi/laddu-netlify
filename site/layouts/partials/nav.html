@@ -1,4 +1,4 @@
-<nav class="overflow-x-scroll overflow-x-visible-ns flex justify-between items-center center bg-white divider-grey relative">
+<nav class="laddu-navbar overflow-x-scroll overflow-x-visible-ns flex justify-between items-center center bg-white divider-grey relative">
 
 	<!-- Logo -->
 	<a href="/" class="pl3 db mr4 h-100 w4 flex-none">
@@ -24,6 +24,7 @@
 			</svg>
 		</a></li>
 		<li><a href="/values" class="pa3 no-underline db">FAQ</a></li>
+		<li><a href="#" class="sign-in pa3 no-underline db">Sign in</a></li>
 
 		<!-- <li><a href="/values" class="pa3 no-underline db">Values</a></li> -->
 
@@ -32,3 +33,47 @@
 		<!-- <li><a href="/contact" class="pa3 no-underline db">Contact</a></li> -->
 	</ul>
 </nav>
+
+{{ partial "register_signin" }}
+
+<script type="text/javascript">
+	var baseURL = (window.location.href.indexOf('localhost') !== -1 ? 'http://lvh.me:3001' : 'api.laddu.co');
+	document.addEventListener('DOMContentLoaded', (event) => {
+		// If the user previously signed in, we show an authenticated state in the nav
+		let user = JSON.parse(localStorage.getItem('sessionId'));
+
+		if( !!user )
+		{
+			// authenticate session with the backend, and get unread message count
+			var request = new XMLHttpRequest();
+
+            request.open('POST', `${baseURL}/unread`, true);
+            request.setRequestHeader('Content-Type', 'application/json; charset=UTF-8');
+
+            request.onload = function(data) {
+                
+	            if (this.status === 200) {
+
+	                // checking email validity
+	                let response = JSON.parse(this.response).response;
+	                debugger;
+
+	            } else {
+	                // We reached our target server, but it returned an error
+	                console.log('Error fetching unreads')
+
+	            }
+	        };
+
+	        request.onerror = function(errObj) {
+	          // There was a connection error of some sort
+	          debugger;
+	        };
+	        debugger;
+	        // request.send( JSON.stringify( {session: user.session}) );
+	        request.send( `aauthenticity_token=${encodeURIComponent(user.session)}` );
+
+
+		}
+	})
+</script>

@@ -1,107 +1,6 @@
-<!doctype html>
-<html lang="en">
-  <head>
-	<meta name="generator" content="Hugo 0.56.3" />
-
-  <title>A better way to meet Rishtas | Homepage</title>
-
-  
-  
-    <link href="/main.css" rel="stylesheet">
-  
-
-  	<link rel="stylesheet" type="text/css" href="/css/hover.css">
-  	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.7.2/animate.min.css">
-	<meta charset="utf-8">
-	<meta http-equiv="x-ua-compatible" content="ie=edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
-  <base href="/">
-
-	<link href="https://fonts.googleapis.com/css?family=Nunito+Sans:400,700" rel="stylesheet">
-
-	
-	<link rel="apple-touch-icon" sizes="57x57" href="img/apple-icon-57x57.png">
-	<link rel="apple-touch-icon" sizes="60x60" href="img/apple-icon-60x60.png">
-	<link rel="apple-touch-icon" sizes="72x72" href="img/apple-icon-72x72.png">
-	<link rel="apple-touch-icon" sizes="76x76" href="img/apple-icon-76x76.png">
-	<link rel="apple-touch-icon" sizes="114x114" href="img/apple-icon-114x114.png">
-	<link rel="apple-touch-icon" sizes="120x120" href="img/apple-icon-120x120.png">
-	<link rel="apple-touch-icon" sizes="144x144" href="img/apple-icon-144x144.png">
-	<link rel="apple-touch-icon" sizes="152x152" href="img/apple-icon-152x152.png">
-	<link rel="apple-touch-icon" sizes="180x180" href="img/apple-icon-180x180.png">
-	<link rel="icon" type="image/png" sizes="192x192"  href="img/android-icon-192x192.png">
-	<link rel="icon" type="image/png" sizes="32x32" href="img/favicon-32x32.png">
-	<link rel="icon" type="image/png" sizes="96x96" href="img/favicon-96x96.png">
-	<link rel="icon" type="image/png" sizes="16x16" href="img/favicon-16x16.png">
-	<meta name="msapplication-TileColor" content="#ffffff">
-	<meta name="msapplication-TileImage" content="img/ms-icon-144x144.png">
-	<meta name="theme-color" content="#ffffff">
-
-
-	
-
-	
-	<meta property="og:type" content="business.business">
-	<meta property="og:title" content="Redefining the way you meet Rishtas">
-	<meta property="og:url" content="laddu.co">
-	<meta property="og:image" content="/img/laddu.png">
-
-  
-    <script src="https://identity.netlify.com/v1/netlify-identity-widget.js"></script>
-  
-
- 	
-	<script async src="https://www.googletagmanager.com/gtag/js?id=UA-148406310-1"></script>
-	<script>
-	  window.dataLayer = window.dataLayer || [];
-	  function gtag(){dataLayer.push(arguments);}
-	  gtag('js', new Date());
-
-	  gtag('config', 'UA-148406310-1');
-	</script>
-
-</head>
-  <body class="sans-serif">
-
-    <nav class="laddu-navbar overflow-x-scroll overflow-x-visible-ns flex justify-between items-center center bg-white divider-grey relative">
-
-	
-	<a href="/" class="pl3 db mr4 h-100 w4 flex-none">
-		<img src="/img/laddu.png" alt="Laddu logo" class="br0 db mb0 w-100"/>
-		
-	</a>
-
-	
-	<ul class="flex b grey-3">
-		<li><a href="https://www.instagram.com/laddu.co/" class="pa3 no-underline db" target="_blank">
-			<svg width="16px" height="16px">
-			  <use xlink:href="#icons-instagram"></use>
-			</svg>
-		</a></li>
-		<li><a href="https://twitter.com/laddu_co" class="pa3 no-underline db" target="_blank">
-			<svg width="16px" height="16px">
-			  <use xlink:href="#icons-twitter"></use>
-			</svg>
-		</a></li>
-		<li><a href="https://www.facebook.com/Laddu-110028743668467/" class="pa3 no-underline db" target="_blank">
-			<svg width="16px" height="16px">
-			  <use xlink:href="#icons-facebook"></use>
-			</svg>
-		</a></li>
-		<li><a href="/values" class="pa3 no-underline db">FAQ</a></li>
-		<li><a href="#" class="sign-in pa3 no-underline db">Sign in</a></li>
-
-		
-
-		
-
-		
-	</ul>
-</nav>
-
 <style type="text/css">
 
-     
+    /* Bootstrap inputs */
     .form-control.is-valid, .was-validated .form-control:valid {
         border-color: #28a745;
         padding-right: calc(1.5em + .75rem);
@@ -376,7 +275,7 @@
         box-shadow: none;
     }
 
-     
+    /* Spinner (loader button) */
     .spinner-border {
       display: inline-block;
       width: 2rem;
@@ -419,7 +318,7 @@
         top: 2px;
     }
 
-     
+    /* Bootstrap inputs END */
 
     .modal-header {
         display: -ms-flexbox;
@@ -432,8 +331,8 @@
         border-bottom: 1px solid #dee2e6;
         border-top-left-radius: .3rem;
         border-top-right-radius: .3rem;
-         
-         
+        /*background-color: rgba(255, 100, 44, 0.95);*/
+        /*color: #fff;*/
 
     }
 
@@ -522,10 +421,10 @@
         }
     }
 
-     
+    /* flipping jumbotron background */
     .jumbotron {transform: scaleX(-1);}
 
-     
+    /* undo the vertical flip for all child elements */
     .jumbotron a { transform: scaleX(1);}
     .jumbotron * {
         -webkit-transform:scaleX(-1);
@@ -535,7 +434,11 @@
         transform:scaleX(-1);
     }
 
-   
+  /*.modal__overlay > .modal__close {
+    position: fixed;
+    left: 10px;
+    top: 10px;
+  }*/
 
   @media (min-width: 640px) {
 
@@ -575,7 +478,7 @@
 
     .modal__overlay > iframe {
       overflow-y: scroll;
-       
+      /*margin-top: 120vh;*/
       height: 100%;
     }
     .modal__container {
@@ -602,8 +505,11 @@
     color: #00449e;
     box-sizing: border-box;
     }
-     
-     
+    /*.modal__close {
+    background: transparent;
+    border: 0;
+    }*/
+    /*.modal__header .modal__close:before { content: "\2715"; }*/
     .modal__content {
     margin-top: 2rem;
     margin-bottom: 2rem;
@@ -645,7 +551,9 @@
     background-color: #00449e;
     color: #fff;
     }
-     
+    /**************************\
+      Demo Animation Style
+    \**************************/
     @keyframes mmfadeIn {
     from { opacity: 0; }
     to { opacity: 1; }
@@ -726,12 +634,42 @@
         outline: 0;
     }
 
- 
+/*    .modal__close {
+        position: fixed;
+        top: 15px;
+        left: calc(600px + ((100vw - 640px) / 2));
+        z-index: 1000;
+        background-color: rgba(227, 228, 218, 1);
+        border-color: rgba(227, 228, 218, 1);
+        width: 30px;
+        height: 30px;
+        border-radius: 15px;
+        color: white;
+        font-size: 0.7em;
+        font-weight: bold;
+        line-height: 0.1;
+        transition: 0.2s linear all;
+    }
+
+    .modal__close:focus {
+        box-shadow: none;
+    }
+
+    .modal__close:hover {
+        background-color: rgba(255, 68, 0, 1);
+        color: white;
+    }
+
+    @media (min-width: 750px) {
+        .modal__close {
+
+        }
+    }*/
 </style>
 
-
+<!-- signup-modal -->
 <div class="modal signup-modal micromodal-slide" id="signup-modal" aria-hidden="true">
-  
+  <!-- <button class="modal__close" aria-label="Close modal">x</button> -->
   <div class="modal__overlay" tabindex="-1">
     <div class="modal-dialog">
         <div class="modal-content">
@@ -795,7 +733,7 @@
                         </div>
     
                     </div>
-                </div>
+                </div><!-- /.form-container ENDs -->
             </div>
             
             <div class="modal-footer">
@@ -813,12 +751,12 @@
      
   </div>
 </div>
+<!-- signup-modal ENDs -->
 
 
-
-
+<!-- #signin-modal -->
 <div class="modal signin-modal micromodal-slide" id="signin-modal" aria-hidden="true">
-  
+  <!-- <button class="modal__close" aria-label="Close modal">x</button> -->
   <div class="modal__overlay" tabindex="-1">
     <div class="modal-dialog">
         <div class="modal-content">
@@ -841,7 +779,7 @@
                       <div class="invalid-feedback"></div>
                     </div>
     
-                </div>
+                </div><!-- /.form-container ENDs -->
             </div>
             
             <div class="modal-footer">
@@ -859,11 +797,28 @@
      
   </div>
 </div>
+<!-- #signin-modal ENDs -->
 
+<!-- <div id="signup-modal" class="modal signup-modal micromodal-slide" tabindex="-1" role="dialog" aria-hidden="true">
+  <div class="modal-dialog modal-lg" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title">Modal title</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+        testing
+      </div>
+    </div>
+  </div>
+</div> -->
 
+<!-- 
+    <iframe src="https://docs.google.com/forms/d/e/1FAIpQLSfWuAEuVK1LdtixmtCedcCi5zPotqBUG5ssuBlsIsav5iuSHg/viewform?embedded=true" width="100%" height="1929" frameborder="0" marginheight="0" marginwidth="0">Loading…</iframe>  
 
-
-
+    <iframe src="https://docs.google.com/forms/d/e/1FAIpQLSfWuAEuVK1LdtixmtCedcCi5zPotqBUG5ssuBlsIsav5iuSHg/viewform?embedded=true" width="100%" height="2069" frameborder="0" marginheight="0" marginwidth="0">Loading…</iframe> -->
 
 
 <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
@@ -871,41 +826,41 @@
 <script type="text/javascript" src="js/micromodal.js"></script>
 <script type="text/javascript" src="bodyscroll.js"></script>
 
-
+<!-- Isolated Version of Bootstrap, not needed if your site already uses Bootstrap -->
 <link rel="stylesheet" href="https://formden.com/static/cdn/bootstrap-iso.css" />
 
-
+<!-- Bootstrap Date-Picker Plugin -->
 <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.4.1/js/bootstrap-datepicker.min.js"></script>
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.4.1/css/bootstrap-datepicker3.css"/>
 
-
+<!-- {{ $style := resources.Get "css/test.css" }} -->
 
 <script type="text/javascript">
   var baseURL = (window.location.href.indexOf('localhost') !== -1 ? 'http://lvh.me:3001' : 'api.laddu.co');
 
   $(document).ready(function(){
 
-    
+    // Registration modal
     MicroModal.init({});
     var targetElement = $('.modal__overlay');
 
-    
+    // Shows the signin modal, if the link in the top nav is clicked
     document.querySelector('.sign-in').addEventListener('click', (event) => {
     	event.preventDefault();
     	showSigninModal();
     })
 
-    
+    // Alternate action button, opens the signin modal from signup, and the signup modal from signin
     document.querySelectorAll('.alternate-btn').forEach( (element) => {
       element.addEventListener('click', (event) => {
         
-        
+        // Opening the signup modal
         if( event.currentTarget.closest('.modal').classList.contains('signin-modal') )
         {
           hideModal();
           showRegistrationModal();
         }else{
-          
+          // opening the signin modal
           hideModal();
           showSigninModal();
 
@@ -915,13 +870,13 @@
     })
 
     function showRegistrationModal() {
-        
+        // window.location.href = 'https://docs.google.com/forms/d/e/1FAIpQLSfTTVfdL73PYou7IRVtopgbTGRPzCNyTvMJAa8mgLkL1-QsCg/viewform?usp=sf_link';
 
-        
+        // console.log('show called?');
         MicroModal.show('signup-modal');
         bodyScrollLock.disableBodyScroll(targetElement);
         
-        
+        // If the URL doesn't already initially include #register in it's URL fragment, we push that here
         if( window.location.href.indexOf('#register') === -1 )
             history.pushState({prevUrl: window.location.href}, null, '#register');
 
@@ -933,7 +888,7 @@
         MicroModal.show('signin-modal');
         bodyScrollLock.disableBodyScroll(targetElement);
 
-        
+        // If the URL doesn't already initially include #register in it's URL fragment, we push that here
         if( window.location.href.indexOf('#signin') === -1 )
             history.pushState({prevUrl: window.location.href}, null, '#signin');
 
@@ -948,23 +903,23 @@
         MicroModal.close('signin-modal');
         
         let referrer = document.referrer,
-            baseURL = window.location.href.substr(0, window.location.href.indexOf('#')); 
-        
+            baseURL = window.location.href.substr(0, window.location.href.indexOf('#')); // current URL, without the #register fragment
+        // if(referrer.includes('laddu') || referrer.includes('localhost')){
         if( !!window.history.state ){
             history.back();    
         }else{
-            history.pushState(null, null, baseURL); 
+            history.pushState(null, null, baseURL); //removes #register from the URL
         }
         
-        
+        // animateCSS('.modal__overlay > .modal-dialog', 'fadeOut');
     }
 
-    
+    // Opening the modal, if the URL hash contains #register
     if( window.location.hash === "#register" || 
         window.location.hash === "#signup" )
         showRegistrationModal();
 
-    
+    // Opening the modal, if the URL hash contains #register
     if( window.location.hash === "#signin" ||
         window.location.hash === "#login" )
         showSigninModal();
@@ -974,8 +929,8 @@
     $('.sign-up-btn').on('click', function(event){ 
         event.preventDefault();
         showRegistrationModal();
-        
-        
+        // console.log('BOOGA BOOGA');
+        // window.location.href = 'https://docs.google.com/forms/d/e/1FAIpQLSfTTVfdL73PYou7IRVtopgbTGRPzCNyTvMJAa8mgLkL1-QsCg/viewform?usp=sf_link';
     });
     $('.register.link').on('click', showRegistrationModal);
 
@@ -988,7 +943,7 @@
 
         document.querySelectorAll('.form-container input').forEach( (element) => {
 
-            
+            // Length check
             if( element.value.length < 1 ) {
                 
                 isValid = false;
@@ -1002,21 +957,21 @@
             }
         })
 
-        
+        // Email format validation
         if( !validateEmailFormat() ) {
             isValid = false;
             emailField.classList.add('is-invalid');
             emailField.parentElement.querySelector('.invalid-feedback').innerText = emailField.dataset.errormessage;
         }
 
-        
+        // Date field validation
         if( !validateDateFormat() ) {
             isValid = false;
             dateField.classList.add('is-invalid');
             dateField.parentElement.querySelector('.invalid-feedback').innerText = dateField.dataset.errormessage;
         }
 
-        
+        // If the gender field has a value (which it always would, unless the user's tampered with f/e code), we show validation
         genderField.classList.add( !!genderField.value ? 'is-valid' : 'is-invalid' );
 
         return isValid;
@@ -1028,7 +983,7 @@
             isEmailValid = true;
         
 
-        
+        // checking email formatting
         if(!/\S+@\S+/.test(email))
             isEmailValid = false;
 
@@ -1039,7 +994,7 @@
         var dateField = document.querySelector('#birthdate'),
             isDateValid = true;
 
-        
+        // if( !/(([1-2][0-9])|([1-9])|(3[0-1]))/((1[0-2])|([1-9]))/[0-9]{4}/.test(date) )
         if( !/[0-9]{4}-(0[1-9]|1[012])-(0[1-9]|1[0-9]|2[0-9]|3[01])/.test(dateField.value) )
             isDateValid = false;
             
@@ -1047,10 +1002,10 @@
         return isDateValid;
     }
 
-    
+    // Signin click-handler
     document.querySelector('#signin-modal .modal-footer .btn-primary').addEventListener('click', signinHandler);
 
-    
+    // Todo - add event-handler for enter keypress
 
     function signinHandler(event) {
 
@@ -1078,7 +1033,7 @@
 
 	    }
 
-	    
+	    // Validating the user's credentials asdf
 	    if(isSigninValid)
 	    {
 	    	event.currentTarget.classList.add('loading');
@@ -1097,28 +1052,28 @@
 	          debugger;
 	          if (this.status >= 200 && this.status < 400) {
 	              
-	              
+	              // Success!
 	              var resp = JSON.parse(this.response);
 	              if(this.status === 200)
 	              {
-	              	
+	              	// Showing validation on the input fields
 	              	document.querySelector('#email_signin').classList.add('is-valid');
 		            document.querySelector('#password').classList.add('is-valid');
 		            document.querySelector('#email_signin').classList.remove('is-invalid');
 		            document.querySelector('#password').classList.remove('is-invalid');
 
-		            
+		            // Storing the session
 		            localStorage.setItem('sessionId', JSON.stringify(resp.response));
 
 
-		            
-		            
+		            // Directing users to the dashboard
+		            // window.open(`${baseURL}/users/${resp.id}/edit`, '_self');
 	              }
 	              
-	              
+	              // window.location.url = `${baseURL}/users/${resp.id}/profile`;
 
 	          } else {
-	              
+	              // We reached our target server, but it returned an error 
 	              let error = JSON.parse(this.response).response;
 	              document.querySelector('#email_signin').classList.remove('is-valid');
 	              document.querySelector('#password').classList.remove('is-valid');
@@ -1130,7 +1085,7 @@
 	      };
 
 	      request.onerror = function(errObj) {
-	        
+	        // There was a connection error of some sort
 	        debugger;
 	      };
 
@@ -1138,11 +1093,11 @@
 	    }
     }
 
-    
+    // Signup form submission event-handler
     document.querySelector('#signup-modal .modal-footer button.btn-primary').addEventListener('click', event => {
         let signupBtn = event.currentTarget;
 
-        
+        // front-end validation
         if(validateSignupForm()) {
           
           signupBtn.classList.add('loading');
@@ -1156,7 +1111,7 @@
                 location: document.querySelector('#city').value
             }
 
-            
+            // Creating a new request
             var request = new XMLHttpRequest();
 
             request.open('POST', `${baseURL}/users/`, true);
@@ -1167,9 +1122,9 @@
                 debugger;
                 if (this.status >= 200 && this.status < 400) {
                     
-                    
+                    // Success!
                     var resp = JSON.parse(this.response);
-                    
+                    // window.location.url = `${baseURL}/users/${resp.id}/profile`;
                     window.open(`${baseURL}/users/${resp.id}/edit`, '_self');
 
                 } else {
@@ -1180,39 +1135,39 @@
             };
 
             request.onerror = function(errObj) {
-              
+              // There was a connection error of some sort
               debugger;
             };
 
             request.send( JSON.stringify(signupObj) );
 
         }else{
-            
+            // form has invalid data
             debugger;
         }
     })
 
-    
+    // Removing previous validation styling on input fields
     document.querySelectorAll('input').forEach( (element) => {
         element.addEventListener('focus', (event) => {
             event.currentTarget.classList.remove("is-valid","is-invalid");
         })  
     })
 
-    
+    // validating email formatting and uniqueness
     document.querySelector('#email').addEventListener('blur', (event) => {
         var email = event.target.value,
             emailField = document.querySelector('#email');
         
-        
+        // checking email formatting
         if(!validateEmailFormat())
         {
             emailField.classList.add('is-invalid');
             emailField.nextElementSibling.innerText = 'Please enter a valid email address';
 
-        
+        // Ensuring that this email isn't already used
         }else{
-            
+            // Creating a new request
             var request = new XMLHttpRequest();
             
             request.open('POST', `${baseURL}/users/emailvalidation`, true);
@@ -1222,11 +1177,11 @@
                 
                 if (this.status >= 200 && this.status < 400) {
 
-                    
+                    // checking email validity    
                     let response = JSON.parse(this.response).response,
                         emailField = document.querySelector('#email');
 
-                    
+                    // Rendering the response
                     if(response !== "Email available")
                     {
                         emailField.classList.add('is-invalid');
@@ -1236,14 +1191,14 @@
                     }
 
                 } else {
-                    
+                    // We reached our target server, but it returned an error
                     console.log('ERROR')
 
                 }
             };
 
             request.onerror = function(errObj) {
-              
+              // There was a connection error of some sort
               debugger;
             };
 
@@ -1252,7 +1207,7 @@
         
     })
 
-  })
+  })//document.ready ENDs
 
     function animateCSS(element, animationName, callback) {
         const node = document.querySelector(element)
@@ -1268,981 +1223,3 @@
         node.addEventListener('animationend', handleAnimationEnd)
     }
 </script>
-
-<script type="text/javascript">
-	var baseURL = (window.location.href.indexOf('localhost') !== -1 ? 'http://lvh.me:3001' : 'api.laddu.co');
-	document.addEventListener('DOMContentLoaded', (event) => {
-		
-		let user = JSON.parse(localStorage.getItem('sessionId'));
-
-		if( !!user )
-		{
-			
-			var request = new XMLHttpRequest();
-
-            request.open('POST', `${baseURL}/unread`, true);
-            request.setRequestHeader('Content-Type', 'application/json; charset=UTF-8');
-
-            request.onload = function(data) {
-                
-	            if (this.status === 200) {
-
-	                // checking email validity
-	                let response = JSON.parse(this.response).response;
-	                debugger;
-
-	            } else {
-	                // We reached our target server, but it returned an error
-	                console.log('Error fetching unreads')
-
-	            }
-	        };
-
-	        request.onerror = function(errObj) {
-	          // There was a connection error of some sort
-	          debugger;
-	        };
-	        debugger;
-	        // request.send( JSON.stringify( {session: user.session}) );
-	        request.send( `aauthenticity_token=${encodeURIComponent(user.session)}` );
-
-
-		}
-	})
-</script>
-
-    
-
-<div class="jumbotron pv5 pv6-l ph3 bg-center cover cf" style="background-image: url('/img/shutterstock_313114061.jpg')">
-  
-  <div class="jumbotron-content">
-    <div class="db mb3">
-      <div class="mw7 relative bg-fix-primary mb3">
-        <h1 class="f2 f2-l b di lh-title mb3 white mw6">
-          A better way to meet Rishtas
-        </h1>
-      </div>
-      <div class="mw7 relative bg-fix-primary">
-        
-        <p class="b f4 di lh-title mb3 white mw6 bg-primary">
-           
-        </p>
-        
-      </div>
-      
-      <div class="tc mt-5">
-        
-        <a href="#" tabindex="1" class="btn raise sign-up-btn">Join now</a>
-      </div>
-      
-    </div>
-  </div>
-</div>
-
-<link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.min.css" />
-<style type="text/css">
-	.icons-container > .icon-box > .img-container {
-		width: 130px;
-	    height: 130px;
-	    border-radius: 65px;
-		background-color: #ddd;
-		transition: 0.2s linear all;
-		border: 3px solid #fff;
-		overflow: hidden;
-		position: relative;
-	}
-
-	.icons-container > .icon-box:hover > .img-container {
-		 
-		background-color: #fff;
-		border: 3px solid rgba(255, 68, 0, 1);
-	}
-
-	.icons-container > .icon-box > .img-container > i {
-		position: absolute;
-		left: 50%;
-		top: 50%;
-		transform: translateX(-50%) translateY(-50%);
-		font-size: 3em;
-	}
-
-
-	.icons-container > .icon-box hr {
-		width: 70%;
-		text-align: center;
-		margikn-left: auto;
-		margin-right: auto;
-		 
-	}
-
-	.icons-container > .icon-box > .img-container > img {
-		max-width: 100px;
-	}
-
-	.icons-container > .icon-box:hover a.btn {
-		background-color: rgba(255, 68, 0, 0.9);
-		color: white;
-	}
-
-	.icons-container > .icon-box a.btn {
-		 
-	}
-
- 
-
-	.icons-container p {
-		padding: 0 5px;
-		 
-	}
-
-</style>
-
-<div class="bg-off-white pv4 cf">
-
-	<div class="icons-container mw7 center">
-	
-		<div class="icon-box w-25-l w-50 fl tc mb5">
-	<div class="img-container mx-auto">
-		<i class="fas fa-clipboard-list"></i>
-	</div>
-	<h3>Sign up</h3>
-	<hr>
-	<p>Create a profile by earnestly answering your preferences. Our matchmakers will then get in touch with you.</p>
-	<a href="/values#how-to-register" class="btn raise">Learn more</a>
-</div>
-	
-		<div class="icon-box w-25-l w-50 fl tc mb5">
-	<div class="img-container mx-auto">
-		<i class="fas fa-users"></i>
-	</div>
-	<h3>Multiple rishtas</h3>
-	<hr>
-	<p>We will send you an event invite in advance where you will be able to meet multiple rishtas, in a single evening</p>
-	<a href="/values#how-many-people" class="btn raise">Learn more</a>
-</div>
-	
-		<div class="icon-box w-25-l w-50 fl tc mb5">
-	<div class="img-container mx-auto">
-		<i class="fas fa-user-check"></i>
-	</div>
-	<h3>Account verification</h3>
-	<hr>
-	<p>We pre-vet members to make sure that Laddu events are a great experience for all attendees.</p>
-	<a href="/values#type-of-people" class="btn raise">Learn more</a>
-</div>
-	
-		<div class="icon-box w-25-l w-50 fl tc mb5">
-	<div class="img-container mx-auto">
-		<i class="fas fa-shield-alt"></i>
-	</div>
-	<h3>Privacy</h3>
-	<hr>
-	<p>Contact information cannot be traded during the initial meeting, in order to reduce pressure to accept or reject a suitor to his or her face.</p>
-	<a href="/values#pay-for-information" class="btn raise">Learn more</a>
-</div>
-	
-	
-	</div>
-</div>
-
-<style type="text/css">
-	.event-image {
-		border-radius: 50% !important;
-	    width: 300px;
-	    height: 300px;
-	    object-fit: cover;
-	}
-
-	.spots-container {
-		display: inline-block;
-	    text-align: left;
-	    position: relative;
-	}
-
-	.spots-container > img {
-		width: 25px;
-	    height: 25px;
-	    object-fit: contain;
-	    position: relative;
-	    top: 5px;
-	}
-
-	.spots-container > span {
-		position: relative;
-		left: -3px;
-	}
-
-	.remaining-spots > span:first-of-type {
-		display: block;
-	}
-
-	.rounded-box {
-		padding: 0px 10px;
-	    background-color: #fff;
-	    border: 2px solid #ddd;
-	    border-radius: 10px;
-	}
-
-	.rounded-box.spots-filled {
-		border: 2px solid rgba(255, 68, 0, 0.9) !important;
-		color: rgba(255, 68, 0, 0.9) !important;
-	}
-
-	.spots-filled-container {
-		color: rgba(255, 68, 0, 1) !important;	
-	}
-	.spots-filled-container > a {
-		color: rgba(255, 68, 0, 0.9) !important;
-		font-weight: bold;
-		transition: 0.4s linear all;
-		text-decoration: none;
-		border-bottom: 1px solid rgba(255, 68, 0, 0.4);
-	}
-
-	.spots-filled-container > a:hover {
-		border-bottom: 2px solid rgba(255, 68, 0, 1);	
-	}
-
-	.rounded-box > i {
-		padding: 0 2px;
-		font-size: 1.2em;
-	    position: relative;
-	    top: 2px;
-	}
-
-	.btn.orange {
-		background-color: rgba(255, 68, 0, 0.9) !important;
-		color: white !important;
-	}
-
-	.next-event .btn.orange {
-		 
-	}
-
-	.details-block > h3 {
-    	font-weight: bold;
-	    font-size: 1.3em;
-	    margin-bottom: 10px;
-	}
-
-	.details-block > .date {
-		font-weight: bold;
-	    font-size: 2em;
-	    color: #fff;
-	    text-shadow: 4px 4px #aaa;
-	}
-
-	.details-block > .month, .details-block > .year {
-
-	}
-
-	.next-event .sign-up-btn {
-		text-transform: initial;
-	}
-</style>
-
-<div class="bg-grey-1 pv4 next-event">
-  <div class="flex-l mhn1-l ph3 center mw7">
-    <div class="w-30-l mb0 tc tl-l">
-    	<img class="event-image" src="/img/lahore.jpg">
-    	<div class="event-image-container">
-    		
-    	</div>
-    </div>
-    <div class="w-30-l details-block ph3 tc tr-l">
-    	<h3>DHA Phase 3<br>
-    	Lahore</h3>
-    	<input type="hidden" name="eventDate" value="2019-12-25T04:12:37.115Z" />
-    	<input type="hidden" name="auto" value="false" />
-    	<span class="date"></span>&nbsp;
-    	<span class="month"></span>
-    	<br>
-    	<span class="year"></span>
-    	<br>
-    	<a href="#" class="btn sign-up sign-up-btn orange raise mb4">Sign up</a>
-    </div>
-    <div class="w-30-l ph3 tc tr-l">
-    	<div class="remaining-spots mb2">
-    		<span>Remaining spots:</span>	
-
-    		<span class="spots-container rounded-box" aria-label="Males" data-balloon-pos="down">
-				<i class="fas fa-mars"></i>
-	    		<span>4</span>	
-	    	</span>
-	    	
-	    	<span class="spots-container rounded-box" aria-label="Females" data-balloon-pos="down">
-		    	<i class="fas fa-venus"></i>
-		    	<span>2</span>
-	    	</span>
-
-	    	<div class="spots-filled-container dn">
-	    		<a href="#" class="sign-up-btn">Sign-up </a> for a spot on the waiting list<br class="dn-l"> or join <a href="#" class="sign-up-btn">upcoming events</a>
-	    	</div>
-	    	
-    	</div>
-
-    	<div class="time mb2">
-    		<span class="db">Time:</span>
-    		<span class="rounded-box">
-    			6pm - 8pm
-    		</span>
-    	</div>
-
-    	<div class="age-range mb2">
-    		<span class="db">Age range:</span>
-    		<span class="rounded-box">
-    			26 - 34
-    		</span>
-    	</div>
-
-    	<div class="price mb2">
-    		<span class="db">Ticket price (Rs):</span>
-    		<span class="rounded-box">
-    			6000
-    		</span>
-    	</div>
-
-
-
-    </div>
-  </div>
-</div>
-
-<script type="text/javascript">
-	document.addEventListener('DOMContentLoaded', function(event){
-
-		
-		
-  
-
-
-		
-		var eventDate = new Date(document.querySelector('.details-block > input[name="eventDate"]').value);
-
-		renderEventDate(eventDate);
-
-		function renderEventDate(dateObj){
-			let months = ["January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"],
-				days = ['Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday', 'Sunday'];
-
-			
-			document.querySelector('.details-block > .date').textContent = ( dateObj.getDate().toString().length === 1 ? "0" + dateObj.getDate() : dateObj.getDate() );
-			document.querySelector('.details-block > .month').textContent = months[dateObj.getMonth()];
-			document.querySelector('.details-block > .year').textContent = `${dateObj.getFullYear()} (${days[dateObj.getDay() - 1]})`;
-		}
-
-		
-		document.querySelectorAll('.spots-container').forEach(function(node){
-			if(Number(node.querySelector('span').textContent) === 0){
-				node.classList.add('spots-filled');
-				document.querySelector('.spots-filled-container').classList.remove('dn')
-			}
-		})
-	})
-</script>
-
-<div class="bg-off-white pv4">
-  <div class="flex-l mhn1-l ph3 center mw7">
-    <h2 class="f2 b lh-title mb2 w-40-l">Why Laddu</h2>
-    <p class="w-60-l mb0">For the Muslim community marriage is a rite of passage into adulthood and not a choice.
-<br /><br />
-The traditional way of getting married includes an outdated matchmaker, often dubbed the Rishta Aunty, ubiquitously renowned for asking regressive questions and pigeonholing people in the guise of finding an appropriate partner. This approach does not work for millennials and is especially derogatory for women who are shamed for having any personality. The alternative- dating apps, also don&rsquo;t work for Muslims who are seeking marriage and not hookups.
-<br /><br />
-Laddu aims to take online-dating offline and in doing so, create a progressive space for marriage-minded Muslims to meet. Our app enables Muslims globally to connect in person and offline through tailored events. The app is currently being alpha tested, but event registration is open for Lahore.</p>
-  </div>
-</div>
-
-
-<div class="bg-off-white pv4">
-  <div class="ph3 mw7 center">
-    <h2 class="f2 b lh-title mb2">How is Laddu different from traditional matchmakers?</h2>
-    <p class="mb4 mw6">For starters, we are the antidote to misogynistic Rishta aunties who ask regressive questions and shame both men and women into domestication with a mismatched suitor.
-<br /><br />
-Unlike traditional matchmaking firms, we are a transparent company and have no gimmicks. We do not solicit outrageous sums of money on pretentious claims, we do not have scary contracts and most importantly we create a safe space for our clients to meet several suitable suitors in a short time span.
-<br /><br />
-You will not have to entertain people in your drawing room and endure an additional cost of hosting, and then suffer the humiliation of waiting endlessly. Our process returns power to our clients, is efficient, and is far less expensive way than traditional matchmaking.</p>
-
-    <div class="flex-ns mhn2-ns mb3">
-      
-    </div>
-
-    
-  </div>
-</div>
-
-
-<div class="bg-grey-1 pv4">
-	<div class="ph3 mw7 center">
-
-		<div class="flex-l mhn2-l">
-			<div class="w-40-l ph2-l">
-				<h2 class="f2 b lh-title mb2"></h2>
-
-				<p></p>
-			</div>
-
-			<div class="w-60-l ph2-l">
-				<img src="img/jumbotron_new.jpg" alt="" class="mb3">
-			</div>
-		</div>
-
-		<div class="tc">
-			<a href="/values" class="btn raise">Read more</a>
-		</div>
-
-	</div>
-</div>
-
-
-
-
-
-<style type="text/css">
- 
-
-.hero-carousel {
-  margin-bottom: 80px;
-  background: #FAFAFA url('https://i.imgur.com/R60qKwS.jpg');
-  background-size: cover;
-}
-
-.hero-carousel__cell {
-  width: 100%;
-  height: 540px;
-  color: white;
-  background: #ED2;
-  background: #EFCE36;  
-}
-
-.hero-carousel__cell__content {
-  padding: 20px 60px 0;
-  max-width: 1000px;
-  margin: 0 auto;
-  position: relative;
-  top: 50%;
-  transform: translateY(-50%) translateX(10px);
-}
-
-.hero-carousel h1 {
-  font-size: 3.2rem;
-  line-height: 1.0;
-  margin: 0;
-  padding-top: 40px;
-}
-
-.hero-carousel .tagline {
-  font-size: 1.4rem;
-  line-height: 1.0;
-  margin: 0 0 0.5rem;
-  color: #444;
-}
-
-.hero-illustration {
-  display: block;
-  width: 100%;
-  max-width: 200px;
-  margin: 0 auto;
-}
-
-.hero-carousel__cell--2 {
-  background: #8C8;
-}
-
-.slogan {
-  line-height: 1.2;
-  margin: 0;
-}
-
-.slogan--easy,
-.slogan--fun {
-  font-size: 2.2rem;
-  line-height: 1.1;
-}
-
-.slogan--easy {
-  background-color: rgb(255, 68, 0);
-}
-
-.slogan--tagline {
-  background-color: rgba(247, 194, 0, 0.9);
-   
-  margin-top: 10px;
-  font-size: 1.2rem;
-  color: #fff;
-  transition: 0.2s linear background-color;
-}
-
-.slogan--tagline:hover {
-  background-color: rgba(247, 194, 0, 1);
-}
-
-.feature-list {
-  font-size: 1.8rem;
-  list-style: none;
-  line-height: 1.2;
-  margin: 0;
-  padding: 0;
-}
-
-.feature-list li {
-  margin-bottom: 10px;
-}
-
-.hero-carousel__cell--3 {
-  background: #E90;
-}
-
-.hero-carousel__cell--4 {
-  background: #E5A;
-}
-
-.by-line {
-  line-height: 1.2;
-  margin: 0;
-  font-size: 1.8rem;
-}
-
-.by-line--made {
-  padding-top: 20px;
-  margin-bottom: 10px;
-  color: #444;
-}
-
-@media screen and ( max-width: 500px ) {
-   
-  .hero-carousel h1,
-  .hero-carousel .tagline,
-  .hero-carousel .gh-button {
-    display: none;
-  }
-
-}
-
-@media screen and ( min-width: 500px ) {
-  .hero-carousel__cell--1  .hero-carousel__cell__content {
-    padding-right: 260px;
-  }
-
-  .hero-illustration {
-    position: absolute;
-    right: 60px;
-    top: 20px;
-  }
-}
-
- 
-
-@media screen and ( min-width: 768px ) {
-
-  .hero-carousel__cell {
-    height: 740px;
-  }
-
-  .hero-carousel__cell__content {
-    padding-top: 40px;
-  }
-
-  .hero-carousel h1 {
-    font-size: 5.8rem;
-  }
-
-  .hero-carousel .tagline {
-    font-size: 2.1rem;
-  }
-
-  .hero-illustration {
-    top: 80px;
-  }
-
-  .slogan--easy,
-  .slogan--fun {
-    font-size: 2.8rem;
-  }
-
-  .slogan--tagline {
-    margin-top: 20px;
-    font-size: 1.4rem;
-  }
-
-  .feature-list {
-    font-size: 3.1rem;
-  }
-
-  .feature-list li {
-    margin-bottom: 20px;
-  }
-
-  .by-line {
-    font-size: 3.1rem;
-  }
-
-  .by-line--made {
-    padding-top: 40px;
-    margin-bottom: 20px;
-  }
-
-}
-
-@media screen and ( min-width: 960px ) {
-
-  .hero-carousel__cell--1  .hero-carousel__cell__content {
-    padding-right: 400px;
-  }
-
-  .hero-carousel h1 {
-    font-size: 7.8rem;
-  }
-
-  .hero-carousel .tagline {
-    margin-bottom: 1.0rem;
-  }
-
-  .hero-illustration {
-    max-width: 400px;
-    top: 20px
-  }
-
-}
-
- 
-
-.in-use-carousel {
-}
-
-.in-use-carousel__item {
-  width: 400px;
-  height: 450px;
-  display: block;
-  position: relative;
-  margin-right: 40px;
-  border-radius: 5px;
-}
-
-.in-use-carousel__item__title {
-  position: absolute;
-  bottom: 0px;
-  text-align: center;
-  width: 100%;
-  margin: 0;
-  line-height: 50px;
-}
-
-.in-use-carousel__item__image {
-  display: block;
-  max-width: 100%;
-  border-radius: 5px;
-  transition: opacity 0.4s;
-  opacity: 0;
-}
-
- 
-.in-use-carousel__item__image.flickity-lazyloaded,
-.in-use-carousel__item__image.flickity-lazyerror {
-  opacity: 1;
-}
-
- 
-
-.page-nav {
-  list-style: none;
-  margin: 0 0 40px;
-  padding: 0 10px 0 0;
-  font-size: 0.85rem;
-  line-height: 1.2;
-}
-
-.page-nav li {
-  margin: 0.2rem 0;
-}
-
-.page-nav__item--h3,
-.page-nav__item--h4 {
-  padding-left: 15px;
-}
-
-@media screen and ( min-width: 1220px ) {
-  .page-nav {
-    position: absolute;
-    right: 0px;
-    top: 0px;
-    width: 200px;
-    padding-top: 20px;
-  }
-
-   
-  .page-nav:after {
-    content: 'sticky';
-    display: none;
-  }
-
-  .page-nav.is-fixed {
-    position: fixed;
-  }
-
-}
-
-.hero-carousel .first {
-  background-color: #bcf35a;
-}
-
-.hero-carousel .second {
-  	background-color: #FFDA41;
-  }
-
-  .hero-carousel .third {
-  	background-color: rgba(255, 68, 0, 1);
-  }
-
-  .fourth {
-    background-color: rgb(47, 97, 210);
-  }
-
-  .fifth {
-
-  }
-
-  .sixth {
-    
-  }
-</style>
-
-<link rel="stylesheet" href="https://unpkg.com/flickity@2/dist/flickity.min.css">
-<script src="https://unpkg.com/flickity@2/dist/flickity.pkgd.min.js"></script>
-
-<div class="hero-carousel" data-flickity="" data-js="hero-carousel">
-
-  
-	<div class="hero-carousel__cell hero-carousel__cell--2 first"
-    
-      style="background-image: url(/img/blog-chemex.jpg)"
-    
-    >
-      <div class="hero-carousel__cell__content">
-        <p class="slogan slogan--easy">Connect with multiple Rishtas in a single event</p>
-        <p class="slogan slogan--tagline">Finding the right partner is a numbers game. You’ll encounter many frogs before you meet your prince. Laddu events facilitate you to meet a large number of suitors in a short period of time.</p>
-      </div>
-  </div>
-  
-	<div class="hero-carousel__cell hero-carousel__cell--2 first"
-    
-      style="background: #8C8"
-    
-    >
-      <div class="hero-carousel__cell__content">
-        <p class="slogan slogan--easy">Reclaim the Trolley-pushing Toxic Rishta Culture</p>
-        <p class="slogan slogan--tagline">We find rishta meet-ups where women have to awkwardly serve tea archaic and dehumanizing. Allow us to serve the tea, you ask the pertinent questions.</p>
-      </div>
-  </div>
-  
-	<div class="hero-carousel__cell hero-carousel__cell--2 first"
-    
-      style="background: #FFDA41"
-    
-    >
-      <div class="hero-carousel__cell__content">
-        <p class="slogan slogan--easy">An Efficient Way of Connecting</p>
-        <p class="slogan slogan--tagline">Imagine hosting numerous dinners for multiple rishtas, and potentially not liking a single one of them. The whole ordeal can be utterly exhausting, especially for women who traditionally host the men. Our events take away the pressure of hosting and allow you to connect you with potential partners in a more time-efficient and dignified manner.</p>
-      </div>
-  </div>
-  
-	<div class="hero-carousel__cell hero-carousel__cell--2 first"
-    
-      style="background: ZgotmplZ"
-    
-    >
-      <div class="hero-carousel__cell__content">
-        <p class="slogan slogan--easy">Meet Pre-Vetted People</p>
-        <p class="slogan slogan--tagline">Meeting people in real-life, as opposed to meeting them online, affords a better opportunity to gauge compatibility.</p>
-      </div>
-  </div>
-  
-	<div class="hero-carousel__cell hero-carousel__cell--2 first"
-    
-      style="background: ZgotmplZ"
-    
-    >
-      <div class="hero-carousel__cell__content">
-        <p class="slogan slogan--easy">No more Ghosting</p>
-        <p class="slogan slogan--tagline">Immediately after the event we will email you your matches and facilitate further interactions, thereby ensuring that no one gets ghosted. With us, you will never be placed in limbo endlessly wondering whether or not a suitor likes you.</p>
-      </div>
-  </div>
-  
-	<div class="hero-carousel__cell hero-carousel__cell--2 first"
-    
-      style="background: #8C8"
-    
-    >
-      <div class="hero-carousel__cell__content">
-        <p class="slogan slogan--easy">Connect better</p>
-        <p class="slogan slogan--tagline">Meeting people in real-life, versus meeting them online, affords you a better opportunity to gauge your compatibility.</p>
-      </div>
-  </div>
-  
-  
-</div>
-
-<script type="text/javascript">
-	var elem = document.querySelector('.hero-carousel');
-	var flkty = new Flickity( elem, {
-	  
-    wrapAround: true,
-    autoPlay: true,
-	  cellAlign: 'left',
-	  contain: true
-	});
-
-</script>
-
-<style>
-	@media (max-width: 1024px) {
-		#photo_lightbox_wrapper #right_panel {
-			position: relative !important;
-			left: 50%;
-			transform: translateX(-50%);
-		}
-
-		#photo_lightbox_wrapper #left_panel {
-			position: relative !important;
-			left: 50%;
-			transform: translateX(-50%);
-		}
-	}
-
-	@media only screen and (max-width: 736px) {
-		.mfp-arrow-right:after {
-			display: none;
-			content: '';
-		}
-	}
-
-	@media (max-width: 780px) {
-		#photo_lightbox_wrapper #left_panel {
-			display: block !important;
-		}
-
-		#photo_lightbox_wrapper #right_panel {
-			display: block !important;
-		}
-	}
-
-</style>
-
-<script type="text/javascript">
-
-	$(document).ready(function(){
-		var style = document.createElement('style');
-		style.innerHTML = 
-		`@media (max-width: 1024px) {
-			#photo_lightbox_wrapper #right_panel {
-				position: relative !important;
-				left: 50%;
-				transform: translateX(-50%);
-			}
-
-			#photo_lightbox_wrapper #left_panel {
-				position: relative !important;
-				left: 50%;
-				transform: translateX(-50%);
-			}
-		}`;
-
-		style.rel = 'stylesheet';
-		style.type = 'text/css';
-	})
-</script>
-
-<div class="ph3 mw7 center">
-	<div id="pixlee_container" class="mb3"></div>
-</div>
-
-
-
-<script src="https://apps.elfsight.com/p/platform.js" defer></script>
-<div class="mw7 center mb5">
-	<div class="elfsight-app-5150f37c-b9e8-4119-9e22-b92db646f9ea"></div>	
-</div>
-
-
-
-
-    <footer class="bg-black ph3 pv4 white">
-
-	<div class="mw7 center pt3">
-
-		<div class="measure-narrow center mb4">
-
-			<img src="/img/laddu.png" alt="Laddu logo" class="db w4 center mb4 br0">
-			
-
-		</div>
-
-		<div class="flex-ns justify-between">
-
-			<div>
-				<h3 class="f4 b lh-title mb1 primary">Laddu</h3>
-				<ul class="mb3">
-					<li><a href="/#register" class="register link">Register</a></li>
-					<li><a href="/" class="link">Home</a></li>
-					<li><a href="/post" class="link">Blog</a></li>
-					
-				</ul>
-			</div>
-
-			<div>
-				
-				<ul class="mb3">
-					
-				</ul>
-			</div>
-
-			<div>
-				<h3 class="f4 b lh-title mb2 primary">Social media</h3>
-				<ul class="mhn2 footer-links">
-					<li class="dib ph2 raise">
-  <a href="https://www.facebook.com/Laddu-110028743668467/" target="_blank" class="link bg-white black db relative br-100 pa2">
-    <svg width="16px" height="16px" class="db">
-      <use xlink:href="#icons-facebook"></use>
-    </svg>
-  </a>
-</li>
-
-					<li class="dib ph2 raise">
-  <a href="https://twitter.com/laddu_co" target="_blank" class="link bg-white black db relative br-100 pa2">
-    <svg width="16px" height="16px" class="db">
-      <use xlink:href="#icons-twitter"></use>
-    </svg>
-  </a>
-</li>
-
-					<li class="dib ph2 raise">
-  <a href="https://www.instagram.com/laddu.co/" target="_blank" class="link bg-white black db relative br-100 pa2">
-    <svg width="16px" height="16px" class="db">
-      <use xlink:href="#icons-instagram"></use>
-    </svg>
-  </a>
-</li>
-
-				</ul>
-			</div>
-
-		</div>
-	</div>
-
-</footer>
-
-<div style="height: 0; width: 0; position: absolute; visibility: hidden">
-	
-  <svg xmlns="http://www.w3.org/2000/svg"><symbol id="icons-facebook" viewBox="0 0 32 32"><path d="M30.7 0H1.3C.6 0 0 .6 0 1.3v29.3c0 .8.6 1.4 1.3 1.4H17V20h-4v-5h4v-4c0-4.1 2.6-6.2 6.3-6.2 1.8 0 3.3.2 3.7.2v4.3h-2.6c-2 0-2.5 1-2.5 2.4V15h5l-1 5h-4l.1 12h8.6c.7 0 1.3-.6 1.3-1.3V1.3C32 .6 31.4 0 30.7 0z"/></symbol><symbol id="icons-instagram" viewBox="0 0 32 32"><path d="M28.2 0H3.8C1.7 0 0 1.7 0 3.8v24.4C0 30.3 1.7 32 3.8 32h24.4c2.1 0 3.8-1.7 3.8-3.8V3.8C32 1.7 30.3 0 28.2 0zM24 4h3c.6 0 1 .4 1 1v3c0 .6-.4 1-1 1h-3c-.6 0-1-.4-1-1V5c0-.6.4-1 1-1zm-8 5.9c3.4 0 6.2 2.7 6.2 6.1 0 3.4-2.8 6.1-6.2 6.1-3.4 0-6.2-2.7-6.2-6.1.1-3.4 2.8-6.1 6.2-6.1zM28 29H4c-.6 0-1-.4-1-1V13h4c-.5.8-.7 2.1-.7 3 0 5.4 4.4 9.7 9.7 9.7 5.4 0 9.7-4.4 9.7-9.7 0-.9-.1-2.3-.8-3h4v15c.1.6-.3 1-.9 1z"/></symbol><symbol id="icons-twitter" viewBox="0 0 32 32"><path d="M32 6.1c-1.2.5-2.4.9-3.8 1 1.4-.8 2.4-2.1 2.9-3.6-1.3.8-2.7 1.3-4.2 1.6C25.7 3.8 24 3 22.2 3c-3.6 0-6.6 2.9-6.6 6.6 0 .5.1 1 .2 1.5-5.5-.3-10.3-2.9-13.6-6.9-.6 1-.9 2.1-.9 3.3 0 2.3 1.2 4.3 2.9 5.5-1.1 0-2.1-.3-3-.8v.1c0 3.2 2.3 5.8 5.3 6.4-.6.1-1.1.2-1.7.2-.4 0-.8 0-1.2-.1.8 2.6 3.3 4.5 6.1 4.6-2.2 1.8-5.1 2.8-8.2 2.8-.5 0-1.1 0-1.6-.1 3 1.8 6.5 2.9 10.2 2.9 12.1 0 18.7-10 18.7-18.7v-.8c1.2-1 2.3-2.1 3.2-3.4z"/></symbol><symbol id="icons-vimeo" viewBox="0 0 32 32"><path d="M32 8.6c-.1 3.1-2.3 7.4-6.5 12.8-4.4 5.7-8 8.5-11 8.5-1.9 0-3.4-1.7-4.7-5.2-.9-3.2-1.7-6.3-2.6-9.5-1-3.4-2-5.2-3.1-5.2-.2 0-1.1.5-2.5 1.5L0 9.6c1.6-1.4 3.1-2.8 4.7-4.2 2.1-1.8 3.7-2.8 4.7-2.9 2.5-.2 4 1.5 4.6 5.1.6 3.9 1.1 6.4 1.3 7.3.7 3.3 1.5 4.9 2.4 4.9.7 0 1.7-1.1 3-3.2s2.1-3.7 2.2-4.8c.2-1.8-.5-2.7-2.2-2.7-.8 0-1.6.2-2.4.5 1.6-5.2 4.6-7.7 9-7.5 3.3.2 4.9 2.3 4.7 6.5z"/></symbol></svg>
-  
-</div>
-
-
-<script src="/app.js"></script>
-
-
-    
-    
-      <script src="/main.js"></script>
-    
-  </body>
-</html>
