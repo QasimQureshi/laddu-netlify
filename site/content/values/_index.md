@@ -1,6 +1,6 @@
 ---
 title: Frequently asked Questions
-image: /img/faq-image.jpg
+image: /img/94074034-question-mark-pop-art-woman.jpg
 values:
   - heading: How does Laddu registration work?
     imageUrl: /img/noun_form_589531.svg
