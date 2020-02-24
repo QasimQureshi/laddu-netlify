@@ -26,14 +26,14 @@ event:
   age: 26 - 34
   auto: false
   city: Lahore
-  date: 2019-12-25T04:12:37.115Z
+  date: 2020-02-25T04:12:37.115Z
   duration: 6pm - 8pm
   image: /img/lahore.jpg
   locality: DHA Phase 3
   price: 6000
   spots:
-    females: 2
-    males: 4
+    females: 7
+    males: 3
 icons:
   - content: >-
       Create a profile by earnestly answering your preferences. Our matchmakers
@@ -59,7 +59,6 @@ icons:
     header: Privacy
     imageClass: fas fa-shield-alt
     url: '/values#pay-for-information'
-    
 image: /img/shutterstock_313114061.jpg
 intro:
   heading: How is Laddu different from traditional matchmakers?
@@ -85,9 +84,9 @@ slide:
   - color: 'rgb(255, 68, 0)'
     description: >-
       Finding the right partner is a numbers game. You’ll encounter many frogs
-      before you meet your prince. Laddu events facilitate you to meet a large
-      number of suitors in a short period of time.
-    hasImage: true
+      before you meet your perfect fit. Laddu events facilitate you to meet a
+      large number of suitors in a short period of time.
+    hasImage: false
     imageURL: /img/blog-chemex.jpg
     title: Connect with multiple Rishtas in a single event
   - color: '#8C8'

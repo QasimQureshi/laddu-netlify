@@ -9,13 +9,16 @@
 {{ partial "short-text" .Params.blurb}}
 
 
-{{ partial "2-up" .Params }}
+<!-- {{ partial "2-up" .Params }} -->
 
-{{ partial "text-and-image" (dict "heading" .Params.values.heading "text" .Params.values.text "buttonText" "Read more" "buttonLink" "/values") }}
+{{ partial "text-and-image" (dict "heading" .Params.intro.heading "text" .Params.intro.text "buttonText" "Read more" "buttonLink" "/values") }}
 
+
+<!-- {{ partial "text-and-image" (dict "heading" .Params.values.heading "text" .Params.values.text "buttonText" "Read more" "buttonLink" "/values") }}
+ -->
 <!-- {{ partial "blog" . }} -->
 
-{{ partial "carousel" .Params }}
+<!-- {{ partial "carousel" .Params }} -->
 
 {{ partial "instagram" }}
 
