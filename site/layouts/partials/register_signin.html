@@ -1,5 +1,52 @@
 <style type="text/css">
 
+    @keyframes fadeIn {
+        0% { opacity: 0; }
+        10% {opacity: 0; }
+        100% { opacity: 1; }
+    }
+
+    .alert-success:not(.dn) {
+        animation: fadeIn 1s;
+    }
+
+    .alert-success {
+        color: #155724;
+        background-color: #d4edda;
+        border-color: #c3e6cb;
+    }
+
+    strong {
+        font-weight: bolder;
+    }
+
+    .alert {
+        position: relative;
+        padding: .75rem 1.25rem;
+        margin-bottom: 1rem;
+        border: 1px solid transparent;
+        border-radius: .25rem;
+    }
+
+    .alert-success .alert-link {
+        color: #0b2e13;
+    }
+
+    .alert-link {
+        font-weight: 700;
+    }    
+
+    .password-reset {
+        text-decoration: none;
+        border-bottom: dotted 1px #000;
+        color: #777;
+        font-size: 0.8em;
+    }
+
+    a:focus {
+        box-shadow: none !important;
+    }
+
     /* Bootstrap inputs */
     .form-control.is-valid, .was-validated .form-control:valid {
         border-color: #28a745;
@@ -168,6 +215,17 @@
         margin: 0 auto;
     }
 
+    .alert-container {
+        max-width: 500px;
+        margin: 0 auto;
+        font-size: 14px;
+        padding: 15px 0;
+    }
+
+    .modal-footer {
+        justify-content: space-between !important;
+    }
+
     .modal-footer .btn {
         box-shadow: none;
     }
@@ -180,8 +238,9 @@
     }
 
     .modal-footer .alternate-btn {
-      position: absolute;
-      left: 10px;
+      /*position: absolute;*/
+      /*left: 10px;*/
+      font-weight: 300;
     }
 
     .modal-footer .btn-warning {
@@ -236,6 +295,13 @@
         -ms-flex: 0 0 50%;
         flex: 0 0 50%;
         max-width: 50%;
+    }
+
+    @media (min-width: 576px) {
+        .col-sm-6 {
+            flex: 0 0 50%;
+            max-width: 50%;
+        }
     }
 
     .modal-header .close {
@@ -665,6 +731,10 @@
 
         }
     }*/
+
+    .signup-modal .form-row > div {
+        margin-top: 0.5rem;
+    }
 </style>
 
 <!-- signup-modal -->
@@ -679,18 +749,22 @@
                 <span aria-hidden="true">×</span>
               </button>
             </div>
-            <div class="modal-body">
+            <div class="modal-body asdf">
+                <div class="alert alert-success dn" role="alert">
+                    Please check your email, <strong>qasim.qureshi@gmail.com</strong>. 
+                    Please follow the emailed instructions to complete your registration.
+                </div>
                 <div class="form-container">
                     <div class="form-row">
-                        <div class="col-6">
-                          <label for="firstname">First name</label>
+                        <div class="col-sm-6 col-12">
+                          <!-- <label for="firstname">First name</label> -->
                           <input type="text" data-errormessage="Please enter a valid first name" name="firstname" class="form-control" id="firstname" placeholder="First name" required>
                           <div class="invalid-feedback">
                               Only alphabets and hyphens, please
                           </div>
                         </div>
-                        <div class="col-6">
-                          <label for="lastname">Last name</label>
+                        <div class="col-sm-6 col-12">
+                          <!-- <label for="lastname">Last name</label> -->
                           <input type="text" data-errormessage="Please enter a valid last name" name="lastname" class="form-control" id="lastname" placeholder="Last name" required="">
                           
                           <div class="invalid-feedback">
@@ -698,14 +772,30 @@
                           </div>
                         </div>
                         <div class="col-12">
-                          <label for="email">Email</label>
-                          <input type="email" data-errormessage="Please provide a valid email address" name="email" class="form-control" id="email" autocomplete="false" placeholder="Your email address">
+                          <!-- <label for="email">Email</label> -->
+                          <input type="email" data-errormessage="Please provide a valid email address" name="email" class="form-control" id="email" autocomplete="new-password" placeholder="Your email address">
                           <div class="invalid-feedback">
                             Please provide a valid email address
                           </div>
                         </div>
+
+                        <div class="col-12 col-sm-6">
+                            <!-- <label for="password">Password</label> -->
+                            <input type="password" data-errormessage="Please ensure that both passwords match" name="password" class="form-control" id="signupPassword" autocomplete="new-password" placeholder="Password">
+                            <div class="invalid-feedback">
+                              Please ensure that both passwords match
+                            </div>
+                        </div>
+
+                        <div class="col-12 col-sm-6">
+                            <!-- <label for="password_confirmation">Confirm Password</label> -->
+                            <input type="password" data-errormessage="Please ensure that both passwords match" name="password_confirmation" class="form-control" id="password_confirmation" autocomplete="false" placeholder="Confirm Password">
+                            <div class="invalid-feedback">
+                              Please ensure that both passwords match
+                            </div>
+                        </div>
                         
-                        <div class="col-4">
+                        <!-- <div class="col-4">
                           <label for="location">Location</label>
                           <input type="text" name="location" data-errormessage="Please type in your city" class="form-control" id="city" placeholder="City" required="true">
                           <div class="invalid-feedback">
@@ -730,14 +820,14 @@
                           <div class="invalid-feedback">
                               Please provide a valid value
                           </div>
-                        </div>
+                        </div> -->
     
                     </div>
                 </div><!-- /.form-container ENDs -->
             </div>
             
             <div class="modal-footer">
-              <a href='#' class="btn btn-secondary alternate-btn">Laddu signin</a>
+              <a href='#' class="btn btn-secondary alternate-btn">Already have an account? Signin</a>
               <button type="button" class="btn btn-secondary modal__close" data-dismiss="modal">Close</button>
               <button type="button" class="btn btn-primary loader">
                 <span>Signup for Free</span>
@@ -752,6 +842,37 @@
   </div>
 </div>
 <!-- signup-modal ENDs -->
+
+<!-- info modal -->
+<div class="modal info-modal micromodal-slide" id="info-modal" aria-hidden="true">
+  <!-- <button class="modal__close" aria-label="Close modal">x</button> -->
+  <div class="modal__overlay" tabindex="-1">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+              <h5 class="modal-title"></h5>
+              <button type="button" class="close modal__close" data-dismiss="modal" aria-label="Close">
+                <span aria-hidden="true">×</span>
+              </button>
+            </div>
+            <div class="modal-body">
+                <div class="alert-container">
+                    <div class="alert alert-success" role="alert">
+                        Please check your email
+                      A simple success alert with <a href="#" class="alert-link">an example link</a>. Give it a click if you like.
+                    </div>
+                </div>
+            </div>
+            
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-primary modal__close" data-dismiss="modal">Close</button>
+                </div>
+            </div>
+        </div>
+    </div>
+  </div>
+</div>
+<!-- info modal ENDs -->
 
 
 <!-- #signin-modal -->
@@ -775,8 +896,11 @@
                     </div>
                     <div class="form-group row">
                       <label class="col-4" for="password">Password</label>
-                      <input type="password" data-errormessage="Must be atleast 8 characters in length" name="password" class="col-8 form-control" id="password" placeholder="Password" required>
+                      <input tabindex="1" type="password" data-errormessage="Must be atleast 8 characters in length" name="password" class="col-8 form-control" id="password" placeholder="Password" required>
                       <div class="invalid-feedback"></div>
+                    </div>
+                    <div class="form-group">
+                        <a class="password-reset" href="#">Reset your password</a>
                     </div>
     
                 </div><!-- /.form-container ENDs -->
@@ -784,7 +908,7 @@
             
             <div class="modal-footer">
               <a href='#' class="btn btn-secondary alternate-btn">Signup for Laddu</a>
-              <button type="button" class="btn btn-secondary modal__close" data-dismiss="modal">Close</button>
+              <!-- <button type="button" class="btn btn-secondary modal__close" data-dismiss="modal">Close</button> -->
               <a href='#' class="btn btn-primary loader">
                 <span>Signin</span>
                 <div class="spinner-border text-light" role="status">
@@ -839,6 +963,14 @@
   var baseURL = (window.location.href.indexOf('localhost') !== -1 ? 'http://lvh.me:3001' : 'api.laddu.co');
 
   $(document).ready(function(){
+
+    // Pre-populating the email field in #login
+    let emailIndex = window.location.search.indexOf('email');
+    if( emailIndex !== -1 ){
+        let email = window.location.search.substr(emailIndex).split('=')[1];
+        document.querySelector('#email_signin').value = email;
+        document.querySelector('#password').focus();
+    }
 
     // Registration modal
     MicroModal.init({});
@@ -935,13 +1067,16 @@
     $('.register.link').on('click', showRegistrationModal);
 
     function validateSignupForm() {
+        debugger;
         let isValid = true,
-            birthdate = document.querySelector('#birthdate').valueAsDate,
+            // birthdate = document.querySelector('#birthdate').valueAsDate,
             emailField = document.querySelector('#email'),
-            dateField = document.querySelector('#birthdate'),
-            genderField = document.querySelector('#gender');
+            // dateField = document.querySelector('#birthdate'),
+            passwordField = document.querySelector('#password'),
+            confirmPasswordField = document.querySelector('#password_confirmation');
+            // genderField = document.querySelector('#gender');
 
-        document.querySelectorAll('.form-container input').forEach( (element) => {
+        document.querySelectorAll('.signup-modal .form-container input').forEach( (element) => {
 
             // Length check
             if( element.value.length < 1 ) {
@@ -950,12 +1085,23 @@
                 element.classList.remove('is-valid');
                 element.classList.add('is-invalid');
                 element.parentElement.querySelector('.invalid-feedback').innerText = element.dataset.errormessage
-            }else{
-                debugger;
+            }else{                
                 element.classList.add('is-valid');
                 element.classList.remove('is-invalid');
             }
         })
+
+        if( !validatePasswordFields() ) {
+            isValid = false;
+            passwordField.classList.add('is-invalid');
+            confirmPasswordField.classList.add('is-invalid');
+            if(passwordField.value === "")
+            {
+              passwordField.parentElement.querySelector('.invalid-feedback').innerText = "Passwords can't be blank";
+            }else{
+              passwordField.parentElement.querySelector('.invalid-feedback').innerText = passwordField.dataset.errormessage;
+            }
+          }
 
         // Email format validation
         if( !validateEmailFormat() ) {
@@ -965,17 +1111,29 @@
         }
 
         // Date field validation
-        if( !validateDateFormat() ) {
-            isValid = false;
-            dateField.classList.add('is-invalid');
-            dateField.parentElement.querySelector('.invalid-feedback').innerText = dateField.dataset.errormessage;
-        }
+        // if( !validateDateFormat() ) {
+        //     isValid = false;
+        //     dateField.classList.add('is-invalid');
+        //     dateField.parentElement.querySelector('.invalid-feedback').innerText = dateField.dataset.errormessage;
+        // }
 
         // If the gender field has a value (which it always would, unless the user's tampered with f/e code), we show validation
-        genderField.classList.add( !!genderField.value ? 'is-valid' : 'is-invalid' );
+        // genderField.classList.add( !!genderField.value ? 'is-valid' : 'is-invalid' );
 
         return isValid;
     }
+
+    function validatePasswordFields(){
+        let isPasswordValid = false,
+            passwordField = document.querySelector('#password'),
+            confirmPasswordField = document.querySelector('#password_confirmation');
+
+        if( passwordField.value !== "" && passwordField.value === confirmPasswordField.value ){
+          isPasswordValid = true;    
+        }
+
+        return isPasswordValid;
+      }
 
     function validateEmailFormat(emailElement){
         let emailField = !!emailElement ? emailElement : document.querySelector('#email'),
@@ -1009,6 +1167,8 @@
 
     function signinHandler(event) {
 
+        event.preventDefault();
+
 	    let isSigninValid = true,
 	    	signinBtn = document.querySelector('.signin-modal .modal-footer > .btn-primary'),
 	        emailField = document.querySelector('#email_signin'),
@@ -1033,7 +1193,7 @@
 
 	    }
 
-	    // Validating the user's credentials asdf
+	    // Validating the user's credentials
 	    if(isSigninValid)
 	    {
 	    	event.currentTarget.classList.add('loading');
@@ -1056,6 +1216,7 @@
 	              var resp = JSON.parse(this.response);
 	              if(this.status === 200)
 	              {
+                    debugger;
 	              	// Showing validation on the input fields
 	              	document.querySelector('#email_signin').classList.add('is-valid');
 		            document.querySelector('#password').classList.add('is-valid');
@@ -1097,40 +1258,57 @@
     document.querySelector('#signup-modal .modal-footer button.btn-primary').addEventListener('click', event => {
         let signupBtn = event.currentTarget;
 
-        // front-end validation
-        if(validateSignupForm()) {
+        // front-end validation & ensuring that the email is new
+        if( !document.querySelector('#email').classList.contains('is-invalid') && validateSignupForm() ) {
           
           signupBtn.classList.add('loading');
 
-            let signupObj = {
-                firstName: document.querySelector('#firstname').value,
-                lastName: document.querySelector('#lastname').value,
-                email: document.querySelector('#email').value,
-                birthdate: document.querySelector('#birthdate').value,
-                gender: document.querySelector('#gender').value,
-                location: document.querySelector('#city').value
+            let signupObj = { user: 
+                {
+                    firstName: document.querySelector('#firstname').value,
+                    lastName: document.querySelector('#lastname').value,
+                    email: document.querySelector('#email').value,
+                    password: document.querySelector('#signupPassword').value
+                }
+
+                // birthdate: document.querySelector('#birthdate').value,
+                // gender: document.querySelector('#gender').value,
+                // location: document.querySelector('#city').value
             }
 
             // Creating a new request
             var request = new XMLHttpRequest();
 
-            request.open('POST', `${baseURL}/users/`, true);
+            request.open('POST', `${baseURL}/users/signup`, true);
             request.setRequestHeader('Content-Type', 'application/json; charset=UTF-8');
 
             request.onload = function(data) {
-              signupBtn.classList.add('loading');
+              // signupBtn.classList.add('loading');
                 debugger;
                 if (this.status >= 200 && this.status < 400) {
                     
                     // Success!
                     var resp = JSON.parse(this.response);
                     // window.location.url = `${baseURL}/users/${resp.id}/profile`;
-                    window.open(`${baseURL}/users/${resp.id}/edit`, '_self');
+                    // ASDF
+                    // Showing a notification & highlighting the Close button
+                    document.querySelector('.signup-modal .modal-footer .btn-primary').style.display = 'none';
+                    document.querySelector('.signup-modal .modal-footer .modal__close').classList.remove('btn-secondary');
+                    document.querySelector('.signup-modal .modal-footer .modal__close').classList.add('btn-primary');
+                    document.querySelector('.signup-modal .alert').classList.remove('dn');
+                    // window.open(`${baseURL}/users/${resp.id}/edit`, '_self');
 
                 } else {
                     // We reached our target server, but it returned an error 
                     signupBtn.classList.remove('loading')
-                    console.log('ERROR');
+                    console.log('Registration form submission error');
+
+                    // Email uniqueness error zxcv. Showing an error and removing input validity
+                    if( !!JSON.parse(this.response).email ) {
+                        document.querySelector('#email').classList.add('is-invalid');
+                        document.querySelectorAll('.signup-modal input.is-valid').forEach(node => node.classList.remove('is-valid'))
+                    }
+                    
                 }
             };
 
@@ -1147,9 +1325,10 @@
         }
     })
 
-    // Removing previous validation styling on input fields
+    // Removing previous validation styling on input fields qwer
     document.querySelectorAll('input').forEach( (element) => {
         element.addEventListener('focus', (event) => {
+            debugger;
             event.currentTarget.classList.remove("is-valid","is-invalid");
         })  
     })

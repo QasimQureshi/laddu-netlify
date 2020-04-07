@@ -43,13 +43,13 @@ var CssBaseline = __webpack_require__(357);
 var ThemeProvider = __webpack_require__(355);
 
 // EXTERNAL MODULE: ./node_modules/@material-ui/core/esm/styles/styled.js + 1 modules
-var styled = __webpack_require__(362);
+var styled = __webpack_require__(363);
 
 // EXTERNAL MODULE: ./node_modules/@material-ui/core/esm/styles/makeStyles.js
 var makeStyles = __webpack_require__(147);
 
 // EXTERNAL MODULE: ./node_modules/@material-ui/core/esm/styles/createStyles.js + 1 modules
-var createStyles = __webpack_require__(361);
+var createStyles = __webpack_require__(365);
 
 // EXTERNAL MODULE: ./node_modules/clsx/dist/clsx.m.js
 var clsx_m = __webpack_require__(3);
@@ -62,7 +62,7 @@ var CallEnd_default = /*#__PURE__*/__webpack_require__.n(CallEnd);
 var Fab = __webpack_require__(344);
 
 // EXTERNAL MODULE: ./node_modules/@material-ui/core/esm/Tooltip/Tooltip.js + 1 modules
-var Tooltip = __webpack_require__(363);
+var Tooltip = __webpack_require__(362);
 
 // EXTERNAL MODULE: ./node_modules/babel-preset-react-app/node_modules/@babel/runtime/helpers/esm/slicedToArray.js + 3 modules
 var slicedToArray = __webpack_require__(6);
@@ -241,7 +241,7 @@ function AboutDialog(_ref){var open=_ref.open,onClose=_ref.onClose;return react_
 var Menu = __webpack_require__(167);
 
 // EXTERNAL MODULE: ./node_modules/@material-ui/core/esm/MenuItem/MenuItem.js + 1 modules
-var MenuItem = __webpack_require__(365);
+var MenuItem = __webpack_require__(366);
 
 // EXTERNAL MODULE: ./node_modules/@material-ui/icons/MoreVert.js
 var MoreVert = __webpack_require__(162);
@@ -278,7 +278,7 @@ var firebaseConfig={apiKey:Object({"NODE_ENV":"production","PUBLIC_URL":"","REAC
 var react_router = __webpack_require__(38);
 
 // CONCATENATED MODULE: ./src/state/usePasscodeAuth/usePasscodeAuth.ts
-function getPasscode(){var match=window.location.search.match(/passcode=(.*)&?/);var passcode=match?match[1]:window.sessionStorage.getItem('passcode');return passcode;}function fetchToken(name,room,passcode){return fetch("https://video-app-4538-dev.twil.io/token?passcode=3022574538",{method:'POST',headers:{'content-type':'application/json'},body:JSON.stringify({user_identity:name,room_name:room,passcode:passcode})});}function verifyPasscode(passcode){return fetchToken('temp-name','temp-room',passcode).then(/*#__PURE__*/function(){var _ref=Object(asyncToGenerator["a" /* default */])(/*#__PURE__*/regenerator_default.a.mark(function _callee(res){var jsonResponse,_jsonResponse$error;return regenerator_default.a.wrap(function _callee$(_context){while(1){switch(_context.prev=_context.next){case 0:_context.next=2;return res.json();case 2:jsonResponse=_context.sent;if(!(res.status===401)){_context.next=5;break;}return _context.abrupt("return",{isValid:false,error:(_jsonResponse$error=jsonResponse.error)===null||_jsonResponse$error===void 0?void 0:_jsonResponse$error.message});case 5:if(!(res.ok&&jsonResponse.token)){_context.next=7;break;}return _context.abrupt("return",{isValid:true});case 7:case"end":return _context.stop();}}},_callee);}));return function(_x){return _ref.apply(this,arguments);};}());}function getErrorMessage(message){switch(message){case'passcode incorrect':return'Passcode is incorrect';case'passcode expired':return'Passcode has expired';default:return message;}}function usePasscodeAuth(){var history=Object(react_router["g" /* useHistory */])();var _useState=Object(react["useState"])(null),_useState2=Object(slicedToArray["a" /* default */])(_useState,2),user=_useState2[0],setUser=_useState2[1];var _useState3=Object(react["useState"])(false),_useState4=Object(slicedToArray["a" /* default */])(_useState3,2),isAuthReady=_useState4[0],setIsAuthReady=_useState4[1];var getToken=Object(react["useCallback"])(function(name,room){return fetchToken(name,room,user.passcode).then(/*#__PURE__*/function(){var _ref2=Object(asyncToGenerator["a" /* default */])(/*#__PURE__*/regenerator_default.a.mark(function _callee2(res){var _json$error;var json,errorMessage;return regenerator_default.a.wrap(function _callee2$(_context2){while(1){switch(_context2.prev=_context2.next){case 0:if(!res.ok){_context2.next=2;break;}return _context2.abrupt("return",res);case 2:_context2.next=4;return res.json();case 4:json=_context2.sent;errorMessage=getErrorMessage(((_json$error=json.error)===null||_json$error===void 0?void 0:_json$error.message)||res.statusText);throw Error(errorMessage);case 7:case"end":return _context2.stop();}}},_callee2);}));return function(_x2){return _ref2.apply(this,arguments);};}()).then(function(res){return res.json();}).then(function(res){return res.token;});},[user]);Object(react["useEffect"])(function(){var passcode=getPasscode();if(passcode){verifyPasscode(passcode).then(function(verification){if(verification===null||verification===void 0?void 0:verification.isValid){setUser({passcode:passcode});window.sessionStorage.setItem('passcode',passcode);history.replace(window.location.pathname);}}).then(function(){return setIsAuthReady(true);});}else{setIsAuthReady(true);}},[history]);var signIn=Object(react["useCallback"])(function(passcode){return verifyPasscode(passcode).then(function(verification){if(verification===null||verification===void 0?void 0:verification.isValid){setUser({passcode:passcode});window.sessionStorage.setItem('passcode',passcode);}else{throw new Error(getErrorMessage(verification===null||verification===void 0?void 0:verification.error));}});},[]);var signOut=Object(react["useCallback"])(function(){setUser(null);window.sessionStorage.removeItem('passcode');return Promise.resolve();},[]);return{user:user,isAuthReady:isAuthReady,getToken:getToken,signIn:signIn,signOut:signOut};}
+function getPasscode(){var match=window.location.search.match(/passcode=(.*)&?/);var passcode=match?match[1]:window.sessionStorage.getItem('passcode');return passcode;}function fetchToken(name,room,passcode){return fetch("https://video-app-4538-dev.twil.io/token?passcode=9823894538",{method:'POST',headers:{'content-type':'application/json'},body:JSON.stringify({user_identity:name,room_name:room,passcode:passcode})});}function verifyPasscode(passcode){return fetchToken('temp-name','temp-room',passcode).then(/*#__PURE__*/function(){var _ref=Object(asyncToGenerator["a" /* default */])(/*#__PURE__*/regenerator_default.a.mark(function _callee(res){var jsonResponse,_jsonResponse$error;return regenerator_default.a.wrap(function _callee$(_context){while(1){switch(_context.prev=_context.next){case 0:_context.next=2;return res.json();case 2:jsonResponse=_context.sent;if(!(res.status===401)){_context.next=5;break;}return _context.abrupt("return",{isValid:false,error:(_jsonResponse$error=jsonResponse.error)===null||_jsonResponse$error===void 0?void 0:_jsonResponse$error.message});case 5:if(!(res.ok&&jsonResponse.token)){_context.next=7;break;}return _context.abrupt("return",{isValid:true});case 7:case"end":return _context.stop();}}},_callee);}));return function(_x){return _ref.apply(this,arguments);};}());}function getErrorMessage(message){switch(message){case'passcode incorrect':return'Passcode is incorrect';case'passcode expired':return'Passcode has expired';default:return message;}}function usePasscodeAuth(){var history=Object(react_router["g" /* useHistory */])();var _useState=Object(react["useState"])(null),_useState2=Object(slicedToArray["a" /* default */])(_useState,2),user=_useState2[0],setUser=_useState2[1];var _useState3=Object(react["useState"])(false),_useState4=Object(slicedToArray["a" /* default */])(_useState3,2),isAuthReady=_useState4[0],setIsAuthReady=_useState4[1];var getToken=Object(react["useCallback"])(function(name,room){return fetchToken(name,room,user.passcode).then(/*#__PURE__*/function(){var _ref2=Object(asyncToGenerator["a" /* default */])(/*#__PURE__*/regenerator_default.a.mark(function _callee2(res){var _json$error;var json,errorMessage;return regenerator_default.a.wrap(function _callee2$(_context2){while(1){switch(_context2.prev=_context2.next){case 0:if(!res.ok){_context2.next=2;break;}return _context2.abrupt("return",res);case 2:_context2.next=4;return res.json();case 4:json=_context2.sent;errorMessage=getErrorMessage(((_json$error=json.error)===null||_json$error===void 0?void 0:_json$error.message)||res.statusText);throw Error(errorMessage);case 7:case"end":return _context2.stop();}}},_callee2);}));return function(_x2){return _ref2.apply(this,arguments);};}()).then(function(res){return res.json();}).then(function(res){return res.token;});},[user]);Object(react["useEffect"])(function(){var passcode=getPasscode();if(passcode){verifyPasscode(passcode).then(function(verification){if(verification===null||verification===void 0?void 0:verification.isValid){setUser({passcode:passcode});window.sessionStorage.setItem('passcode',passcode);history.replace(window.location.pathname);}}).then(function(){return setIsAuthReady(true);});}else{setIsAuthReady(true);}},[history]);var signIn=Object(react["useCallback"])(function(passcode){return verifyPasscode(passcode).then(function(verification){if(verification===null||verification===void 0?void 0:verification.isValid){setUser({passcode:passcode});window.sessionStorage.setItem('passcode',passcode);}else{throw new Error(getErrorMessage(verification===null||verification===void 0?void 0:verification.error));}});},[]);var signOut=Object(react["useCallback"])(function(){setUser(null);window.sessionStorage.removeItem('passcode');return Promise.resolve();},[]);return{user:user,isAuthReady:isAuthReady,getToken:getToken,signIn:signIn,signOut:signOut};}
 // CONCATENATED MODULE: ./src/state/index.tsx
 var StateContext=Object(react["createContext"])(null);/*
   The 'react-hooks/rules-of-hooks' linting rules prevent React Hooks fron being called
@@ -302,7 +302,7 @@ var Info = __webpack_require__(163);
 var Info_default = /*#__PURE__*/__webpack_require__.n(Info);
 
 // EXTERNAL MODULE: ./node_modules/@material-ui/core/esm/Snackbar/Snackbar.js + 1 modules
-var Snackbar = __webpack_require__(366);
+var Snackbar = __webpack_require__(361);
 
 // EXTERNAL MODULE: ./node_modules/@material-ui/core/esm/SnackbarContent/SnackbarContent.js
 var SnackbarContent = __webpack_require__(354);
