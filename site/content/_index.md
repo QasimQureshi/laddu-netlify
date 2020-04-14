@@ -61,7 +61,7 @@ icons:
     url: '/values#pay-for-information'
 image: /img/shutterstock_313114061.jpg
 intro:
-  heading: How is Laddu different from traditional matchmakers?
+  heading: How is Laddu different?
   text: >-
     For starters, we are the antidote to misogynistic Rishta aunties who ask
     regressive questions and shame both men and women into domestication with a
