@@ -26,10 +26,10 @@ event:
   age: 26 - 34
   auto: false
   city: Lahore
-  date: 2020-03-25T04:12:37.115Z
+  date: 2020-05-10T04:12:37.115Z
   duration: 6pm - 8pm
   image: /img/lahore.jpg
-  locality: DHA Phase 3
+  locality: Laddu Virtual Event
   price: 6000
   spots:
     females: 4
