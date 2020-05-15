@@ -37,13 +37,19 @@
 {{ partial "register_signin" }}
 
 <script type="text/javascript">
-	var baseURL = (window.location.href.indexOf('localhost') !== -1 ? 'http://lvh.me:3001' : 'api.laddu.co');
+	var baseURL = ((window.location.href.indexOf('lvh.me') !== -1 || window.location.href.indexOf('localhost') !== -1) ? 'http://lvh.me:3001' : 'api.laddu.co');
+
 	document.addEventListener('DOMContentLoaded', (event) => {
+
+		if( window.location.hash === "#signout"){
+			localStorage.removeItem('sessionId');
+		}
+
 		// If the user previously signed in, we show an authenticated state in the nav
 		let user = JSON.parse(localStorage.getItem('sessionId'));
 
-		if( !!user )
-		{
+		if( !!user ){
+
 			// authenticate session with the backend, and get unread message count
 			var request = new XMLHttpRequest();
 
@@ -71,7 +77,7 @@
 	        };
 	        // debugger;
 	        // request.send( JSON.stringify( {session: user.session}) );
-	        request.send( `authenticity_token=${encodeURIComponent(user.session)}` );
+	        // request.send( `authenticity_token=${encodeURIComponent(user.session)}` );
 
 
 		}

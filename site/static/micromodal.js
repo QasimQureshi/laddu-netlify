@@ -1,6 +1,10 @@
 const MicroModal = (() => {
   'use strict'
 
+  alert('booga');
+  console.log('booga');
+  debugger;
+
   const FOCUSABLE_ELEMENTS = [
     'a[href]',
     'area[href]',
@@ -60,6 +64,8 @@ const MicroModal = (() => {
       this.modal.classList.add('is-open')
       this.scrollBehaviour('disable')
       this.addEventListeners()
+
+      debugger;
 
       if (this.config.awaitOpenAnimation) {
         const handler = () => {

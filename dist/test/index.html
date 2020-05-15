@@ -555,6 +555,10 @@
         border-bottom-left-radius: .3rem;
     }
 
+    #forgotten-modal .modal-footer {
+        justify-content: flex-end !important;
+    }
+
     .jumbotron-content:hover {
         background-color: rgba(255, 68, 0, 0.95) !important;;
     }
@@ -766,7 +770,7 @@
         box-shadow: 0 3px 9px rgba(0, 0, 0, .5);
     }
 
-    #signin-modal .modal-dialog {
+    #signin-modal .modal-dialog, #forgotten-modal .modal-dialog {
         max-width: 450px;
     }
 
@@ -808,10 +812,9 @@
                 <span aria-hidden="true">×</span>
               </button>
             </div>
-            <div class="modal-body asdf">
+            <div class="modal-body">
                 <div class="alert alert-success dn" role="alert">
-                    Please check your email, <strong>qasim.qureshi@gmail.com</strong>. 
-                    Please follow the emailed instructions to complete your registration.
+                    Please check your email, and follow the emailed instructions to complete your registration.
                 </div>
                 <div class="form-container">
                     <div class="form-row">
@@ -922,6 +925,9 @@
               </button>
             </div>
             <div class="modal-body">
+                <div class="alert alert-success dn" role="alert">
+                    Thank you for verifying your email address
+                </div>
                 <div class="form-container">
                     <div class="form-group row">
                       <label class="col-4" for="email_signin">Email</label>
@@ -934,7 +940,7 @@
                       <div class="invalid-feedback"></div>
                     </div>
                     <div class="form-group">
-                        <a class="password-reset" href="#">Reset your password</a>
+                        <a class="password-reset" href="#">Forgot your password?</a>
                     </div>
     
                 </div>
@@ -958,13 +964,54 @@
 
 
 
+<div class="modal forgotten-modal micromodal-slide" id="forgotten-modal" aria-hidden="true">
+  
+  <div class="modal__overlay" tabindex="-1">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+              <h5 class="modal-title">Forgot password</h5>
+              <button type="button" class="close modal__close" data-dismiss="modal" aria-label="Close">
+                <span aria-hidden="true">×</span>
+              </button>
+            </div>
+            <div class="modal-body">
+                <div class="alert alert-success dn" role="alert">
+                    Thank you for verifying your email address
+                </div>
+                <div class="form-container">
+                    <div class="form-group row">
+                      <label class="col-4" for="email_forgotten">Email</label>
+                      <input type="text" data-errormessage="Please provide a valid email address" name="email" class="col-8 form-control" id="email_forgotten" placeholder="Email" required>
+                      <div class="invalid-feedback"></div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="modal-footer">
+              <button type="button" class="btn btn-secondary modal__close" data-dismiss="modal">Close</button>
+              <a href='#' class="btn btn-primary loader">
+                <span>Continue</span>
+                <div class="spinner-border text-light" role="status">
+                  <span class="sr-only">Loading...</span>
+                </div>
+              </a>
+            </div>
+        </div>
+    </div>
+     
+  </div>
+</div>
+
+
+
 
 
 
 
 <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
 <script type="text/javascript" src="https://unpkg.com/micromodal/dist/micromodal.min.js"></script>
-<script type="text/javascript" src="js/micromodal.js"></script>
+
 <script type="text/javascript" src="bodyscroll.js"></script>
 
 
@@ -977,16 +1024,66 @@
 
 
 <script type="text/javascript">
-  var baseURL = (window.location.href.indexOf('localhost') !== -1 ? 'http://lvh.me:3001' : 'api.laddu.co');
 
   $(document).ready(function(){
 
+    let urlParams = new URLSearchParams(window.location.search),
+        emailParam = urlParams.get('email'),
+        statusParam = urlParams.get('s');
+
     
-    let emailIndex = window.location.search.indexOf('email');
-    if( emailIndex !== -1 ){
-        let email = window.location.search.substr(emailIndex).split('=')[1];
-        document.querySelector('#email_signin').value = email;
-        document.querySelector('#password').focus();
+    
+    
+    
+    
+    
+    
+    
+
+    
+    if( window.location.hash === "#register" || 
+        window.location.hash === "#signup" )
+        showRegistrationModal();
+
+    if( window.location.hash === "#signin" ||
+        window.location.hash === "#login" )
+    {
+        if( !!emailParam ) {
+            document.querySelector('#email_signin').value = emailParam;
+        }
+
+        if( !! statusParam ){
+            let statusMessage,
+                loginAlert = document.querySelector('.signin-modal .alert');
+
+            switch(statusParam){
+                case "1": statusMessage = "Your password has been updated"; break;
+                case "4": statusMessage = "Your email has been verified"; break;
+            }
+
+            loginAlert.classList.remove('dn');
+            loginAlert.innerText = statusMessage;
+        }
+
+        showSigninModal();
+    }
+
+    if( window.location.hash === "#iforgot")
+    {
+        if( !! statusParam ){
+            let statusMessage,
+                forgottenAlert = document.querySelector('.forgotten-modal .alert');
+
+            switch(statusParam){
+                case "2": statusMessage = "Your password reset link is invalid"; break;
+                case "3": statusMessage = "Your password reset link has expired"; break;
+            }
+
+            forgottenAlert.classList.remove('dn');
+            forgottenAlert.innerText = statusMessage;
+        }
+
+        showForgottenModal();
     }
 
     
@@ -1012,11 +1109,23 @@
           
           hideModal();
           showSigninModal();
-
         }
 
       })
     })
+
+    
+    document.querySelector('.password-reset').addEventListener('click', (event => {
+
+        let loginEmail = document.querySelector('#email_signin').value;
+
+        if( validateEmailFormat(loginEmail) )
+            document.querySelector('#email_forgotten').value = document.querySelector('#email_signin').value;
+
+        hideModal();
+        showForgottenModal();
+
+    }))
 
     function showRegistrationModal() {
         
@@ -1026,11 +1135,12 @@
         bodyScrollLock.disableBodyScroll(targetElement);
         
         
-        if( window.location.href.indexOf('#register') === -1 )
+        if( window.location.href.indexOf('#register') === -1 ) {
             history.pushState({prevUrl: window.location.href}, null, '#register');
+        }
 
         document.querySelector('body').classList.add('modal-open');
-        animateCSS('.modal__overlay > .modal-dialog', 'bounceInDown');
+        animateCSS('.signup-modal .modal__overlay > .modal-dialog', 'bounceInDown');
     }
 
     function showSigninModal() {
@@ -1042,7 +1152,19 @@
             history.pushState({prevUrl: window.location.href}, null, '#signin');
 
         document.querySelector('body').classList.add('modal-open');
-        animateCSS('.modal__overlay > .modal-dialog', 'bounceInDown');
+        animateCSS('.signin-modal .modal__overlay > .modal-dialog', 'bounceInDown');
+    }
+
+    function showForgottenModal () {
+        MicroModal.show('forgotten-modal');
+        bodyScrollLock.disableBodyScroll(targetElement);
+
+        
+        if( window.location.href.indexOf('#iforgot') === -1 )
+            history.pushState({prevUrl: window.location.href}, null, '#iforgot');
+
+        document.querySelector('body').classList.add('modal-open');
+        animateCSS('.forgotten-modal .modal__overlay > .modal-dialog', 'bounceInDown');
     }
 
     function hideModal() {
@@ -1050,6 +1172,7 @@
         document.querySelector('body').classList.remove('modal-open');
         MicroModal.close('signup-modal');
         MicroModal.close('signin-modal');
+        MicroModal.close('forgotten-modal');
         
         let referrer = document.referrer,
             baseURL = window.location.href.substr(0, window.location.href.indexOf('#')); 
@@ -1063,18 +1186,10 @@
         
     }
 
-    
-    if( window.location.hash === "#register" || 
-        window.location.hash === "#signup" )
-        showRegistrationModal();
-
-    
-    if( window.location.hash === "#signin" ||
-        window.location.hash === "#login" )
-        showSigninModal();
-
 
     $('.modal__close').on('click',hideModal);
+
+    
     $('.sign-up-btn').on('click', function(event){ 
         event.preventDefault();
         showRegistrationModal();
@@ -1084,7 +1199,7 @@
     $('.register.link').on('click', showRegistrationModal);
 
     function validateSignupForm() {
-        debugger;
+
         let isValid = true,
             
             emailField = document.querySelector('#email'),
@@ -1108,7 +1223,7 @@
             }
         })
 
-        if( !validatePasswordFields() ) {
+        if( !validatePasswordFields(emailField) ) {
             isValid = false;
             passwordField.classList.add('is-invalid');
             confirmPasswordField.classList.add('is-invalid');
@@ -1121,7 +1236,7 @@
           }
 
         
-        if( !validateEmailFormat() ) {
+        if( !validateEmailFormat(emailField) ) {
             isValid = false;
             emailField.classList.add('is-invalid');
             emailField.parentElement.querySelector('.invalid-feedback').innerText = emailField.dataset.errormessage;
@@ -1142,7 +1257,7 @@
 
     function validatePasswordFields(){
         let isPasswordValid = false,
-            passwordField = document.querySelector('#password'),
+            passwordField = document.querySelector('#signupPassword'),
             confirmPasswordField = document.querySelector('#password_confirmation');
 
         if( passwordField.value !== "" && passwordField.value === confirmPasswordField.value ){
@@ -1152,9 +1267,9 @@
         return isPasswordValid;
       }
 
+    
     function validateEmailFormat(emailElement){
-        let emailField = !!emailElement ? emailElement : document.querySelector('#email'),
-            email = emailField.value,
+        let email = ( (typeof emailElement === "object") ? emailElement.value : emailElement),
             isEmailValid = true;
         
 
@@ -1177,12 +1292,90 @@
         return isDateValid;
     }
 
+
+    
+    document.querySelector('#forgotten-modal .modal-footer .btn-primary').addEventListener('click', forgotPasswordHandler);
+
     
     document.querySelector('#signin-modal .modal-footer .btn-primary').addEventListener('click', signinHandler);
 
-    
+    function forgotPasswordHandler(event) {
+        event.preventDefault();
 
-    function signinHandler(event) {
+        let isEmailValid = true,
+            forgottenBtn = event.target,
+            emailField = document.querySelector('#email_forgotten');
+
+        if( validateEmailFormat(emailField) ) {
+            event.currentTarget.classList.add('loading');
+
+            let request = new XMLHttpRequest(),
+            emailObj = {
+                email: document.querySelector('#email_forgotten').value
+            };
+
+            request.open('POST', `${baseURL}/reset/`, true);
+            request.setRequestHeader('Content-Type', 'application/json; charset=UTF-8');
+
+            request.onload = function(data) {
+                forgottenBtn.classList.remove('loading');
+              if (this.status >= 200 && this.status < 400) {
+                  
+                
+                var resp = JSON.parse(this.response);
+                if(this.status === 200)
+                {
+                    
+                    document.querySelector('#email_forgotten').classList.remove('is-invalid');
+                    document.querySelector('#email_forgotten').classList.add('is-valid');
+
+                    document.querySelector('#email_forgotten').nextElementSibling.innerText = "";
+                    document.querySelector('#email_forgotten').setAttribute('disabled', 'disabled')
+
+                    document.querySelector('#forgotten-modal .alert').classList.remove('dn');
+                    document.querySelector('#forgotten-modal .alert').innerHTML = "Please check your email inbox. We've sent you a password reset link";
+
+                    document.querySelector('#forgotten-modal .modal-footer .btn-primary').style.display = "none";
+                    document.querySelector('#forgotten-modal .modal-footer button').classList.toggle('btn-secondary');
+                    document.querySelector('#forgotten-modal .modal-footer button').classList.toggle('btn-primary');
+                }else{
+                    
+                    
+                    document.querySelector('#email_forgotten').classList.remove('is-valid');
+                    document.querySelector('#email_forgotten').classList.add('is-invalid');
+                    document.querySelector('#email_forgotten').nextElementSibling.innerText = "No such email address found";
+                    document.querySelector('#forgotten-modal .modal-footer .loader').classList.remove('loading')
+                }
+                  
+
+            } else {
+                
+                document.querySelector('#email_forgotten').classList.remove('is-valid');
+                document.querySelector('#email_forgotten').classList.add('is-invalid');
+                document.querySelector('#email_forgotten').nextElementSibling.innerText = "Unable to find this email address in our records";
+                document.querySelector('#forgotten-modal .modal-footer .loader').classList.remove('loading')
+                }
+            }
+
+            request.onerror = function(errObj) {
+                
+                
+            };
+
+            
+            request.send( JSON.stringify(emailObj) );
+
+        }else{
+            
+            document.querySelector('#email_forgotten').classList.remove('is-valid');
+            document.querySelector('#email_forgotten').classList.add('is-invalid');
+
+            document.querySelector('#email_forgotten').nextElementSibling.innerText = "Please provide a properly formatted email address";
+        }
+    }
+
+    
+    function signinHandler(event){
 
         event.preventDefault();
 
@@ -1190,6 +1383,8 @@
 	    	signinBtn = document.querySelector('.signin-modal .modal-footer > .btn-primary'),
 	        emailField = document.querySelector('#email_signin'),
 	        passwordField = document.querySelector('#password');
+
+        document.querySelector('.signin-modal .alert').classList.add('dn'); 
 
 	    if( !validateEmailFormat(emailField) )
 	    {
@@ -1225,15 +1420,15 @@
 	      request.setRequestHeader('Content-Type', 'application/json; charset=UTF-8');
 
 	      request.onload = function(data) {
-	        signinBtn.classList.remove('loading');
-	          debugger;
+
+              signinBtn.classList.remove('loading');
+	          
 	          if (this.status >= 200 && this.status < 400) {
 	              
 	              
 	              var resp = JSON.parse(this.response);
 	              if(this.status === 200)
 	              {
-                    debugger;
 	              	
 	              	document.querySelector('#email_signin').classList.add('is-valid');
 		            document.querySelector('#password').classList.add('is-valid');
@@ -1243,36 +1438,41 @@
 		            
 		            localStorage.setItem('sessionId', JSON.stringify(resp.response));
 
-
+                    
 		            
-		            
+                    
+                    debugger;
+		            window.open(`${baseURL}/dashboard`, '_self');
+                    // window.location.url = `${baseURL}/users/${resp.id}/profile`;
 	              }
 	              
-	              
+	              // window.location.url = `${baseURL}/users/${resp.id}/profile`;
 
 	          } else {
-	              
+	              // We reached our target server, but it returned an error 
 	              let error = JSON.parse(this.response).response;
 	              document.querySelector('#email_signin').classList.remove('is-valid');
 	              document.querySelector('#password').classList.remove('is-valid');
 	              document.querySelector('#email_signin').classList.add('is-invalid');
 	              document.querySelector('#password').classList.add('is-invalid');
-
+                  document.querySelector('#password').value = "";
 	              document.querySelector('#email_signin').nextElementSibling.innerText = error;
 	          }
 	      };
 
 	      request.onerror = function(errObj) {
 	        
-	        debugger;
+	        
 	      };
 
 	      request.send( JSON.stringify(loginObj) );
 	    }
     }
 
+
     
     document.querySelector('#signup-modal .modal-footer button.btn-primary').addEventListener('click', event => {
+        
         let signupBtn = event.currentTarget;
 
         
@@ -1301,12 +1501,11 @@
 
             request.onload = function(data) {
               
-                debugger;
+                
                 if (this.status >= 200 && this.status < 400) {
                     
                     
                     var resp = JSON.parse(this.response);
-                    
                     
                     
                     document.querySelector('.signup-modal .modal-footer .btn-primary').style.display = 'none';
@@ -1331,21 +1530,20 @@
 
             request.onerror = function(errObj) {
               
-              debugger;
+              
             };
 
             request.send( JSON.stringify(signupObj) );
 
         }else{
             
-            debugger;
+            
         }
     })
 
     
     document.querySelectorAll('input').forEach( (element) => {
         element.addEventListener('focus', (event) => {
-            debugger;
             event.currentTarget.classList.remove("is-valid","is-invalid");
         })  
     })
@@ -1356,7 +1554,7 @@
             emailField = document.querySelector('#email');
         
         
-        if(!validateEmailFormat())
+        if(!validateEmailFormat(emailField))
         {
             emailField.classList.add('is-invalid');
             emailField.nextElementSibling.innerText = 'Please enter a valid email address';
@@ -1395,7 +1593,7 @@
 
             request.onerror = function(errObj) {
               
-              debugger;
+              
             };
 
             request.send( JSON.stringify( {email: email}) );
@@ -1421,13 +1619,19 @@
 </script>
 
 <script type="text/javascript">
-	var baseURL = (window.location.href.indexOf('localhost') !== -1 ? 'http://lvh.me:3001' : 'api.laddu.co');
+	var baseURL = ((window.location.href.indexOf('lvh.me') !== -1 || window.location.href.indexOf('localhost') !== -1) ? 'http://lvh.me:3001' : 'api.laddu.co');
+
 	document.addEventListener('DOMContentLoaded', (event) => {
+
+		if( window.location.hash === "#signout"){
+			localStorage.removeItem('sessionId');
+		}
+
 		
 		let user = JSON.parse(localStorage.getItem('sessionId'));
 
-		if( !!user )
-		{
+		if( !!user ){
+
 			
 			var request = new XMLHttpRequest();
 
@@ -1455,7 +1659,7 @@
 	        };
 	        // debugger;
 	        // request.send( JSON.stringify( {session: user.session}) );
-	        request.send( `authenticity_token=${encodeURIComponent(user.session)}` );
+	        // request.send( `authenticity_token=${encodeURIComponent(user.session)}` );
 
 
 		}
@@ -1831,7 +2035,7 @@
 </div>
 
 
-<script src="/app.js"></script>
+
 
 
     
