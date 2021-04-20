@@ -1054,6 +1054,13 @@
 	.next-event .sign-up-btn {
 		text-transform: initial;
 	}
+
+	.sign-up-btn-disabled {
+		pointer-events: none;
+		background-color: #ddd !important;
+		color: darkgray !important;
+		box-shadow: unset !important;
+	}
 </style>
 
 <div class="bg-grey-1 pv4 next-event">
@@ -1074,7 +1081,8 @@
     	<br>
     	<span class="year"></span>
     	<br>
-    	<a href="#" class="btn sign-up sign-up-btn orange raise mb4">Sign up</a>
+    	
+    	<a href="#" class="btn sign-up-btn raise mb4 sign-up-btn-disabled">Sign up</a>
     </div>
     <div class="w-30-l ph3 tc tr-l">
     	<div class="remaining-spots mb2">
